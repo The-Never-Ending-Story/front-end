@@ -1,7 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from 'react';
+import { getAllWorldsData } from './apiCalls'; 
 
 function App() {
+
+  useEffect( () => {
+    getAllWorldsData()
+    .then(data => {
+      console.log(data)
+    })
+  }, [] )
+
   return (
     <div className="App">
       <header className="App-header">
