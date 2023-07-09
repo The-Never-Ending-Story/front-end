@@ -16,7 +16,7 @@ export const SingleWorld = () => {
         setWorld(data.world);
         setIsLoading(false);
       })
-      .catch( err => {
+      .catch(err => {
         setError(true)
         setIsLoading(false);
       })
@@ -24,21 +24,28 @@ export const SingleWorld = () => {
 
   if (isLoading) {
     return <div>Loading...</div>;
-  } else if(error){
+  } else if (error) {
     return <div>Sorry the world could not be found</div>
   }
 
   const notables = world.notableItems
     ? world.notableItems.map((item, index) => (
       <NotableItem
-        key={index}
-        name={item.name}
-        lore={item.lore}
-        type={item.type}
+        date={item.date}
         img={item.img}
+        key={index}
+        lore={item.lore}
+        name={item.name}
         outcome={item.outcome}
         population={item.population}
+        type={item.type}
       />
+    ))
+    : null;
+
+  const history = world.history
+    ? world.history.map((event, index) => (
+      <p key={index}>{event}</p>
     ))
     : null;
 
@@ -50,17 +57,23 @@ export const SingleWorld = () => {
       <div className="world-details-box">
         <div className="longer-lore">LONG LORE: {world.longerLore}</div>
         <div className="bullet-points">
-          <p>Magic: {world.magicTechnology.magic? "Yes": "No"}</p>
+          <p>Magic: {world.magicTechnology.magic ? "Yes" : "No"}</p>
           <p>Genre: {world.magicTechnology.genre}</p>
           <p>Climate: {world.geoDynamics.climate}</p>
           <p>Size: {world.geoDynamics.size}</p>
           <p>Dominant Race: {world.dominantRace.name}</p>
-          <p>Poltics: {world.dominantRace.poltics}</p>
-          <p>Alignment: {world.geoDynamics.alignment}</p>
+          <p>Poltics: {world.dominantRace.politics}</p>
+          <p>Alignment: {world.dominantRace.alignment}</p>
         </div>
       </div>
-      <section className="notables-box">{notables}</section>
-      <section className="history-box">History</section>
+      <section className="notables-box">
+        <h2>Noteworthy Highlights</h2>
+        {notables}
+      </section>
+      <section className="history-box">
+        <h2>History</h2>
+        {history}
+      </section>
     </section>
   );
 };
