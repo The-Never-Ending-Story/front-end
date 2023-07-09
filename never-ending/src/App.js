@@ -4,6 +4,10 @@ import React, { useEffect } from 'react';
 import { getAllWorldsData } from './apiCalls'; 
 import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds } from './app/rootSlice';
+import { Route, Switch } from 'react-router-dom';
+import { SingleWorld } from './app/SingleWorld/SingleWorld';
+import { WelcomePage } from './app/WelcomePage/WelcomePage'
+import { Header } from './app/Header/Header.js'
 
 function App() {
 
@@ -14,24 +18,15 @@ const dispatch = useDispatch()
     .then(data => {
       dispatch(getDiscoveredWorlds(data.worlds))
     })
-  }, [] )
+  }, [dispatch] )
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Switch>
+        <Route path="/world/:id" render={() => ( <SingleWorld /> )}/>
+        <Route path="/" render={()=> ( <WelcomePage/> )}/>
+      </Switch>
     </div>
   );
 }
