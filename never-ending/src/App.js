@@ -3,10 +3,11 @@ import React, { useEffect } from 'react';
 import { getAllWorldsData } from './apiCalls'; 
 import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds } from './app/rootSlice';
+import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { SingleWorld } from './app/SingleWorld/SingleWorld';
 
 function App() {
-
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   useEffect( () => {
     getAllWorldsData()
@@ -17,6 +18,12 @@ const dispatch = useDispatch()
 
   return (
     <div className="App">
+      <Switch>
+        <Route path = "/world/:id" render = {() => (
+          <SingleWorld />
+          )}
+        />
+      </Switch>
     </div>
   );
 }
