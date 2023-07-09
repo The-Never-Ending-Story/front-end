@@ -33,8 +33,15 @@ export const SingleWorld = () => {
       <img src={world.img}></img>
       <div className="world-details-box">
         <div className="longer-lore">{world.longerLore}</div>
-        <div className="bullet-points"></div>
-
+        <div className="bullet-points">
+          <p>{world.magicTechnology.magic}</p>
+          <p>{world.magicTechnology.technologyLevel}</p>
+          <p>{world.geoDynmaics.climate}</p>
+          <p>{world.geoDynmaics.size}</p>
+          <p>{world.dominantRace.name}</p>
+          <p>{world.dominantRace.poltics}</p>
+          <p>{world.geoDynmaics.alignment}</p>
+        </div>
       </div>
       <section className="notables-box">
         {notables}
