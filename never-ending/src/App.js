@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { getAllWorldsData } from './apiCalls'; 
 import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds } from './app/rootSlice';
-import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { Route, Switch } from 'react-router-dom';
 import { SingleWorld } from './app/SingleWorld/SingleWorld';
 
 function App() {
