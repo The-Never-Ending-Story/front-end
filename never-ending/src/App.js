@@ -19,10 +19,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path = "/world/:id" render = {() => (
-          <SingleWorld />
-          )}
-        />
+        <Route path="/world/:id" render={() => ( <SingleWorld /> )}/>
       </Switch>
     </div>
   );
