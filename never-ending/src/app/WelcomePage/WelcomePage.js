@@ -11,7 +11,7 @@ export const WelcomePage = () => {
   }
   const discover = (id) => {
     console.log('discovering')
-    history.push(`/worlds/${id}`)
+    history.push(`/world/${id}`)
   }
   return (
     <main className="welcome-page">
