@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds } from './app/rootSlice';
 import { Route, Switch } from 'react-router-dom';
 import { SingleWorld } from './app/SingleWorld/SingleWorld';
+import { WelcomePage } from './app/WelcomePage/WelcomePage'
+import { Header } from './app/Header/Header.js'
 
 function App() {
   const dispatch = useDispatch()
@@ -14,12 +16,14 @@ function App() {
     .then(data => {
       dispatch(getDiscoveredWorlds(data.worlds))
     })
-  }, [] )
+  }, [dispatch] )
 
   return (
     <div className="App">
+      <Header/>
       <Switch>
         <Route path="/world/:id" render={() => ( <SingleWorld /> )}/>
+        <Route path="/" render={()=> ( <WelcomePage/> )}/>
       </Switch>
     </div>
   );
