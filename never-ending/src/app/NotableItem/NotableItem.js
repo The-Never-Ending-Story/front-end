@@ -1,7 +1,7 @@
 import React from "react";
 import './NotableItem.css'
 
-export const NotableItem = ({name, type, lore, img, race, date, outcome, alignment, population}) => {
+export const NotableItem = ({ imagePosition, name, type, lore, img, race, date, outcome, alignment, population }) => {
 
   let optionalFields;
   if (type === "person") {
@@ -14,8 +14,8 @@ export const NotableItem = ({name, type, lore, img, race, date, outcome, alignme
   } else if (type === "event") {
     optionalFields = (
       <div>
-        <p>outcome: {outcome}</p>
         <p>date: {date}</p>
+        <p>outcome: {outcome}</p>
       </div>
     );
   } else if (type === "place") {
@@ -24,13 +24,15 @@ export const NotableItem = ({name, type, lore, img, race, date, outcome, alignme
 
   return (
     <div className="notable-card">
-      <h3 className="notable-name">{name}</h3>
-      <img src={img} className={`notable-img-${imagePosition}`} alt={`Image of ${name}`} />
-      <div>
-        <p>type: {type}</p>
-        {optionalFields}
+      <div className="notable-wrapper">
+        <img src={img} className={`notable-img img-${imagePosition}`} alt={`Image of ${name}`} />
+        <div className="notable-text">
+          <h3 className="notable-name">{name}</h3>
+          <p>type: {type}</p>
+          {optionalFields}
+          <p>{lore}</p>
+        </div>
       </div>
-      <p>lore: {lore}</p>
     </div>
   )
 }

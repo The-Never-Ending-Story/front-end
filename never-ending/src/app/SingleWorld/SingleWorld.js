@@ -55,7 +55,7 @@ export const SingleWorld = () => {
 
     <section className="single-world-view">
       <div className="world-detail-wrapper">
-        <img className="world-img" src={world.img} alt={`Image of %{world.name}`} />
+        <img className="world-img" src={world.img} alt={`Image of ${world.name}`} />
         <div className="world-details-box">
           <h1>{world.name}</h1>
           <div className="bullet-points">
@@ -94,11 +94,9 @@ export const SingleWorld = () => {
                 </tr>
               </tbody>
             </table>
- 
             <p className="longer-lore">
-              {/* {world.longerLore} */}
-              Mythos, a captivating fantasy realm, mesmerizes with its ethereal beauty. Towering spires reach towards a resplendent sky, where swirling constellations cast a celestial glow. Lush forests breathe with magical creatures, their melodious whispers harmonizing with the babbling rivers. Ancient ruins, adorned with intricate runes, hint at a forgotten history. Mythical beings, from elegant unicorns to majestic dragons, roam freely, their presence igniting wonder in all who encounter them. Sorcerers, wielding arcane powers, craft spells that dance in kaleidoscopic hues. In Mythos, dreams intertwine with reality, and every step unravels untold mysteries, immersing explorers in a realm where enchantment reigns supreme.
-              </p>
+              {world.longerLore}
+            </p>
           </div>
         </div>
       </div>

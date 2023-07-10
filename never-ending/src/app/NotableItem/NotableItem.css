@@ -1,15 +1,28 @@
-.notables-box{
-  border: 1px green solid;
-}
-
 .notable-card{
-  border: 1px purple solid;
+  padding: 25px;
+}
+.notable-wrapper{
+  display: flex;
 }
 
-.notable-img-left {
-  float: left;
+.notable-img{
+  width: 50vw;
 }
 
-.notable-img-right {
-  float: right;
+.img-left {
+  flex-direction: row;
+}
+
+.img-right {
+  flex-direction: row-reverse;
+}
+
+
+
+.notable-text{
+  padding: 0px 50px;
+}
+
+.notable-text p{
+  text-align: left;
 }
