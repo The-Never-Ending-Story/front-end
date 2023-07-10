@@ -9,8 +9,7 @@ import { WelcomePage } from './app/WelcomePage/WelcomePage'
 import { Header } from './app/Header/Header.js'
 
 function App() {
-
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   useEffect( () => {
     getAllWorldsData()

@@ -1,17 +1,38 @@
 import React from "react";
+import './NotableItem.css'
 
-export const NotableItem = ({name, type, lore, img, date, outcome}) => {
-/// layout is also super janky since i wasn't able to run the App in browser. 
+export const NotableItem = ({ imagePosition, name, type, lore, img, race, date, outcome, alignment, population }) => {
+
+  let optionalFields;
+  if (type === "person") {
+    optionalFields = (
+      <div>
+        <p>race: {race}</p>
+        <p>alignment: {alignment}</p>
+      </div>
+    );
+  } else if (type === "event") {
+    optionalFields = (
+      <div>
+        <p>date: {date}</p>
+        <p>outcome: {outcome}</p>
+      </div>
+    );
+  } else if (type === "place") {
+    optionalFields = <p>population: {population}</p>;
+  }
+
   return (
     <div className="notable-card">
-      <h3 className="notable-name">{name}</h3>
-      <img src={img}></img>
-      <div>
-        <p>type: {type}</p>
-        <p>outcome: {outcome}</p>
-        <p>date: {date}</p>
+      <div className="notable-wrapper">
+        <img src={img} className={`notable-img img-${imagePosition}`} alt={`Image of ${name}`} />
+        <div className="notable-text">
+          <h3 className="notable-name">{name}</h3>
+          <p>type: {type}</p>
+          {optionalFields}
+          <p>{lore}</p>
+        </div>
       </div>
-      <p>lore:{lore}</p>
     </div>
   )
 }
