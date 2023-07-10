@@ -1,4 +1,5 @@
 import React from "react";
+import './NotableItem.css'
 
 export const NotableItem = ({name, type, lore, img, date, outcome}) => {
 

@@ -1,0 +1,52 @@
+.single-world-view {
+  border: 1px red solid;
+  padding: 25px;
+}
+
+.world-detail-wrapper {
+  display: flex;
+
+}
+
+.world-img {
+  width: 50vw;
+}
+
+.world-details-box {
+  border: blue 1px solid;
+  padding: 0px 50px;
+}
+
+.world-details-box p {
+ text-align: left;
+}
+
+.center-table {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  /* border: red 1px solid; */
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.center-table th, 
+.center-table td {
+  border: 1px solid black;
+}
+
+.center-table th { 
+  text-align: center;
+  background-color: lightgray;
+}
+
+
+
+.politics-cell {
+  text-align: left;
+}
+
+.history-box {
+  border: 1px lightgreen solid;
+}
