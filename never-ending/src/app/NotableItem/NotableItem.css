@@ -6,3 +6,10 @@
   border: 1px purple solid;
 }
 
+.notable-img-left {
+  float: left;
+}
+
+.notable-img-right {
+  float: right;
+}

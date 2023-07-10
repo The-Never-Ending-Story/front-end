@@ -31,14 +31,17 @@ export const SingleWorld = () => {
   const notables = world.notableItems
     ? world.notableItems.map((item, index) => (
       <NotableItem
-        date={item.date}
-        img={item.img}
         key={index}
-        lore={item.lore}
+        imagePositon={index % 2 === 0 ? 'left' : 'right'}
         name={item.name}
+        type={item.type}
+        lore={item.lore}
+        img={item.img}
+        race={item.race}
+        alignment={item.alignment}
+        date={item.date}
         outcome={item.outcome}
         population={item.population}
-        type={item.type}
       />
     ))
     : null;
