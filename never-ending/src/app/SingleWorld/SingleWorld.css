@@ -1,0 +1,40 @@
+.single-world-view {
+  padding: 25px;
+}
+
+.world-detail-wrapper {
+  display: flex;
+}
+
+.world-img {
+  width: 50vw;
+}
+
+.world-details-box {
+  padding: 0px 50px;
+}
+
+.world-details-box p {
+ text-align: left;
+}
+
+.center-table {
+  width: 85%;
+  margin: 15px auto 0;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.center-table th, 
+.center-table td {
+  border: 1px solid black;
+}
+
+.center-table th { 
+  text-align: center;
+  background-color: lightgray;
+}
+
+.politics-cell {
+  text-align: left;
+}

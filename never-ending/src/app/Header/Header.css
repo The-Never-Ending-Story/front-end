@@ -1,0 +1,10 @@
+.header-container {
+  height: 15vh;
+  background-color:rgb(124, 180, 228);
+  text-decoration: none;
+}
+
+.header-text {
+  width: 13rem;
+  display: flex;
+}

@@ -3,7 +3,7 @@ import React from  'react';
 import { useSelector } from 'react-redux';
 import WorldCard from '../WorldCard/WorldCard';
 
-function WorldBrowser() {
+export const WorldBrowser = () => {
 
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
 
@@ -16,4 +16,3 @@ function WorldBrowser() {
   );
 }
 
-export default WorldBrowser;

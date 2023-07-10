@@ -7,7 +7,7 @@ function WorldCard({ world }) {
   const { id, img, name, preview } = world
   console.log(world)
   return (
-    <NavLink to={`/worlds/${id}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+    <NavLink to={`/world/${id}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
       <div className='world-card-container'>
         <img className='world-image' src={img}/>
         <div className='world-card-text-container'>

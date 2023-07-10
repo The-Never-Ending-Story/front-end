@@ -1,0 +1,40 @@
+.welcome-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/public/future_cities2.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-menu {
+  background-color:rgba(228, 206, 179, 0.908);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: .25rem black solid;
+  border-radius: .25rem;
+  padding: 3rem;
+  max-width: 65vw;
+  max-height: 25vh;
+}
+
+.initial-text {
+  margin: 1rem;
+  font-size: 1rem;
+  padding: .25rem;
+}
+
+.intro-text {
+  margin: 1rem;
+  font-size: 1.25rem;
+  padding: .25rem;
+}
+
+.button-container {
+  display:flex;
+  margin: .45rem;
+  padding: .25rem;
+}
+.menu-button {
+}
