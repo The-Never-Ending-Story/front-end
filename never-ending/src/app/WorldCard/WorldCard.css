@@ -1,0 +1,14 @@
+.world-card-container {
+  display: flex;
+  border: solid black 2px;
+  width: 500px;
+}
+
+.world-image {
+  height: 100px;
+}
+
+.world-card-text-container {
+  display: flex;
+  flex-direction: column;
+}
