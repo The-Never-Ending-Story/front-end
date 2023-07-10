@@ -15,7 +15,7 @@ const dispatch = useDispatch()
     .then(data => {
       dispatch(getDiscoveredWorlds(data.worlds))
     })
-  }, [] )
+  }, [dispatch] )
 
   return (
     <div className="App">
