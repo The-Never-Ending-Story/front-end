@@ -1,0 +1,28 @@
+.notable-card{
+  padding: 25px;
+}
+.notable-wrapper{
+  display: flex;
+}
+
+.notable-img{
+  width: 50vw;
+}
+
+.img-left {
+  flex-direction: row;
+}
+
+.img-right {
+  flex-direction: row-reverse;
+}
+
+
+
+.notable-text{
+  padding: 0px 50px;
+}
+
+.notable-text p{
+  text-align: left;
+}

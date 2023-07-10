@@ -1,13 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useEffect } from 'react';
 import { getAllWorldsData } from './apiCalls'; 
 import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds } from './app/rootSlice';
+import { Route, Switch } from 'react-router-dom';
+import { SingleWorld } from './app/SingleWorld/SingleWorld';
 
 function App() {
-
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   useEffect( () => {
     getAllWorldsData()
@@ -18,20 +18,9 @@ const dispatch = useDispatch()
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/world/:id" render={() => ( <SingleWorld /> )}/>
+      </Switch>
     </div>
   );
 }
