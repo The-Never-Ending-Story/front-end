@@ -1,7 +1,6 @@
 body {
-  background: linear-gradient(-45deg, #1e2c2a, #4a7166ed, #15be8b, #69dc9e,#f1f6f987);
-  background-size: 400% 400%;
-  animation: gradient 15s linear infinite;
+  background-image: url('../../../public/future_cities2.png');
+  background-size: 100%;
   height: 100vh;
 }
 
@@ -15,7 +14,7 @@ body {
 }
 
 .welcome-menu {
-  background-color:#f1f6f9aa;
+  background-color:#3b5b52;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +22,7 @@ body {
   border-radius: .75rem;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
 	animation: borderRotate var(--d) linear infinite forwards;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   padding: 3rem;
   max-width: 65vw;
   max-height: 25vh;
@@ -42,14 +42,73 @@ body {
 
 .button-container {
   display:flex;
+  justify-content: space-between;
+  background:#4a7166;
+  border-radius:.75rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   margin: .45rem;
   padding: .25rem;
-}
-.menu-button {
+  min-width: 20rem;
 }
 
+.menu-button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+/* 
+.menu-button:before {
+  content: "";
+  background: conic-gradient(#4a7166ed, #15be8b, #69dc9e,#f1f6f987);
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  animation: glowing-menu-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 7px;
+}
+
+@keyframes glowing-menu-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.menu-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+} */
+
 @keyframes borderRotate {
-  25% {
+  /* 25% {
     --angle:105deg;
   }
   50% {
@@ -57,30 +116,18 @@ body {
   }
   75% {
     --angle:315deg;
-  }
+  } */
   100% {
     --angle: 420deg;
   }
 }
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 :root {
 	--d: 2500ms;
 	--angle: 90deg;
 	--gradX: 100%;
 	--gradY: 50%;
-	--c1: #f1f6f9;
-	--c2: rgba(168, 239, 255, 0.1);
+	--c1: #f1f6f992;
+	--c2: #4a7166;
 }
 @property --angle {
   syntax: '<angle>';
@@ -99,7 +146,6 @@ body {
   initial-value: 0%;
   inherits: true;
 }
-
 /*
 
 @keyframes borderRadial {

@@ -21,10 +21,10 @@ export const WelcomePage = () => {
       <p className="intro-text">
         Please select a starting place - either browse worlds that have been discovered thus far, or travel to a new part of this plane!
       </p>
-      <span className="button-container">
+      <div className="button-container">
         <button className="menu-button" onClick={()=> explore()}>Explore</button>
         <button className="menu-button" onClick={()=> discover(1)}>Discover</button>
-      </span>
+      </div>
     </section>
     </main>
   )

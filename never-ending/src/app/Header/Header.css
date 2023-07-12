@@ -5,6 +5,7 @@
 }
 
 .header-text {
+  font-family: 'MEXURYTRIAL', sans-serif; 
   width: 13rem;
   display: flex;
 }

@@ -5,7 +5,6 @@ import './Header'
 export const Header = () => {
   const history = useHistory();
   const home = () => {
-    console.log('going home!')
     history.push('/')
   }
   return (
