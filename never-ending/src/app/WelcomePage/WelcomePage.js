@@ -6,15 +6,14 @@ export const WelcomePage = () => {
   const history = useHistory();
 
   const explore = () => {
-    console.log('exploring')
     history.push('/worlds')
   }
   const discover = (id) => {
-    console.log('discovering')
     history.push(`/world/${id}`)
   }
   return (
     <main className="welcome-page">
+    <div className="slider-thumb"></div>
     <section className="welcome-menu">
       <div className="initial-text">
         Welcome! This is a page to inform you of your options in this upcoming HyperLoom experience:

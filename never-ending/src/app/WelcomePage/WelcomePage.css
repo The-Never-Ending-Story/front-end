@@ -1,18 +1,18 @@
 .welcome-page {
   height: 100vh;
   width: 100vw;
-  background-image: url('/public/future_cities2.png');
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .welcome-menu {
-  background-color:rgba(228, 206, 179, 0.908);
+  background-color:#4a716670;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: .25rem black solid;
+  border: .25rem #1e2c2a solid;
   border-radius: .25rem;
   padding: 3rem;
   max-width: 65vw;
@@ -37,4 +37,39 @@
   padding: .25rem;
 }
 .menu-button {
+}
+
+.slider-thumb::before {
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  display:block;
+	content: "";
+	width: 100em;
+	height: 70rem;
+	background: radial-gradient(#1e2c2a, #4a7166ed, #15be8b, #69dc9e,#f1f6f987);
+	border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+	will-change: border-radius, transform, opacity;
+	animation: sliderShape 5s ease-in infinite;
+	z-index: -1;
+	-webkit-animation: sliderShape 5s ease-in infinite;
+  filter:blur(.15rem);
+  overflow:hidden;
+}
+@keyframes sliderShape{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34%{
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
 }
