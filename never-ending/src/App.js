@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Switch>
         <Route path="/world/:id" render={() => ( <SingleWorld /> )}/>
         <Route path="/worlds" render={() => ( <WorldBrowser /> )} />
