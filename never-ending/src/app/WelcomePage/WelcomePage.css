@@ -21,9 +21,9 @@ body {
   flex-direction: column;
   align-items: center;
   border: .75rem #43675ded solid;
-  border-radius: .75rem;
+  border-radius: .25rem;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-	animation: borderRotate var(--d) linear infinite forwards;
+	animation: borderRotate var(--d) ease-out infinite forwards;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   padding: 3rem;
   max-width: 65vw;
@@ -118,13 +118,13 @@ body {
 
 @keyframes borderRotate {
   /* 25% {
-    --angle:105deg;
+    --angle: 105deg;
   }
   50% {
-    --angle:210deg;
+    --angle: 210deg;
   }
   75% {
-    --angle:315deg;
+    --angle: 315deg;
   } */
   100% {
     --angle: 420deg;
