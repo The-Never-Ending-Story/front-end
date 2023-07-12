@@ -10,7 +10,7 @@ function WorldCard({ world }) {
     <NavLink to={`/world/${id}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
       <div className='world-card-container'>
         <img className='world-image' src={img}/>
-        <div className='world-card-text-container'>
+        <div className='world-card-text-container' alt='PLACEHOLDER'>
           <p className='world-name'>{name}</p>
           <p className='world-preview'>{preview}</p>
         </div>

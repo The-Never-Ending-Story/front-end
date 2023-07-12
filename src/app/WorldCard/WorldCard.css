@@ -1,7 +1,23 @@
 .world-card-container {
   display: flex;
-  border: solid black 2px;
-  width: 100%;
+  width: 50em;
+  height: 8em;
+  margin: 1em;
+  transition: all 150ms ease-in-out;
+  align-items: center;
+  padding-left: 1em;
+  color: #69dc9e;
+  font-family: Futura;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background-color: rgba(18, 21, 21, 0.642)
+}
+
+.world-card-container:hover {
+  transform: scale(1.025);
+  border-image-slice: 1;
+  box-shadow: 3px 3px 5px 6px rgba(35, 200, 32, 0.539);
 }
 
 .world-image {
@@ -11,4 +27,6 @@
 .world-card-text-container {
   display: flex;
   flex-direction: column;
+  align-content: left;
+  padding-left: 1em;
 }
