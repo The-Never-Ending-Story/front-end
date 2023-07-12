@@ -1,3 +1,10 @@
+body {
+  background: linear-gradient(-45deg, #1e2c2a, #4a7166ed, #15be8b, #69dc9e,#f1f6f987);
+  background-size: 400% 400%;
+  animation: gradient 15s linear infinite;
+  height: 100vh;
+}
+
 .welcome-page {
   height: 100vh;
   width: 100vw;
@@ -8,12 +15,14 @@
 }
 
 .welcome-menu {
-  background-color:#4a716670;
+  background-color:#f1f6f9aa;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: .25rem #1e2c2a solid;
-  border-radius: .25rem;
+  border: 1rem #4a7166ed solid;
+  border-radius: .75rem;
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
   padding: 3rem;
   max-width: 65vw;
   max-height: 25vh;
@@ -39,6 +48,83 @@
 .menu-button {
 }
 
+@keyframes borderRotate {
+  25% {
+    --angle:105deg;
+  }
+  50% {
+    --angle:210deg;
+  }
+  75% {
+    --angle:315deg;
+  }
+  100% {
+    --angle: 420deg;
+  }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #f1f6f9;
+	--c2: rgba(168, 239, 255, 0.1);
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+/*
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+/* 
 .slider-thumb::before {
   position: absolute;
   top: -15%;
@@ -72,4 +158,4 @@
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
     transform: translate3d(0,-3px,0) rotateZ(0.01deg);
   }
-}
+} */
