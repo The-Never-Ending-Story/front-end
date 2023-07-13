@@ -6,6 +6,7 @@ import WorldCard from '../WorldCard/WorldCard';
 export const WorldBrowser = () => {
 
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
+  console.log(displayedWorlds)
 
   return (
     <div className='world-browser-container'>
