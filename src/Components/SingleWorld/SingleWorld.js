@@ -72,9 +72,9 @@ export const SingleWorld = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>{world.magictechnology.magic ? "Yes" : "No"}</td>
-                  <td>{world.magictechnology.technologyLevel}</td>
-                  <td>{world.magictechnology.genre}</td>
+                  <td>{world.magicTechnology.magic ? "Yes" : "No"}</td>
+                  <td>{world.magicTechnology.technology}</td>
+                  <td>{world.magicTechnology.genre}</td>
                 </tr>
               </tbody>
             </table>
