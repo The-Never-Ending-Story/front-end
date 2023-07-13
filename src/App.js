@@ -16,7 +16,7 @@ function App() {
     getAllWorldsData()
     .then(data => {
       dispatch(getDiscoveredWorlds(data.worlds))
-    })
+    }).catch(err => console.log(err))
   }, [dispatch] )
 
   return (
