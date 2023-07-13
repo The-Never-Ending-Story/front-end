@@ -56,7 +56,7 @@ export const SingleWorld = () => {
 
     <section className="single-world-view">
       <div className="world-detail-wrapper">
-        <img className="world-img" src={world.img} alt={`Image of ${world.name}`} />
+        <img className="world-img" src={world.img} alt={`${world.name}`} />
         <div className="world-details-box">
           <h1>{world.name}</h1>
           <div className="bullet-points">
