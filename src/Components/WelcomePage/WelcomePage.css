@@ -1,31 +1,48 @@
+body {
+  font-family: 'DYLOVASTUFF', sans-serif;
+  background-image: url('https://cdn.midjourney.com/3d47c815-3670-49a7-84bc-efe8d6b541da/0_3.webp');
+  background-size: 100%;
+  height: 100vh;
+}
+
 .welcome-page {
   height: 100vh;
   width: 100vw;
-  background-image: url('/public/future_cities2.png');
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .welcome-menu {
-  background-color:rgba(228, 206, 179, 0.908);
+  background: #3b5b52b6;
+  background: radial-gradient(circle, rgba(59,91,82,0.9276304271708683) 13%, rgba(21,190,139,0.7343531162464986) 31%, rgba(30, 44, 42, 0.791) 59%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: .25rem black solid;
+  border: .75rem #43675ded solid;
   border-radius: .25rem;
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) ease-out infinite forwards;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   padding: 3rem;
   max-width: 65vw;
   max-height: 25vh;
 }
 
 .initial-text {
+  border-radius: .25rem;
+  color: #69dc9fe2;
+  background:rgba(59, 91, 82, 0.826); 
   margin: 1rem;
   font-size: 1rem;
   padding: .25rem;
 }
 
 .intro-text {
+  background:rgba(59, 91, 82, 0.826);
+  border-radius: .25rem;
+  color: #69dc9f;
   margin: 1rem;
   font-size: 1.25rem;
   padding: .25rem;
@@ -33,8 +50,167 @@
 
 .button-container {
   display:flex;
+  justify-content: space-between;
+  background:#4a7166;
+  border-radius:.75rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   margin: .45rem;
   padding: .25rem;
+  min-width: 20rem;
 }
+
 .menu-button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: #69dc9fb0;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'DYLOVASTUFF', sans-serif;
 }
+/* 
+.menu-button:before {
+  content: "";
+  background: conic-gradient(#4a7166ed, #15be8b, #69dc9e,#f1f6f987);
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  animation: glowing-menu-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 7px;
+}
+
+@keyframes glowing-menu-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.menu-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+} */
+
+@keyframes borderRotate {
+  /* 25% {
+    --angle: 105deg;
+  }
+  50% {
+    --angle: 210deg;
+  }
+  75% {
+    --angle: 315deg;
+  } */
+  100% {
+    --angle: 420deg;
+  }
+}
+:root {
+	--d: 5000ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #f1f6f992;
+	--c2: #4a7166;
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+/*
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+/* 
+.slider-thumb::before {
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  display:block;
+	content: "";
+	width: 100em;
+	height: 70rem;
+	background: radial-gradient(#1e2c2a, #4a7166ed, #15be8b, #69dc9e,#f1f6f987);
+	border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+	will-change: border-radius, transform, opacity;
+	animation: sliderShape 5s ease-in infinite;
+	z-index: -1;
+	-webkit-animation: sliderShape 5s ease-in infinite;
+  filter:blur(.15rem);
+  overflow:hidden;
+}
+@keyframes sliderShape{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34%{
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
+} */
