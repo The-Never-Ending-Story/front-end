@@ -1,5 +1,5 @@
 export function getAllWorldsData () {
-  return fetch('https://7bf33ed3-7948-40dc-a8ab-0be48d89e61c.mock.pstmn.io/worlds')
+  return fetch('https://hyperloom-d209dae18b26.herokuapp.com/worlds?format=json')
   .then(response => {
     if(!response.ok) {
       throw new Error(response.status)
@@ -10,7 +10,7 @@ export function getAllWorldsData () {
 }
 
 export function getSingleWorldData (id) {
-  return fetch(`https://7bf33ed3-7948-40dc-a8ab-0be48d89e61c.mock.pstmn.io/world/${id}`)
+  return fetch(`https://hyperloom-d209dae18b26.herokuapp.com/worlds/${id}?format=json`)
   .then(response => {
     if(!response.ok) {
       throw new Error(response.status)
