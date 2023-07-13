@@ -21,7 +21,7 @@ export const SingleWorld = () => {
         setError(true)
         setIsLoading(false);
       })
-  }, []);
+  }, [id]);
 
   if (isLoading) {
     return <div>Loading...</div>;
