@@ -25,7 +25,7 @@ export const NotableItem = ({ imagePosition, name, type, lore, img, race, date, 
   return (
     <div className="notable-card">
       <div className="notable-wrapper">
-        <img src={img} className={`notable-img img-${imagePosition}`} alt={`Image of ${name}`} />
+        <img src={img} className={`notable-img img-${imagePosition}`} alt={`${name}`} />
         <div className="notable-text">
           <h3 className="notable-name">{name}</h3>
           <p>type: {type}</p>
