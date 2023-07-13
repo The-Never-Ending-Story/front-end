@@ -13,7 +13,8 @@ export const SingleWorld = () => {
   useEffect(() => {
     getSingleWorldData(id)
       .then((data) => {
-        setWorld(data.world);
+        setWorld(data);
+        console.log(data)
         setIsLoading(false);
       })
       .catch(err => {
@@ -46,10 +47,10 @@ export const SingleWorld = () => {
     ))
     : null;
 
-  const history = world.history ? world.history.map((event, index) => (
-    <p key={index}>{event}</p>
-  ))
-    : null;
+  // const history = world.history ? world.history.map((event, index) => (
+  //   <p key={index}>{event}</p>
+  // ))
+  //   : null;
 
   return (
 
@@ -59,8 +60,8 @@ export const SingleWorld = () => {
         <div className="world-details-box">
           <h1>{world.name}</h1>
           <div className="bullet-points">
-            <p>Size: {world.geoDynamics.size}</p>
-            <p>Climate: {world.geoDynamics.climate}</p>
+            <p>Size: {world.geodynamics.size}</p>
+            <p>Climate: {world.geodynamics.climate}</p>
             <table className="center-table">
               <thead>
                 <tr>
@@ -71,9 +72,9 @@ export const SingleWorld = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>{world.magicTechnology.magic ? "Yes" : "No"}</td>
-                  <td>{world.magicTechnology.technologyLevel}</td>
-                  <td>{world.magicTechnology.genre}</td>
+                  <td>{world.magictechnology.magic ? "Yes" : "No"}</td>
+                  <td>{world.magictechnology.technologyLevel}</td>
+                  <td>{world.magictechnology.genre}</td>
                 </tr>
               </tbody>
             </table>
@@ -86,11 +87,11 @@ export const SingleWorld = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>{world.dominantRace.name}</td>
-                  <td>{world.dominantRace.alignment}</td>
+                  <td>{world.species.name}</td>
+                  <td>{world.species.alignment}</td>
                 </tr>
                 <tr>
-                  <td className="politics-cell" colSpan="2">Politics: {world.dominantRace.politics}</td>
+                  <td className="politics-cell" colSpan="2">Politics: {world.species.politics}</td>
                 </tr>
               </tbody>
             </table>
@@ -106,7 +107,7 @@ export const SingleWorld = () => {
       </section>
       <section className="history-box">
         <h2>History</h2>
-        {history}
+        {/* {history} */}
       </section>
     </section>
   );

@@ -15,7 +15,8 @@ function App() {
   useEffect( () => {
     getAllWorldsData()
     .then(data => {
-      dispatch(getDiscoveredWorlds(data.worlds))
+      console.log(data)
+      dispatch(getDiscoveredWorlds(data))
     })
   }, [dispatch] )
 
@@ -23,7 +24,7 @@ function App() {
     <div className="App">
       <Header/>
       <Switch>
-        <Route path="/world/:id" render={() => ( <SingleWorld /> )}/>
+        <Route path="/worlds/:id" render={() => ( <SingleWorld /> )}/>
         <Route path="/worlds" render={() => ( <WorldBrowser /> )} />
         <Route path="/" render={()=> ( <WelcomePage/> )}/>
       </Switch>
