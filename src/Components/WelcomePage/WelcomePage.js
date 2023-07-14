@@ -1,16 +1,9 @@
 import React from "react";
-import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './WelcomePage.css'
 
 export const WelcomePage = () => {
-  const history = useHistory();
 
-  const explore = () => {
-    history.push('/worlds')
-  }
-  const discover = (id) => {
-    history.push(`/world/${id}`)
-  }
   return (
     <main className="welcome-page">
     <section className="welcome-menu">
@@ -21,8 +14,12 @@ export const WelcomePage = () => {
       Explore barely known worlds, or discover new domains:
       </p>
       <div className="button-container">
-        <button className="menu-button" onClick={()=> explore()}>Explore</button>
-        <button className="menu-button" onClick={()=> discover(1)}>Discover</button>
+        <Link to='/worlds'>
+        <button className="menu-button">Explore</button>
+        </Link>
+        <Link to='/world/1'>
+        <button className="menu-button">Discover</button>
+        </Link>
       </div>
     </section>
     </main>

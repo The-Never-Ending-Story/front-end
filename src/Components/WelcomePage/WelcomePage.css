@@ -1,6 +1,6 @@
 body {
   font-family: 'Share-TechMono', sans-serif;
-  background-image: url('/Users/shane/mod4/capstone/front-end/src/assets/HyperLoom.png');
+  background-image: url('../../assets/HyperLoom.png');
   background-size: 100%;
   height: 100vh;
 }
