@@ -28,8 +28,8 @@ export const SingleWorld = () => {
   } else if (error) {
     return <div>Sorry the world could not be found</div>
   }
-
-  const notables = world.notableItems
+  
+  const highlights = world.notableItems
     ? world.notableItems.map((item, index) => (
       <NotableItem
         key={index}
@@ -47,10 +47,7 @@ export const SingleWorld = () => {
     ))
     : null;
 
-  // const history = world.history ? world.history.map((event, index) => (
-  //   <p key={index}>{event}</p>
-  // ))
-  //   : null;
+  const history = world.history || 'This world\'s history is unknown' 
 
   return (
 
@@ -60,8 +57,7 @@ export const SingleWorld = () => {
         <div className="world-details-box">
           <h1>{world.name}</h1>
           <div className="bullet-points">
-            <p>Size: {world.geodynamics.size}</p>
-            <p>Climate: {world.geodynamics.climate}</p>
+            <p>Climate: {world.geoDynamics.climate}</p>
             <table className="center-table">
               <thead>
                 <tr>
@@ -81,7 +77,7 @@ export const SingleWorld = () => {
             <table className="center-table">
               <thead>
                 <tr>
-                  <th>Dominant Race</th>
+                  <th>Notable Races</th>
                   <th>Alignment</th>
                 </tr>
               </thead>
@@ -103,11 +99,11 @@ export const SingleWorld = () => {
       </div>
       <section className="notables-box">
         <h2>Noteworthy Highlights</h2>
-        {notables}
+        {/* {notables} */}
       </section>
       <section className="history-box">
         <h2>History</h2>
-        {/* {history} */}
+        {history}
       </section>
     </section>
   );

@@ -15,7 +15,7 @@ export const Header = () => {
       <Link to='/'>
       <img className ='header-logo'src={logo} alt='hyper loom'/>
       </Link>
-      <Link to='world/1'>
+      <Link to='world/2'>
       <img className ='header-button discover'src={single} alt='explore button'/>
       </Link>
     </nav>
