@@ -17,7 +17,7 @@ export const WelcomePage = () => {
         <Link to='/worlds'>
         <button className="menu-button">Explore</button>
         </Link>
-        <Link to='/world/1'>
+        <Link to='/world/2'>
         <button className="menu-button">Discover</button>
         </Link>
       </div>
