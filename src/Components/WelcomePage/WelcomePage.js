@@ -8,7 +8,7 @@ export const WelcomePage = () => {
     <main className="welcome-page">
     <section className="welcome-menu">
       <div className="initial-text">
-        Welcome to the HyperLoom!
+        Introducing HyperLoom
       </div>
       <p className="intro-text">
       Explore barely known worlds, or discover new domains:

@@ -1,7 +1,9 @@
 body {
   font-family: 'Share-TechMono', sans-serif;
-  background-image: url('../../assets/HyperLoom.png');
-  background-size: 100%;
+  background-image: url('../../assets/background.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -37,7 +39,7 @@ body {
   color: #69dc9fe2;
   background:rgba(59, 91, 82, 0.65); 
   margin: 1rem;
-  font-size: 1rem;
+  font-size: 2rem;
   padding: .35rem;
 }
 
