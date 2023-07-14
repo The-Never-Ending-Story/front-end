@@ -1,14 +1,5 @@
-body {
-  font-family: 'Share-TechMono', sans-serif;
-  background-image: url('../../assets/background.webp');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
 .welcome-page {
-  height: 100%;
+  height: 30rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -19,38 +10,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-self: center;
-  margin-top: 12rem;
-  background: rgb(24,52,48);
-  background: radial-gradient(circle, rgba(24,52,48,0.91) 0%, rgba(188,202,179,0.81) 41%, rgba(42,51,52,0.98) 100%);
+  justify-self: flex-start;
+  background: rgb(3, 42, 37, .5);
   border: .75rem #43675ded solid;
   border-radius: .25rem;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
 	animation: borderRotate var(--d) ease-out infinite forwards;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   padding: 3rem;
   max-width: 65vw;
   max-height: 25vh;
 }
 
 .initial-text {
-  border-radius: .25rem;
-  border: 2px #bccab3e6 solid;
-  color: #69dc9fe2;
-  background:rgba(59, 91, 82, 0.65); 
+  color: white;
   margin: 1rem;
   font-size: 2rem;
-  padding: .35rem;
-}
-
-.descriptive-text {
-  background:rgba(59, 91, 82, 0.8);
-  border-radius: .25rem;
-  border: 2px #bccab3e6 solid;
-  color: #69dc9f;
-  margin: 1rem;
-  font-size: 1.25rem;
-  padding: .25rem;
 }
 
 .button-container {
@@ -78,8 +52,9 @@ body {
   touch-action: manipulation;
   font-family: 'DYLOVASTUFF', sans-serif;
 }
+
 .menu-button:hover {
-  animation: increase 4s ease-out;
+  animation: increase 2s ease-out;
 }
 
 @keyframes increase {
