@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getAllWorldsData } from '../../apiCalls.js'
 import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds } from '../rootSlice';
@@ -8,15 +8,23 @@ import { SingleWorld } from '../SingleWorld/SingleWorld';
 import { WelcomePage } from '../WelcomePage/WelcomePage'
 import { Header } from '../Header/Header.js'
 import { WorldBrowser } from '../WorldBrowser/WorldBrowser';
+import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
+import { Error } from '../Error/Error';
+
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false)
   const dispatch = useDispatch()
 
   useEffect( () => {
     getAllWorldsData()
     .then(data => {
-      console.log(data)
       dispatch(getDiscoveredWorlds(data))
-    }).catch(err => console.log(err))
+      setIsLoading(false);
+    }).catch(err => {
+      setError(true)
+        setIsLoading(false);
+    })
   }, [dispatch] )
 
   return (

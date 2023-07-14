@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { getSingleWorldData } from "../../apiCalls";
 import { NotableItem } from "../NotableItem/NotableItem";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
+import { Error } from "../Error/Error";
 import './SingleWorld.css'
 
 export const SingleWorld = () => {
@@ -14,8 +15,8 @@ export const SingleWorld = () => {
   useEffect(() => {
     getSingleWorldData(id)
       .then((data) => {
-        // setWorld(data);
-        // setIsLoading(false);
+        setWorld(data);
+        setIsLoading(false);
       })
       .catch(err => {
         setError(true)
@@ -26,7 +27,7 @@ export const SingleWorld = () => {
   if (isLoading) {
     return <LoadingIcon />;
   } else if (error) {
-    return <div>Sorry the world could not be found</div>
+    return <Error />
   }
 
   const notables = world.notableItems
