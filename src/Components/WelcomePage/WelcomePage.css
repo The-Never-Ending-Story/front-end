@@ -1,25 +1,26 @@
 body {
-  font-family: 'DYLOVASTUFF', sans-serif;
-  background-image: url('https://cdn.midjourney.com/3d47c815-3670-49a7-84bc-efe8d6b541da/0_3.webp');
+  font-family: 'Share-TechMono', sans-serif;
+  background-image: url('../../assets/HyperLoom.png');
   background-size: 100%;
   height: 100vh;
 }
 
 .welcome-page {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .welcome-menu {
-  background: #3b5b52b6;
-  background: radial-gradient(circle, rgba(59,91,82,0.9276304271708683) 13%, rgba(21,190,139,0.7343531162464986) 31%, rgba(30, 44, 42, 0.791) 59%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
+  margin-top: 12rem;
+  background: rgb(24,52,48);
+  background: radial-gradient(circle, rgba(24,52,48,0.91) 0%, rgba(188,202,179,0.81) 41%, rgba(42,51,52,0.98) 100%);
   border: .75rem #43675ded solid;
   border-radius: .25rem;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
@@ -32,16 +33,18 @@ body {
 
 .initial-text {
   border-radius: .25rem;
+  border: 2px #bccab3e6 solid;
   color: #69dc9fe2;
-  background:rgba(59, 91, 82, 0.826); 
+  background:rgba(59, 91, 82, 0.65); 
   margin: 1rem;
   font-size: 1rem;
-  padding: .25rem;
+  padding: .35rem;
 }
 
-.intro-text {
-  background:rgba(59, 91, 82, 0.826);
+.descriptive-text {
+  background:rgba(59, 91, 82, 0.8);
   border-radius: .25rem;
+  border: 2px #bccab3e6 solid;
   color: #69dc9f;
   margin: 1rem;
   font-size: 1.25rem;
@@ -51,20 +54,19 @@ body {
 .button-container {
   display:flex;
   justify-content: space-between;
-  background:#4a7166;
   border-radius:.75rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   margin: .45rem;
-  padding: .25rem;
+  padding: .45rem;
   min-width: 20rem;
 }
 
 .menu-button {
   padding: 0.6em 2em;
-  border: none;
+  border: 1px solid #bccab3e6;
+  box-shadow: #bccab3e6 0px 2px 4px, #bccab3e6 0px 7px 13px -3px, #bccab3e6 0px -3px 0px inset;
   outline: none;
-  color: #69dc9fb0;
-  background: #111;
+  color: #69dc9f;
+  background:#2c36383c;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -74,7 +76,29 @@ body {
   touch-action: manipulation;
   font-family: 'DYLOVASTUFF', sans-serif;
 }
-/* 
+.menu-button:hover {
+  animation: increase 4s ease-out;
+}
+
+@keyframes increase {
+  25% {
+    scale: 1.05;
+    background:#2c36383c;
+  }
+  50% {
+    scale: 1.10;
+    background:#2c363876;
+  }
+  75% {
+    scale: 1.15;
+    background:#2c3638af;
+  }
+  100% {
+    scale: 1.2;
+    background:#2C3638;
+  }
+}
+/* Glowing Button Effect - uses background layer shifting to seem animated -
 .menu-button:before {
   content: "";
   background: conic-gradient(#4a7166ed, #15be8b, #69dc9e,#f1f6f987);
@@ -131,11 +155,11 @@ body {
   }
 }
 :root {
-	--d: 5000ms;
+	--d:  10000ms;
 	--angle: 90deg;
 	--gradX: 100%;
 	--gradY: 50%;
-	--c1: #f1f6f992;
+	--c1: #CDD2CA;
 	--c2: #4a7166;
 }
 @property --angle {

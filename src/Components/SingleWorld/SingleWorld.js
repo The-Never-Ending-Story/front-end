@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useParams } from "react-router-dom";
 import { getSingleWorldData } from "../../apiCalls";
 import { NotableItem } from "../NotableItem/NotableItem";
 import './SingleWorld.css'
