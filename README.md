@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# HyperLoom:
+[//]: <>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users new expansive fictional worlds. Users are able to browse previously generated worlds or create new ones with the click of a button. Hyperloom aims to foster the imagination and excitement of its users while providing them with high resolution images to give the sense of an immersive experience. 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Technologies
+- React
+- Router
+- Cypress 
+- GitHub Project Board
+- Miro - planning 
+- Google Sheets - daily standup
 
-### `npm start`
+#### Application is deployed live at:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Preview of App:
+[//]: <>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Context:
+[//]: <>
 
-### `npm run build`
+Hyperloom was created over a 2 week sprint as part of Turings software development program as part of the final ‘capstone’ project. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributors:
+[//]: <>
+FE: \
+[Adam Meza](https://github.com/Adam-Meza) \
+[Priscilla Paxton](https://github.com/priscillaapaxton) \
+[Sharie Trachsel](https://github.com/sdtrachsel) \
+[Shane Misra](https://github.com/sdmisra) 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+BE: \
+[Andrew Bowman](https://github.com/abwmn) \
+[Sean Cowans](https://github.com/brandenge) \
+[Branden Ge](https://github.com/sjcowans) 
 
-### `npm run eject`
+## Learning Goals:
+[//]: <>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Challenges & Wins:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Future Feature Ideas:
+[//]: <>
+- Login feature for persistent world saving
+- User input for customized world generation results
+- Further depth to world characteristics
 
-## Learn More
+## Installation Instructions:
+[//]: <>
+-
+-
+-
+## Testing Instructions:
+[//]: <>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To run the test suite associated with the classes behind the scenes and how they interact: 
+Run 'npm run cypress' from the terminal while within the main directory of the application and select E2E Testing, and your chosen browser in the following window.
