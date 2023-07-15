@@ -9,9 +9,9 @@ h2 {
   justify-content: space-between;
   align-items:center;
   display: flex;
-  background: rgb(59,91,82);
+  /* background: rgb(59,91,82); */
   background: radial-gradient(
-    circle,rgb(3, 42, 37) 30%,rgb(80, 158, 146) 40%,rgb(3, 42, 37) 44%);
+    circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
   line-height: 2rem;
 }
 
