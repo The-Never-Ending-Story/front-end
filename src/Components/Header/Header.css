@@ -22,12 +22,19 @@ h2 {
 }
 
 .header-button {
-  padding: .2rem;
-  max-height: 7vh;
-  background: radial-gradient(circle, rgba(203, 207, 200, 0.629) 7%, rgba(42,51,52,0.83) 71%, rgba(42,51,52,0.83) 90%);
-  border:rgba(188, 202, 179, 0.696) solid 2px;
-  border-radius: .65rem;
+    padding: 0.6em 2em;
+    outline: none;
+    border: none;
+    background: rgba(185, 229, 205, 0.5);
+    color:white;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: 'DYLOVASTUFF', sans-serif;
 }
+  
 
 .header-container:hover {
   animation: close-in ease 1s;

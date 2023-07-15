@@ -17,10 +17,10 @@ export const WelcomePage = () => {
         </p>
         <div className="button-container">
           <Link to='/worlds'>
-          <button className="menu-button">Explore</button>
+            <button className="menu-button">Explore</button>
           </Link>
           <Link to='/world/2'>
-          <button className="menu-button">Create</button>
+            <button className="menu-button">Create</button>
           </Link>
         </div>
       </section>

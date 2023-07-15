@@ -10,13 +10,13 @@ export const Header = () => {
   return (
     <nav className='header-container'>
       <Link to='/worlds'>
-      <img className ='header-button explore'src={saved} alt='discover button'/>
+        <button className="header-button">Explore</button>
       </Link>
       <Link to='/'>
-      <img className ='header-logo'src={logo} alt='hyper loom'/>
+        <img className ='header-logo'src={logo} alt='hyper loom'/>
       </Link>
-      <Link to='world/2'>
-      <img className ='header-button discover'src={single} alt='explore button'/>
+      <Link to='/world/2'>
+          <button className="header-button">Create</button>
       </Link>
     </nav>
   )
