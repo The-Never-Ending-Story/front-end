@@ -9,12 +9,8 @@ import { WelcomePage } from '../WelcomePage/WelcomePage'
 import { Header } from '../Header/Header.js'
 import { WorldBrowser } from '../WorldBrowser/WorldBrowser';
 import { PageNotFound } from '../PageNotFound/PageNotFound';
-import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
-import { Error } from '../Error/Error';
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [error, setError] = useState(false)
   const dispatch = useDispatch()
 
   useEffect( () => {
@@ -22,12 +18,9 @@ function App() {
     .then(data => {
       dispatch(getDiscoveredWorlds(data))
       dispatch(changeIsLoading(false))
-      // setIsLoading(false);
     }).catch(err => {
       dispatch(changeIsLoading(false))
       dispatch(changeError(err.message))
-      // setError(true)
-      // setIsLoading(false);
     })
   }, [dispatch] )
 
