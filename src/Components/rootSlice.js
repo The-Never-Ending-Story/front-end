@@ -2,6 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   discoveredWorlds: [],
+  isLoading: true,
+  error: '',
 }
 
 export const rootSlice = createSlice( 
@@ -11,16 +13,16 @@ export const rootSlice = createSlice(
     reducers: {
       getDiscoveredWorlds: (state, action) => {
         state.discoveredWorlds = action.payload
+      },
+      changeIsLoading: (state, action) => {
+        state.isLoading = action.payload
+      },
+      changeError: (state, action) => {
+        state.error = action.payload
       }
-      // saveWorld: (state, action) => {
-      //   state.discoveredWorlds.push(action.payload)
-      // },
-      // deleteWorld: (state, action) => {
-      //   state.discoveredWorlds = state.discoveredWorlds.filter(world => world !== action.payload)
-      // }
     }
   }
 )
 
-export const { getDiscoveredWorlds } = rootSlice.actions;
+export const { getDiscoveredWorlds, changeIsLoading, changeError } = rootSlice.actions;
 export default rootSlice.reducer;
