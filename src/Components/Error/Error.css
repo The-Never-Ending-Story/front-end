@@ -1,0 +1,22 @@
+.error-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://media.discordapp.net/attachments/1128814452012220536/1129405994238222366/hyperloom_In_solarpunk_aesthetic_imagine_a_wander_lost_is_a_des_fdcbab30-19c6-45d7-93fc-da2de78e286d.png?width=1740&height=994);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found {
+  border: #f1f6f9 3px solid;
+  background-color: #1e2c2a;
+  padding: 25px;
+}
+
+.not-found h2 {
+  color: #15be8b;
+}
+
+.not-found p {
+  color: #f1f6f9;
+}

@@ -7,6 +7,7 @@ import { Location } from "../Location/Location";
 import { Character } from "../Character/Character";
 import { Event } from "../Event/Event";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
+import { PageNotFound } from "../PageNotFound/PageNotFound";
 import { Error } from "../Error/Error";
 
 export const SingleWorld = () => {
@@ -14,6 +15,7 @@ export const SingleWorld = () => {
   const [world, setWorld] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [wrongPath, setWrongPath] = useState(false);
   const [currentTab, setCurrentTab] = useState('');
 
   useEffect(() => {
@@ -22,16 +24,24 @@ export const SingleWorld = () => {
         setWorld(data);
         setIsLoading(false);
       })
-      .catch(err => {
-        setError(true)
+      .catch((res) => {
+        if (res.message === "404") {
+          setWrongPath(true)
+          setError(false)
+        } else {
+          setError(true)
+          setWrongPath(false)
+        }
         setIsLoading(false);
       })
   }, [id]);
-
+  
   if (isLoading) {
     return <LoadingIcon />;
   } else if (error) {
     return <Error />;
+  } else if (wrongPath) {
+    return <PageNotFound />
   }
 
   const declareUnknown = (subject) => {
@@ -42,7 +52,7 @@ export const SingleWorld = () => {
 
   const listDetails = (list) => {
     return list.reduce((acc, cV, currentIndex) => {
-      if (currentIndex != (list.length - 1)) {
+      if (currentIndex !== (list.length - 1)) {
         acc += `${cV}, `
       } else {
         acc += `and ${cV}`
