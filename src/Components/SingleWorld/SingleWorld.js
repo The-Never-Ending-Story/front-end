@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleWorldData } from "../../apiCalls";
 import { Inhabitant } from "../Inhabitant/Inhabitant";
+import { Location } from "../Location/Location";
+import { Character } from "../Character/Character";
 import { NotableItem } from "../NotableItem/NotableItem";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { Error } from "../Error/Error";
@@ -51,24 +53,11 @@ export const SingleWorld = () => {
   //   : null;
 
 
-
-  const history = world.history || 'This world\'s history is unknown'
-
-  // {img, imagine, name, alignment, politics, lore}
-  const inhabitants = 
-    world.species? world.species.map( inhabitant => (
-      <Inhabitant 
-       key={inhabitant.id}
-       imgAlt={inhabitant.imagine}
-       img={inhabitant.img}
-       name={inhabitant.name}
-       alignment={inhabitant.alignment}
-       politics={inhabitant.politics}
-       lore= {inhabitant.lore}
-        />
-    )) : null;
-
-  
+  const declareUnknown = (subject) => {
+    return (
+      <p>This world's {subject} is unknown.</p>
+    )
+  }
 
   const listDetails = (list) => {
     return list.reduce((acc, cV, currentIndex) => {
@@ -80,6 +69,47 @@ export const SingleWorld = () => {
       return acc;
     }, '')
   }
+
+  const inhabitants =
+    world.species ? world.species.map(inhabitant => (
+      <Inhabitant
+        key={inhabitant.id}
+        img={inhabitant.img}
+        imgAlt={inhabitant.imagine}
+        name={inhabitant.name}
+        alignment={inhabitant.alignment}
+        politics={inhabitant.politics}
+        lore={inhabitant.lore}
+      />
+    )) : declareUnknown('inhabitants');
+
+
+  const locations =
+    world.locations ? world.locations.map(location => (
+      <Location 
+      key={location.id}
+      img={location.img}
+      imgAlt={location.imagine}
+      name={location.name}
+      climate={location.climate}
+      lore={location.lore}
+        />
+      )) : declareUnknown('locations');
+
+      const characters =
+      world.characters ? world.characters.map(character => (
+        <Character 
+        key={character.id}
+        img={character.img}
+        imgAlt={character.imagine}
+        name={character.name}
+        species={character.species}
+        alignment={character.alignment}
+        age={character.age}
+        location={character.location}
+        lore={character.lore}
+          />
+        )) : declareUnknown('locations');
 
   return (
 
@@ -102,10 +132,16 @@ export const SingleWorld = () => {
 
       <h3>Inhabitants</h3>
       {inhabitants}
+
       <h3>Locations</h3>
+      {locations}
+
       <h3>Characters</h3>
+        {characters}
+        
       <h3>Events</h3>
       <h3>History</h3>
+
 
     </section>
   );
