@@ -1,8 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from 'react-router-dom'
+import { getRandomWorldData } from "../../apiCalls";
+import { useSelector, useDispatch } from 'react-redux';
+import { getDiscoveredWorlds } from '../rootSlice';
 import './WelcomePage.css'
 
 export const WelcomePage = () => {
+  const dispatch = useDispatch()
+  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
+
+  const discoverNewWorld = ()=> {
+    getRandomWorldData()
+    .then(data=> {
+      // console.log(displayedWorlds)
+      const addOne = [...displayedWorlds, data]
+      dispatch(getDiscoveredWorlds(addOne))
+    }
+    )
+  }
+
+  useEffect(()=> {
+    // console.log(displayedWorlds)
+  }, [displayedWorlds])
 
   return (
     <main className="welcome-page">
@@ -19,9 +38,9 @@ export const WelcomePage = () => {
           <Link to='/worlds'>
           <button className="menu-button">Explore</button>
           </Link>
-          <Link to='/world/2'>
-          <button className="menu-button">Create</button>
-          </Link>
+
+          <button className="menu-button" onClick={()=> {discoverNewWorld()}}>Create</button>
+
         </div>
       </section>
     </main>
