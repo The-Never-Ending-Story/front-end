@@ -1,7 +1,7 @@
 .single-world-view {
   background-color: rgb(3, 42, 37);
   padding-top: 15px;
-
+  padding: 15px 0;
 }
 
 .world-img {
@@ -52,9 +52,28 @@
   margin: auto;
 }
 
+.tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: #f1f6f9 2px solid;;
+}
+
+.tabs button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: rgb(3, 42, 37);
+  color: #15be8b;
+  inset: 0;
+  flex-grow: 1;
+  height: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .single-det-wrapper {
   background-color:#1e2c2a;
-  border-top: #f1f6f9 2px solid;
   border-bottom: #f1f6f9 2px solid;
   margin: 20px auto;
 }
