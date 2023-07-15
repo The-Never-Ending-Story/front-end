@@ -116,17 +116,17 @@ export const SingleWorld = () => {
       </div>
       <div className="single-top-wrapper">
         <div className="single-geo">
-          <p><span className="attr-name">Shape</span>: {world.geoDynamics.shape}</p>
-          <p><span className="attr-name">Size</span>: {world.geoDynamics.size}</p>
-          <p><span className="attr-name">Climate</span>: {world.geoDynamics.climate}</p>
+          <p><span className="attr-name">Shape </span>  {world.geoDynamics.shape}</p>
+          <p><span className="attr-name">Size: </span> {world.geoDynamics.size}</p>
+          <p><span className="attr-name">Climate: </span> {world.geoDynamics.climate}</p>
         </div>
         <div className="single-mag-tech">
-          <p><span className="attr-name">Magic</span>: {listDetails(world.magicTechnology.magic)}</p>
-          <p><span className="attr-name">Level</span>: {world.magicTechnology.magicLvl}</p>
+          <p><span className="attr-name">Magic: </span> {listDetails(world.magicTechnology.magic)}</p>
+          <p><span className="attr-name">Level: </span> {world.magicTechnology.magicLvl}</p>
         </div>
         <div className="single-mag-tech">
-          <p><span className="attr-name">Techonology</span>: {listDetails(world.magicTechnology.technology)}</p>
-          <p><span className="attr-name">Level</span>: {world.magicTechnology.techLvl}</p>
+          <p><span className="attr-name">Techonology: </span>: {listDetails(world.magicTechnology.technology)}</p>
+          <p><span className="attr-name">Level: </span> {world.magicTechnology.techLvl}</p>
         </div>
         <p>{world.description}</p>
       </div>
@@ -134,21 +134,20 @@ export const SingleWorld = () => {
         <h2>Inhabitants</h2>
         {inhabitants}
       </div>
-
       <div className="single-det-wrapper">
-        <h3>Locations</h3>
+        <h2>Locations</h2>
         {locations}
       </div>
       <div className="single-det-wrapper">
-        <h3>Characters</h3>
+        <h2>Characters</h2>
         {characters}
       </div>
       <div className="single-det-wrapper">
-        <h3>Events</h3>
+        <h2>Events</h2>
         {events}
       </div>
       <div className="single-det-wrapper">
-        <h3>History</h3>
+        <h2>History</h2>
         {history}
       </div>
     </section>
