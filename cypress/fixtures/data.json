@@ -1,1 +1,304 @@
-{ "worlds": [ { "id": 1, "name": "Mythos", "preview": "A realm of ancient legends and mystical wonders.", "img": "https://images.unsplash.com/photo-1587783586691-096850839bd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" }, { "id": 2, "name": "Aetheria", "preview": "A realm of floating islands and arcane wonders.", "img": "https://images.unsplash.com/photo-1612404819070-77c6da472e68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" }, { "id": 3, "name": "world 3", "preview": "preview 3", "img": "https://images.unsplash.com/photo-1612404459571-ccef4b6588e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" }, { "id": 4, "name": "world 4", "preview": "preview 4", "img": "https://images.unsplash.com/photo-1587783586691-096850839bd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" }, { "id": 5, "name": "world 5", "preview": "preview 5", "img": "https://images.unsplash.com/photo-1612404819070-77c6da472e68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" } ] }
+[
+  {
+      "id": 3,
+      "name": "DigiVale",
+      "blurb": "A dwarf planet, blanketed with sun-scorched savannas, gigantic salt flats, and drowned by a complex network of cavernous caves with an extraordinary fusion of magic and rudimentary technology.",
+      "description": "DigiVale is a vivid blend of natural beauty, magic-infused landscapes, and cyberpunk aesthetics. Shimmering salt flats stretch for miles, dotted with conductive crystals that spin in harmony, enhancing magic for miles. The savanna carries vibrant flora and fauna, pulsating with otherworldly life, while its vast, cavernous caves, crisscrossing underneath, are both mystic and perilous.",
+      "geoDynamics": {
+          "size": "Dwarf",
+          "shape": "Planet",
+          "climate": "savanna",
+          "landscapes": [
+              "salt flats",
+              "cavernous caves"
+          ]
+      },
+      "magicTechnology": {
+          "magic": [
+              "virtually limitless",
+              "advanced enchantments",
+              "cosmic wizardry"
+          ],
+          "techLvl": 4,
+          "magicLvl": 10,
+          "technology": [
+              "basic AI",
+              "primitive cybernetics",
+              "rudimentary nanotech"
+          ]
+      },
+      "img": {
+          "landscape": "https://cdn.discordapp.com/attachments/1128814452012220536/1129842151103148173/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_44ee86aa-76d6-416b-9526-75abd158ae6b.png",
+          "thumbnail": "https://cdn.discordapp.com/attachments/1128814452012220536/1129839527599538298/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_4976cd1d-3b62-4510-b6c2-8fb0eba4eb69.png"
+      },
+      "species": [
+          {
+              "id": 3,
+              "name": "Maagi",
+              "alignment": "Neutral Good",
+              "politics": "Communal society",
+              "lore": "Bipedal beings, resembling humans, but adapted to DigiVale's environment. Deeply interwoven with their planet's magic, they're natural enchanters, using the blend of rudimentary tech and magic to thrive and communicate.",
+              "imagine": "Humanoid silhouette standing tall, skin glistening with sweat under a blazing sun, eyes glowing with incandescent magic, with augmentations of rudimentary cybernetics blended seamlessly with their anatomy, and a landscape of dramatic savanna and salt flats stretching out behind them.",
+              "img": "none",
+              "type": "none",
+              "world": 3
+          }
+      ],
+      "locations": [
+          {
+              "id": 4,
+              "name": "Crystaline",
+              "type": "City",
+              "climate": "Hot, dry",
+              "lore": "Constructed amid saltpan, emblematically named for the encircling mystical crystals. Foundations are rooted within the caves beneath, buildings are magically reinforced, with abundant neon lighting.",
+              "imagine": "A cityscape gleaming under the setting sun, tall buildings of glass and metal erected amid a desert of salt, surrounded by giant luminescent crystals, their reflections painting the city in a mesmerizing polychrome lightshow, while the hollow entrance of a cavernous abyss opens up beneath the city.",
+              "img": "none",
+              "world": 3
+          },
+          {
+              "id": 5,
+              "name": "Ravendell",
+              "type": "Settlement",
+              "climate": "Temperate, humid",
+              "lore": "Nestled high in the cavernous caves where the humidity is bearable. It's interconnected with one another via suspended rope bridges, crystal-enhanced lighting refracts to the stalactites above.",
+              "imagine": "High up within a cavernous void, a settlement hangs suspended. Wooden, artificially enhanced structures lit by glowing crystals, surrounded by stalactites, connected with rope bridges swaying slightly in the cave's gentle breathe.",
+              "img": "none",
+              "world": 3
+          }
+      ],
+      "characters": [
+          {
+              "id": 3,
+              "name": "Eldriq",
+              "species": "Maagi",
+              "alignment": "Lawful Neutral",
+              "age": 70,
+              "lore": "The venerable elder of Crystaline, who paved the path for the fusion of magic and technology. Spread the teachings of harmony between both, despite the city's adversity towards technology initially.",
+              "imagine": "An elderly figure, face lining wisdom, eyes glowing with powerful magic, stands before a holographic interface. In their extended hand, a magical orb pulses synchronous with the neon-lit cityscape behind.",
+              "img": "none",
+              "location": "",
+              "world": 3
+          },
+          {
+              "id": 4,
+              "name": "Shyla",
+              "species": "Maagi",
+              "alignment": "Chaotic Good",
+              "age": 30,
+              "lore": "The explorer of Ravendell's depths, who discovered uncharted caves underneath DigiVale. Brought socio-economic growth to the settlement after discovering abundant, precious resources.",
+              "imagine": "An agile silhouette is huddled over a cyber-embedded rope hanging off a bridge's edge, peering down into the abyss with eyes that emit a soft, magical light.",
+              "img": "none",
+              "location": "",
+              "world": 3
+          }
+      ],
+      "events": [
+          {
+              "id": 3,
+              "name": "The Harmonic Uprising",
+              "type": "Revolution",
+              "age": "Bronze Age",
+              "time": "1400",
+              "lore": "Eldriq, with his revolutionary ideas managing to sway public opinion, leading to the Harmonic Uprising, completely changed how the Maagi of Crystaline viewed the relationship between magic and technology.",
+              "imagine": "A lone figure standing elevated, backdropped by a luminescent city, in front of an impending audience, with a holographic spectrum swirling around him.",
+              "img": "",
+              "location": "",
+              "world": 3
+          },
+          {
+              "id": 4,
+              "name": "Uncharted Depths",
+              "type": "Discovery",
+              "age": "Iron Age",
+              "time": "2020",
+              "lore": "After this event, the total landmass known for Ravendell nearly tripled when Shyla discovered new, untouched caverns replete with resources beneath the settlement, triggering an exploration boom.",
+              "imagine": "A figure, silhouette illuminated by the soft glow of a cavern opening, stands at the precipice of an abyss, throwing a light-enchanted stone that reveals a vast labyrinth of previously unseen interconnected caves.",
+              "img": "",
+              "location": "",
+              "world": 3
+          }
+      ],
+      "lore": [
+          "Crystaline, once distrustful of technology, became the beacon of magic-tech fusion under Eldriq's steadfast determination, his Harmonic Uprising allowing Maagi to harmoniously integrate magic with rudimentary technology, establishing a balanced society.",
+          "In the newer age, the settlement of Ravendell experienced an exploration boom after Shyla's discovery of vast, resource-rich caverns. This ignited a wave of adventurous spirits, changing the face of the settlement forever, paving the way for future expansions.",
+          "This application of technology and unearthing of resources led to a Renaissance for the Maagi, ushering in an age of prosperity and cultural upheaval, leaving an indelible mark in the cosmic annals of DigiVale."
+      ]
+  },
+  {
+      "id": 2,
+      "name": "Arcana Lumina",
+      "blurb": "A world where subtropical elements blend with the magic of the land, stretching from vibrant jungles to sparse tundra.",
+      "description": "Arcana Lumina punctuates the void of space as a dazzling jewel of diverse landscapes and climates. Subtropical jungles dominate the equatorial regions seeping with magic, projecting lifeforms distinctive yet integrally attached to the land. Medieval-style settlements with burgeoning technology house sparkling societies, while far north, the desolate beauty of the frozen tundra prevails, underlining the stark contrast of this enchanting world.",
+      "geoDynamics": {
+          "size": "Earth-like",
+          "shape": "Planet",
+          "climate": "subtropical",
+          "landscapes": [
+              "rolling hills",
+              "tundra"
+          ]
+      },
+      "magicTechnology": {
+          "magic": "Charm Craft and Elemental Control",
+          "techLvl": 2,
+          "magicLvl": 7,
+          "technology": "Basic Mechanisms and Elemental Devices"
+      },
+      "img": {
+          "landscape": "https://cdn.discordapp.com/attachments/1128814452012220536/1129838576826331206/hyperloom_Picture_an_ethereal_dawn_a_blend_of_subtropical_hues__1b190073-ca72-4024-9e3a-cddbcaf84087.png",
+          "thumbnail": "https://cdn.discordapp.com/attachments/1128814452012220536/1129835524354473994/hyperloom_Picture_an_ethereal_dawn_a_blend_of_subtropical_hues__8c46d351-ec7c-484c-a167-23797cb7a1df.png"
+      },
+      "species": [
+          {
+              "id": 2,
+              "name": "Humboldtai",
+              "alignment": "Neutral Good",
+              "politics": "Matriarchy",
+              "lore": "The Humboldtai are humanoid entities connected to the lifeblood of the jungles. They possess the ability to harness the vegetation around them, manipulating it to their will.",
+              "imagine": "Imagine a figure whose body seems to rise elegantly from the union between the woodland floor and living vines. Eyes as deep green as the heart of the forest and skin like soft timber. This inhabitant, with hands dancing towards the air, shapes the very vegetation surrounding it.",
+              "img": "none",
+              "type": "none",
+              "world": 2
+          }
+      ],
+      "locations": [
+          {
+              "id": 3,
+              "name": "Ventonda",
+              "type": "Settlement",
+              "climate": "Subtropical",
+              "lore": "Ventonda is a bustling village in the heart of the subtropical jungle. Residents live in homes interwoven with the trees using organic magic, forming a harmonious blend of nature and inhabitants.",
+              "imagine": "Think of homes perched in oversized banyan branches, platforms built from living vines connecting multi-tiered structures. A jungle village bustling with the energy of day-to-day life, while soft bioluminescent blooms add an ethereal glow to the landscape.",
+              "img": "none",
+              "world": 2
+          }
+      ],
+      "characters": [
+          {
+              "id": 2,
+              "name": "Klavandor",
+              "species": "Humboldtai",
+              "alignment": "Neutral Good",
+              "age": 68,
+              "lore": "Klavandor is a revered elder of the Humboldtai, a recognised figure in Ventonda and a pacifier between the diverse ecosystems of subtropical and tungs.",
+              "imagine": "Consider a figure rooted in age, with wisdom reflecting in the eyes. The verdant skin is embedded with patterns shaped like ancient runes, a running ivy swirling around an arm. This figure stands with grace, extending a hand towards a sprouting ground.",
+              "img": "none",
+              "location": "",
+              "world": 2
+          }
+      ],
+      "events": [
+          {
+              "id": 2,
+              "name": "The Grand Bloom",
+              "type": "Awakening",
+              "age": "Second Epoch",
+              "time": "Year 1572",
+              "lore": "The Grand Bloom was a rare miraculous event where every flora in Ventonda ignited with magic, shaping the future of the Humboldtai.",
+              "imagine": "Envision a wave of majestic hues illuminating the jungle, each plant and tree radiating with an ethereal glow. The entire habitat comes alive in a cascade of sparkling lights, mirroring the enchanted energy of the land.",
+              "img": "",
+              "location": "",
+              "world": 2
+          }
+      ],
+      "lore": [
+          "In the First Epoch, the early Humboldtai emerged as a sentient species. Their peaceful existence in harmony with nature and mastery over vegetation flourished in the budding Ventonda, molding it as the heart of their culture.",
+          "Second Epoch started with the Grand Bloom, a landmark event that escalated the Humboldtai's magic to new heights. The burgeoning power shaped their knowledge, increasing the bio-diversity and weaving a stronger bond with the magically infused ecosystem.",
+          "The Third Epoch began as the Humboldtai mastered the synergy between magic and technology, marking the dawn of a golden age. While their territories remained primarily in the subtropical region, they began explorations to the tundra, planting seeds of their culture in the unfamiliar frozen landscapes."
+      ]
+  },
+  {
+      "id": 19,
+      "name": "Fungasia",
+      "blurb": "A vast, arid planet pulsing with paleolithic energy and verdant mushroom clusters.",
+      "description": "Fungasia breathes with the essence of an arid yet thriving biocontinuum, where kilometres of rolling hills kneel before the majesty of profound valleys. Bright azure skies dominate the eye during the day, while striking constellations narrate our vibrant universe's saga during the night. Powerful classical influences impact Fungasia's man-made structures, with architecture mirroring the stoicism of ancient Earth epochs. The technology in Fungasia is primitive yet potent, characterised by rudimentary mechanics, burgeoning steam power, and hints of rudimentary electricity.",
+      "geoDynamics": {
+          "size": "Vast",
+          "shape": "Planet",
+          "climate": "Arid",
+          "landscapes": [
+              "Rolling hills",
+              "Deep valleys"
+          ]
+      },
+      "magicTechnology": {
+          "magic": [],
+          "techLvl": 3,
+          "magicLvl": 0,
+          "technology": [
+              "Basic Mechanics",
+              "Steam Power",
+              "Primitive Electricity"
+          ]
+      },
+      "img": {},
+      "species": [
+          {
+              "id": 23,
+              "name": "Paleolithic Mushling",
+              "alignment": "Neutral",
+              "politics": "Nomadic Tribes",
+              "lore": "Descendants of the primeval times, Paleolithic Mushlings are tribal mushroom creatures. They possess rudimentary intelligence, capable of basic speech and the development of primitive technology. Paleolithic Mushlings are characterized by their symbiotic relationship with the arid planet, deriving sustenance from the local flora.",
+              "imagine": "Imagine a nomadic creature, a curious blend between mushroom and sentient being, walking through arid fields. Its sturdy stalk body supports an oversized cap functioning as the head with piercing bioluminescent eyes visible beneath.",
+              "img": "none",
+              "type": "none",
+              "world": 19
+          }
+      ],
+      "locations": [
+          {
+              "id": 31,
+              "name": "Moshroomafallet",
+              "type": "City",
+              "climate": "Arid",
+              "lore": "A city imbued with the energy of Classicism, Moshroomafallet carries the vibe of an ancient civilization. Nestled amidst the sun-scorched rolling hills, it houses vast mushroom farms and steam-powered factories.",
+              "imagine": "Envision a city situated in scorching heat, buildings of classic design rising amidst the arid valleys. Giant mushroom farms surround the city, irrigated by intricate steam-powered aqueduct systems.",
+              "img": "none",
+              "world": 19
+          },
+          {
+              "id": 32,
+              "name": "Valley of the Porem",
+              "type": "Settlement",
+              "climate": "Arid",
+              "lore": "A settlement based within a deep valley, populated by Paleolithic Mushlings. The Valley of the Porem is known for its large hyphae grid, pulsating with energy deep underground.",
+              "imagine": "Imagine a sprawling settlement within a deep valley, a giant network of pulsating hyphae grid visible underground. Primitive mushroom huts scattered about, with sentient mushroom-like creatures moving busily.",
+              "img": "none",
+              "world": 19
+          }
+      ],
+      "characters": [
+          {
+              "id": 27,
+              "name": "Moshroom",
+              "species": "Paleolithic Mushling",
+              "alignment": "Neutral Good",
+              "age": 45,
+              "lore": "Moshroom is an elder figure of Paleolithic Mushlings, known for pioneering steam-power within the city of Moshroomafallet, significantly advancing their tech-level.",
+              "imagine": "Picture a sentient mushroom figure, donned in draped cloth with intricate mechanic tool belt around the stalk. Bioluminescent eyes glowing with intelligence and curiosity.",
+              "img": "none",
+              "location": "",
+              "world": 19
+          }
+      ],
+      "events": [
+          {
+              "id": 29,
+              "name": "Steam Awakening",
+              "type": "Technology Advancement",
+              "age": "Classical Epoch",
+              "time": "3rd Galactic Rotation",
+              "lore": "The Steam Awakening refers to the pivotal moment when Moshroom introduced steam power to Moshroomafallet, marking the dawn of a new age in technology for Fungasia.",
+              "imagine": "Witness a large crowd of sentient mushroom creatures as they watch with awe a towering, steam-powered contraption. Controlled by a smartly-dressed elder Mushling, the machine whirs and hisses, signifying a new dawn.",
+              "img": "",
+              "location": "",
+              "world": 19
+          }
+      ],
+      "lore": [
+          "Fungasia, the mushroom planet, has morphed through several epochs, each symbolizing a significant shift in its history. The first, Primordial Epoch, saw the rise of Paleolithic Mushlings, creatures with a unique alliance with the planet's mushroom flora. They lived nomadically, influenced only by Fungasia's geographical oddities and their evolutionary course. The magical aspect of this period was non-existent, their technology consistent with Paleolithic Earth.",
+          "The following Classical Epoch marked the transition from nomadic life to an organized, city-oriented lifestyle. This was the era of Moshroomafallet's construction, a city steeped in Classicism. An elder Paleolithic Mushling, Moshroom, introduced steam power to these tribal beings, a transformative event named 'Steam Awakening'. This pivotal moment distinguished the Classical Epoch, signifying a shift towards technological advancement.",
+          "In the upcoming Industrial Epoch, the mushroom inhabitants of Fungasia are on the verge of a major technological forefront, commencing the journey towards electricity harnessing and more advanced mechanization. As Fungasia continues to evolve, her inhabitants — the Mushlings — grow alongside her, ever-changing, ever-evolving."
+      ]
+  }
+]
