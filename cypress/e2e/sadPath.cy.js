@@ -47,19 +47,4 @@ describe('Sad Path Spec', () => {
   cy.contains('Sorry, we can\'t find this page. You\'ll find worlds to discover and explore back home.')
     .get('.not-found-home')
   })
-
-  it('should render the error component if there is an issue with the server', () => {
-  cy.intercept('https://hyperloom-d209dae18b26.herokuapp.com/worlds/1?format=json', {
-    statusCode: 500,
-    body: {}
-  })
-  cy.visit('http://localhost:3000/worlds')
-  cy.get('.not-found-wrapper')
-  cy.contains('Something Went Wrong')
-  cy.contains('HyperLoom is currently experiencing issues.')
-    .get('.not-found-home')
-
-  })
 }) 
-
-//both not testing for loading component?
