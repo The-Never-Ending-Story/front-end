@@ -6,12 +6,12 @@
   transition: all 150ms ease-in-out;
   align-items: center;
   padding-left: 2em;
-  color: #69dc9e;
+  color: #d6d6d6;
   font-family: Futura;
   font-size: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(172, 255, 194, 0.2);
   border-radius: 12px;
-  background-color: rgba(18, 21, 21, 0.642)
+  background-color: rgba(18, 21, 20, 0.642)
 }
 
 .world-card-container:hover {
