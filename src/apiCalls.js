@@ -20,13 +20,11 @@ export function getSingleWorldData (id) {
   })
 }
 
-export function getRandomWorldData() {
-  return fetch(`https://hyperloom-d209dae18b26.herokuapp.com/worlds/discover?format=json`)
-  .then(response=> {
-    if(!response.ok) {
-      throw new Error(response.status)
-    } else {
-      return response.json()
-    }
-  })
+export async function getRandomWorldData() {
+  const response = await fetch(`https://hyperloom-d209dae18b26.herokuapp.com/worlds/discover?format=json`)
+  if (!response.ok) {
+    throw new Error(response.status)
+  } else {
+    return response.json()
+  }
 }

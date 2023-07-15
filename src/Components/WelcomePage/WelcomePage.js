@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoveredWorlds } from '../rootSlice';
@@ -7,20 +7,23 @@ import './WelcomePage.css'
 
 export const WelcomePage = () => {
   const dispatch = useDispatch()
+  const history = useHistory()
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
 
   const discoverNewWorld = ()=> {
     getRandomWorldData()
     .then(data=> {
-      // console.log(displayedWorlds)
       const addOne = [...displayedWorlds, data]
       dispatch(getDiscoveredWorlds(addOne))
-    }
-    )
+      // console.log(data.id)
+      history.push(`/world/${data.id}`)
+    }).catch((error)=>{
+      console.log('This line replaced by error handling')
+    })
   }
 
   useEffect(()=> {
-    // console.log(displayedWorlds)
+    console.log('useEffect:', displayedWorlds)
   }, [displayedWorlds])
 
   return (
@@ -39,7 +42,7 @@ export const WelcomePage = () => {
           <button className="menu-button">Explore</button>
           </Link>
 
-          <button className="menu-button" onClick={()=> {discoverNewWorld()}}>Create</button>
+          <button className="menu-button" onClick={()=> {discoverNewWorld()}}>Discover</button>
 
         </div>
       </section>
