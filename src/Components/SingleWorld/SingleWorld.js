@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { getSingleWorldData } from "../../apiCalls";
 import { NotableItem } from "../NotableItem/NotableItem";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
@@ -14,22 +13,23 @@ export const SingleWorld = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [wrongPath, setWrongPath] = useState(false)
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
 
   useEffect(() => {
-    if (id > displayedWorlds.length) {
-      setWrongPath(true)
-      setIsLoading(false)
-    } else {
     getSingleWorldData(id)
       .then((data) => {
         setWorld(data);
         setIsLoading(false);
       })
-      .catch(() => {
-        setError(true)
+      .catch((res) => {
+        if (res.message === "404") {
+          setWrongPath(true)
+          setError(false)
+        } else {
+          setError(true)
+          setWrongPath(false)
+        }
         setIsLoading(false);
-      })}
+      })
   }, [id]);
   
   if (isLoading) {

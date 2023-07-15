@@ -13,8 +13,8 @@ import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
 import { Error } from '../Error/Error';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false)
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [error, setError] = useState(false)
   const dispatch = useDispatch()
 
   useEffect( () => {
@@ -24,8 +24,10 @@ function App() {
       dispatch(changeIsLoading(false))
       // setIsLoading(false);
     }).catch(err => {
-      setError(true)
-        setIsLoading(false);
+      dispatch(changeIsLoading(false))
+      dispatch(changeError(err.message))
+      // setError(true)
+      // setIsLoading(false);
     })
   }, [dispatch] )
 

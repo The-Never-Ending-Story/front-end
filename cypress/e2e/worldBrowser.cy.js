@@ -1,6 +1,6 @@
 describe('World Browser spec', () => {
   it('should display list of worlds for the user to be able to view', () => {
-    cy.intercept('https://7bf33ed3-7948-40dc-a8ab-0be48d89e61c.mock.pstmn.io/worlds', {
+    cy.intercept('https://hyperloom-d209dae18b26.herokuapp.com/worlds?format=json', {
     statusCode: 200,
     fixture: 'data'
   })
