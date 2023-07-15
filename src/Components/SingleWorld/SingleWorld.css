@@ -1,8 +1,5 @@
 .single-world-view {
-  margin-top: 2rem;
-  background: rgba(188, 202, 179, 0.80);
-  border:.15rem rgba(188, 202, 179, 0.70) solid;
-  border-radius: .65rem;
+  background-color: rgb(3, 42, 37);
   padding: 25px;
 }
 

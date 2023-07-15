@@ -15,6 +15,7 @@ export const SingleWorld = () => {
   useEffect(() => {
     getSingleWorldData(id)
       .then((data) => {
+        console.log(data)
         setWorld(data);
         setIsLoading(false);
       })
@@ -29,83 +30,63 @@ export const SingleWorld = () => {
   } else if (error) {
     return <Error />;
   }
-  
-  const highlights = world.notableItems
-    ? world.notableItems.map((item, index) => (
-      <NotableItem
-        key={index}
-        imagePositon={index % 2 === 0 ? 'left' : 'right'}
-        name={item.name}
-        type={item.type}
-        lore={item.lore}
-        img={item.img}
-        race={item.race}
-        alignment={item.alignment}
-        date={item.date}
-        outcome={item.outcome}
-        population={item.population}
-      />
-    ))
-    : null;
 
-  const history = world.history || 'This world\'s history is unknown' 
+  // const highlights = world.notableItems
+  //   ? world.notableItems.map((item, index) => (
+  //     <NotableItem
+  //       key={index}
+  //       imagePositon={index % 2 === 0 ? 'left' : 'right'}
+  //       name={item.name}
+  //       type={item.type}
+  //       lore={item.lore}
+  //       img={item.img}
+  //       race={item.race}
+  //       alignment={item.alignment}
+  //       date={item.date}
+  //       outcome={item.outcome}
+  //       population={item.population}
+  //     />
+  //   ))
+  //   : null;
+
+  const history = world.history || 'This world\'s history is unknown'
+
+  const listDetails = (list) => {
+    return list.reduce((acc, cV, currentIndex) => {
+      if(currentIndex != (list.length - 1)){
+        acc += `${cV}, `
+      } else {
+        acc += `and ${cV}`
+      }
+      return acc;
+    },'')
+  }
 
   return (
 
     <section className="single-world-view">
-      <div className="world-detail-wrapper">
-        <img className="world-img" src={world.img} alt={`${world.name}`} />
-        <div className="world-details-box">
-          <h1>{world.name}</h1>
-          <div className="bullet-points">
-            <p>Climate: {world.geoDynamics.climate}</p>
-            <table className="center-table">
-              <thead>
-                <tr>
-                  <th>Magic</th>
-                  <th>Technology level</th>
-                  <th>Genre</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{world.magicTechnology.magic ? "Yes" : "No"}</td>
-                  <td>{world.magicTechnology.technology}</td>
-                  <td>{world.magicTechnology.genre}</td>
-                </tr>
-              </tbody>
-            </table>
-            <table className="center-table">
-              <thead>
-                <tr>
-                  <th>Notable Races</th>
-                  <th>Alignment</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{world.species.name}</td>
-                  <td>{world.species.alignment}</td>
-                </tr>
-                <tr>
-                  <td className="politics-cell" colSpan="2">Politics: {world.species.politics}</td>
-                </tr>
-              </tbody>
-            </table>
-            <p className="longer-lore">
-              {world.longerLore}
-            </p>
-          </div>
-        </div>
-      </div>
-      <section className="notables-box">
-        <h2>Noteworthy Highlights</h2>
-        {/* {notables} */}
-      </section>
-      <section className="history-box">
-        <h2>History</h2>
-        {history}
-      </section>
+      <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
+      <h1>{world.name}</h1>
+      <p>{world.description}</p>
+
+      <h3>Geodynamics</h3>
+      <p>Size: {world.geoDynamics.size}</p>
+      <p>Shape: {world.geoDynamics.shape}</p>
+      <p>Climate: {world.geoDynamics.climate}</p>
+
+      <h3>Magic</h3>
+      <p>Magic Level: {world.magicTechnology.magicLvl}</p>
+      <p>Magic: {listDetails(world.magicTechnology.magic)}</p>
+      <h3>Technology</h3>
+      <p>Technology Level: {world.magicTechnology.techLvl}</p>
+      <p>Technology: {listDetails(world.magicTechnology.technology)}</p>
+
+      <h3>Main Inhabitants</h3>
+      <h3>Locations</h3>
+      <h3>Characters</h3>
+      <h3>Events</h3>
+      <h3>History</h3>
+
     </section>
   );
 };
