@@ -8,24 +8,23 @@ import { Error } from '../Error/Error';
 import WorldCard from '../WorldCard/WorldCard';
 
 export const WorldBrowser = () => {
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
-  const loading = useSelector((state) => state.root.isLoading)
-  const error = useSelector((state) => state.root.error)
+  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
+  const loading = useSelector((state) => state.root.isLoading);
+  const error = useSelector((state) => state.root.error);
 
   if (useLocation().pathname !== '/worlds') {
-    return <PageNotFound />
+    return <PageNotFound />;
   } else if (loading) {
-    return <LoadingIcon />
+    return <LoadingIcon />;
   } else if (error) {
-    return <Error />
+    return <Error />;
   }
 
   return (
     <div className='world-browser-container'>
       {displayedWorlds.map((world) => (
-        
         <WorldCard world= {world} key= {world.id} />
       ))}
     </div>
   );
-}
+};

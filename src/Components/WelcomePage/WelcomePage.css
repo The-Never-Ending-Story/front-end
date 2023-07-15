@@ -23,8 +23,12 @@
 
 .initial-text {
   color: white;
-  margin: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.intro-text {
+  color: white;
+  font-size: 1rem;
 }
 
 .button-container {
@@ -75,62 +79,13 @@
     background:#2C3638;
   }
 }
-/* Glowing Button Effect - uses background layer shifting to seem animated -
-.menu-button:before {
-  content: "";
-  background: conic-gradient(#4a7166ed, #15be8b, #69dc9e,#f1f6f987);
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
-  width: calc(100% + 5px);
-  height: calc(100% + 5px);
-  animation: glowing-menu-button 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 7px;
-}
-
-@keyframes glowing-menu-button {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.menu-button:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-} */
 
 @keyframes borderRotate {
-  /* 25% {
-    --angle: 105deg;
-  }
-  50% {
-    --angle: 210deg;
-  }
-  75% {
-    --angle: 315deg;
-  } */
   100% {
     --angle: 420deg;
   }
 }
+
 :root {
 	--d:  10000ms;
 	--angle: 90deg;
@@ -139,6 +94,7 @@
 	--c1: #CDD2CA;
 	--c2: #4a7166;
 }
+
 @property --angle {
   syntax: '<angle>';
   initial-value: 90deg;
@@ -156,62 +112,3 @@
   initial-value: 0%;
   inherits: true;
 }
-/*
-
-@keyframes borderRadial {
-	20% {
-		--gradX: 100%;
-		--gradY: 50%;
-	}
-	40% {
-		--gradX: 100%;
-		--gradY: 100%;
-	}
-	60% {
-		--gradX: 50%;
-		--gradY: 100%;
-	}
-	80% {
-		--gradX: 0%;
-		--gradY: 50%;
-	}
-	100% {
-		--gradX: 50%;
-		--gradY: 0%;
-	}
-}
-/* 
-.slider-thumb::before {
-  position: absolute;
-  top: -15%;
-  left: -15%;
-  display:block;
-	content: "";
-	width: 100em;
-	height: 70rem;
-	background: radial-gradient(#1e2c2a, #4a7166ed, #15be8b, #69dc9e,#f1f6f987);
-	border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
-	will-change: border-radius, transform, opacity;
-	animation: sliderShape 5s ease-in infinite;
-	z-index: -1;
-	-webkit-animation: sliderShape 5s ease-in infinite;
-  filter:blur(.15rem);
-  overflow:hidden;
-}
-@keyframes sliderShape{
-  0%,100%{
-  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-    transform: translate3d(0,0,0) rotateZ(0.01deg);
-  }
-  34%{
-      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
-  }
-  50%{
-    transform: translate3d(0,0,0) rotateZ(0.01deg);
-  }
-  67%{
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
-    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
-  }
-} */

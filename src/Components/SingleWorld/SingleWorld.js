@@ -7,6 +7,7 @@ import { Location } from "../Location/Location";
 import { Character } from "../Character/Character";
 import { Event } from "../Event/Event";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
+import { PageNotFound } from "../PageNotFound/PageNotFound";
 import { Error } from "../Error/Error";
 
 export const SingleWorld = () => {
@@ -14,6 +15,7 @@ export const SingleWorld = () => {
   const [world, setWorld] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [wrongPath, setWrongPath] = useState(false);
   const [currentTab, setCurrentTab] = useState('');
 
   useEffect(() => {
@@ -38,6 +40,8 @@ export const SingleWorld = () => {
     return <LoadingIcon />;
   } else if (error) {
     return <Error />;
+  } else if (wrongPath) {
+    return <PageNotFound />
   }
 
   const declareUnknown = (subject) => {

@@ -15,11 +15,11 @@ function WorldCard({ world }) {
         </div>
       </div>
     </NavLink>
-  )
+  );
 }
 
 export default WorldCard;
 
 WorldCard.propTypes = {
   world: PropTypes.object.isRequired
-}
+};
