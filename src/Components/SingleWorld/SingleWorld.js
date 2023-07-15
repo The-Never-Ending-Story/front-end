@@ -130,17 +130,27 @@ export const SingleWorld = () => {
         </div>
         <p>{world.description}</p>
       </div>
+      <div className="single-det-wrapper">
+        <h2>Inhabitants</h2>
+        {inhabitants}
+      </div>
 
-      <h3>Inhabitants</h3>
-      {inhabitants}
-      <h3>Locations</h3>
-      {locations}
-      <h3>Characters</h3>
-      {characters}
-      <h3>Events</h3>
-      {events}
-      <h3>History</h3>
-      {history}
+      <div className="single-det-wrapper">
+        <h3>Locations</h3>
+        {locations}
+      </div>
+      <div className="single-det-wrapper">
+        <h3>Characters</h3>
+        {characters}
+      </div>
+      <div className="single-det-wrapper">
+        <h3>Events</h3>
+        {events}
+      </div>
+      <div className="single-det-wrapper">
+        <h3>History</h3>
+        {history}
+      </div>
     </section>
   );
 };
