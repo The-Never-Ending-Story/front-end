@@ -4,6 +4,7 @@ import { getSingleWorldData } from "../../apiCalls";
 import { Inhabitant } from "../Inhabitant/Inhabitant";
 import { Location } from "../Location/Location";
 import { Character } from "../Character/Character";
+import { Event } from "../Event/Event";
 import { NotableItem } from "../NotableItem/NotableItem";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { Error } from "../Error/Error";
@@ -86,19 +87,19 @@ export const SingleWorld = () => {
 
   const locations =
     world.locations ? world.locations.map(location => (
-      <Location 
-      key={location.id}
-      img={location.img}
-      imgAlt={location.imagine}
-      name={location.name}
-      climate={location.climate}
-      lore={location.lore}
-        />
-      )) : declareUnknown('locations');
+      <Location
+        key={location.id}
+        img={location.img}
+        imgAlt={location.imagine}
+        name={location.name}
+        climate={location.climate}
+        lore={location.lore}
+      />
+    )) : declareUnknown('locations');
 
-      const characters =
-      world.characters ? world.characters.map(character => (
-        <Character 
+  const characters =
+    world.characters ? world.characters.map(character => (
+      <Character
         key={character.id}
         img={character.img}
         imgAlt={character.imagine}
@@ -108,8 +109,24 @@ export const SingleWorld = () => {
         age={character.age}
         location={character.location}
         lore={character.lore}
-          />
-        )) : declareUnknown('locations');
+      />
+    )) : declareUnknown('locations');
+
+  const events =
+    world.events ? world.events.map(event => (
+      <Event
+        key={event.id}
+        img={event.img}
+        imgAlt={event.imagine}
+        name={event.name}
+        time={event.time}
+        age={event.age}
+        lore={event.lore}
+      />
+    )) : declareUnknown('events');
+
+    const history =
+    world.lore ? world.lore.map(par => <p>{par}</p>) : declareUnknown('history');
 
   return (
 
@@ -137,11 +154,12 @@ export const SingleWorld = () => {
       {locations}
 
       <h3>Characters</h3>
-        {characters}
-        
-      <h3>Events</h3>
-      <h3>History</h3>
+      {characters}
 
+      <h3>Events</h3>
+      {events}
+      <h3>History</h3>
+      {history}
 
     </section>
   );
