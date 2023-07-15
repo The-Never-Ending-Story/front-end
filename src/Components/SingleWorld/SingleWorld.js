@@ -27,7 +27,7 @@ export const SingleWorld = () => {
   if (isLoading) {
     return <LoadingIcon />;
   } else if (error) {
-    return <Error />
+    return <Error />;
   }
   
   const highlights = world.notableItems

@@ -9,7 +9,7 @@
   color: #d6d6d6;
   font-family: Futura;
   font-size: 16px;
-  box-shadow: 0 2px 4px rgba(172, 255, 194, 0.2);
+  box-shadow: 0 2px 4px rgb(80, 158, 146, 0.2);
   border-radius: 12px;
   background-color: rgba(18, 21, 20, 0.642)
 }
@@ -17,7 +17,7 @@
 .world-card-container:hover {
   transform: scale(1.025);
   border-image-slice: 1;
-  box-shadow: 3px 3px 5px 6px rgba(35, 200, 32, 0.539);
+  box-shadow: 3px 3px 5px 6px rgba(80, 158, 146, .5);
 }
 
 .world-image {
