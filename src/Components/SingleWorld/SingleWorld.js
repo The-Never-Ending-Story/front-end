@@ -1,33 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { getSingleWorldData } from "../../apiCalls";
 import { NotableItem } from "../NotableItem/NotableItem";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { Error } from "../Error/Error";
+import { PageNotFound } from "../PageNotFound/PageNotFound";
 import './SingleWorld.css'
 
 export const SingleWorld = () => {
   const { id } = useParams();
   const [world, setWorld] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false);
+  const [wrongPath, setWrongPath] = useState(false)
+  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
 
   useEffect(() => {
+    if (id > displayedWorlds.length) {
+      setWrongPath(true)
+      setIsLoading(false)
+    } else {
     getSingleWorldData(id)
       .then((data) => {
         setWorld(data);
         setIsLoading(false);
       })
-      .catch(err => {
+      .catch(() => {
         setError(true)
         setIsLoading(false);
-      })
+      })}
   }, [id]);
-
+  
   if (isLoading) {
     return <LoadingIcon />;
   } else if (error) {
     return <Error />
+  } else if (wrongPath) {
+    return <PageNotFound />
   }
   
   const highlights = world.notableItems
