@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleWorldData } from "../../apiCalls";
+import { Inhabitant } from "../Inhabitant/Inhabitant";
 import { NotableItem } from "../NotableItem/NotableItem";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { Error } from "../Error/Error";
@@ -49,17 +50,35 @@ export const SingleWorld = () => {
   //   ))
   //   : null;
 
+
+
   const history = world.history || 'This world\'s history is unknown'
+
+  // {img, imagine, name, alignment, politics, lore}
+  const inhabitants = 
+    world.species? world.species.map( inhabitant => (
+      <Inhabitant 
+       key={inhabitant.id}
+       imgAlt={inhabitant.imagine}
+       img={inhabitant.img}
+       name={inhabitant.name}
+       alignment={inhabitant.alignment}
+       politics={inhabitant.politics}
+       lore= {inhabitant.lore}
+        />
+    )) : null;
+
+  
 
   const listDetails = (list) => {
     return list.reduce((acc, cV, currentIndex) => {
-      if(currentIndex != (list.length - 1)){
+      if (currentIndex != (list.length - 1)) {
         acc += `${cV}, `
       } else {
         acc += `and ${cV}`
       }
       return acc;
-    },'')
+    }, '')
   }
 
   return (
@@ -81,7 +100,8 @@ export const SingleWorld = () => {
       <p>Technology Level: {world.magicTechnology.techLvl}</p>
       <p>Technology: {listDetails(world.magicTechnology.technology)}</p>
 
-      <h3>Main Inhabitants</h3>
+      <h3>Inhabitants</h3>
+      {inhabitants}
       <h3>Locations</h3>
       <h3>Characters</h3>
       <h3>Events</h3>
