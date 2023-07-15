@@ -52,7 +52,7 @@ export const SingleWorld = () => {
 
   const listDetails = (list) => {
     return list.reduce((acc, cV, currentIndex) => {
-      if (currentIndex != (list.length - 1)) {
+      if (currentIndex !== (list.length - 1)) {
         acc += `${cV}, `
       } else {
         acc += `and ${cV}`
