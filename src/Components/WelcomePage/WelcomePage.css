@@ -9,16 +9,20 @@
 .welcome-menu {
   color: white;
   width: 500px;
-  height: 170px;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-self: flex-start;
+  justify-content: center;
   background: rgb(3, 42, 37, .5);
   border: .75rem #43675ded solid;
   border-radius: .25rem;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
 	animation: borderRotate var(--d) ease-out infinite forwards;
+}
+
+.intro-text {
+  margin: 1rem;
 }
 
 .initial-text {
@@ -38,14 +42,11 @@
 
 .menu-button {
   padding: 0.6em 2em;
-  border: 1px solid #bccab3e6;
-  box-shadow: #bccab3e6 0px 2px 4px, #bccab3e6 0px 7px 13px -3px, #bccab3e6 0px -3px 0px inset;
   outline: none;
-  color: #69dc9f;
-  background:#2c36383c;
+  border: black solid .5px;
+  background: rgb(3, 42, 37, .5);
+  color:white;
   cursor: pointer;
-  position: relative;
-  z-index: 0;
   border-radius: 10px;
   user-select: none;
   -webkit-user-select: none;
@@ -59,19 +60,19 @@
 
 @keyframes increase {
   25% {
-    scale: 1.05;
+    scale: 1.01;
     background:#2c36383c;
   }
   50% {
-    scale: 1.10;
+    scale: 1.02;
     background:#2c363876;
   }
   75% {
-    scale: 1.15;
+    scale: 1.06;
     background:#2c3638af;
   }
   100% {
-    scale: 1.2;
+    scale: 1..02;
     background:#2C3638;
   }
 }
