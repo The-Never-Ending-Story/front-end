@@ -12,19 +12,22 @@ export const WorldBrowser = () => {
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
 
+  console.log(displayedWorlds.length > 0)
+
   if (useLocation().pathname !== '/worlds') {
     return <PageNotFound />;
   } else if (loading) {
     return <LoadingIcon />;
   } else if (error) {
     return <Error />;
+  } else if (displayedWorlds.length > 0) {
+    return (
+      <div className='world-browser-container'>
+        {displayedWorlds.map((world) => {
+          
+          return <WorldCard world= {world} key= {world.id} />
+        })}
+      </div>
+    );
   }
-
-  return (
-    <div className='world-browser-container'>
-      {displayedWorlds.map((world) => (
-        <WorldCard world= {world} key= {world.id} />
-      ))}
-    </div>
-  );
 };
