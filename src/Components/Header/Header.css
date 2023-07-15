@@ -3,25 +3,21 @@ h2 {
 }
 
 .header-container {
+  border-bottom:rgba(229, 235, 226, 0.696) solid 2px;
+  padding-top: 20px;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
   align-items:center;
   display: flex;
-  height: 9vh;
-  border: .35rem rgba(59, 91, 82, 0.921) solid;
-  border-radius: .75rem;
-  background: rgb(59,91,82);
   background: radial-gradient(
-    circle,rgba(59,91,82,1) 12%,rgba(30,44,42,1) 20%,#bccab3 44%);
-  box-shadow: rgba(50, 50, 93, 0.65) 0px 50px 100px -20px, rgba(0, 0, 0, 0.75) 0px 30px 60px -30px, rgba(10, 37, 64, 0.85) 0px -2px 6px 0px inset;
+    circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
   line-height: 2rem;
 }
 
 .header-logo {
   padding: .2rem;
   max-height: 10vh;
-  background: radial-gradient(circle, rgba(203, 207, 200, 0.629) 7%, rgba(42,51,52,0.83) 71%, rgba(42,51,52,0.83) 90%);
-  border:rgba(188, 202, 179, 0.696) solid 2px;
+  border:rgba(229, 235, 226, 0.696) solid 2px;
   border-radius: .65rem;
 }
 
@@ -32,42 +28,43 @@ h2 {
   border:rgba(188, 202, 179, 0.696) solid 2px;
   border-radius: .65rem;
 }
+
 .header-container:hover {
   animation: close-in ease 1s;
 }
 
 @keyframes close-in {
   0% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 18%, rgba(30,44,42,1) 20%, #bccab3 44%);
+    background: radial-gradient(circle, rgba(42,51,52,) 30%, rgb(80, 158, 146) 37%, rgba(42,51,52,) 44%);
   }
   10% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 16%, rgba(30,44,42,1) 19%, #bccab3 46%)
+    background: radial-gradient(circle, rgba(42,51,52,) 27%, rgb(80, 158, 146) 34%, rgba(42,51,52,) 46%)
   }
   20% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 14%, rgba(30,44,42,1) 18%,#bccab3 48%)
+    background: radial-gradient(circle, rgba(42,51,52,) 25%, rgb(80, 158, 146) 31%,rgba(42,51,52,) 48%)
   }
   30% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 12%, rgba(30,44,42,1) 17%, #bccab3 49%)
+    background: radial-gradient(circle, rgba(42,51,52,) 23%, rgb(80, 158, 146) 28%, rgb(3, 42, 37) 49%)
   }
   40% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 10%, rgba(30,44,42,1) 16%, #bccab3 50%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 25%, rgb(3, 42, 37) 50%)
   }
   50% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 8%, rgba(30,44,42,1) 15%, #bccab3 50%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 17%, rgb(80, 158, 146) 23%,  rgb(3, 42, 37) 50%)
   }
   60% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 10%, rgba(30,44,42,1) 16%, #bccab3 50%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 25%, rgb(3, 42, 37) 50%)
   }
   70% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 12%, rgba(30,44,42,1) 17%, #bccab3 49%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 23%, rgb(80, 158, 146) 28%, rgb(3, 42, 37) 49%)
   }
   80% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 14%, rgba(30,44,42,1) 18%, #bccab3 48%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 25%, rgb(80, 158, 146) 31%, rgb(3, 42, 37) 48%)
   }
   90% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 16%, rgba(30,44,42,1) 19%, #bccab3 46%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 27%, rgb(80, 158, 146) 33%, rgb(3, 42, 37) 46%)
   }
   100% {
-    background: radial-gradient(circle, rgba(59,91,82,1) 18%, rgba(30,44,42,1) 20%, #bccab3 44%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 30%, rgb(80, 158, 146) 37%, rgb(3, 42, 37) 44%)
   }
 }
