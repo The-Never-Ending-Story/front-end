@@ -12,8 +12,6 @@ export const WorldBrowser = () => {
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
 
-  console.log(displayedWorlds.length > 0)
-
   if (useLocation().pathname !== '/worlds') {
     return <PageNotFound />;
   } else if (loading) {
