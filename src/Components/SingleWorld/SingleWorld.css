@@ -1,41 +1,57 @@
 .single-world-view {
   background-color: rgb(3, 42, 37);
-  padding: 25px;
-}
+  padding-top: 15px;
 
-.world-detail-wrapper {
-  display: flex;
 }
 
 .world-img {
-  width: 50vw;
+  width: 100%;
 }
 
-.world-details-box {
-  padding: 0px 50px;
-}
-
-.world-details-box p {
- text-align: left;
-}
-
-.center-table {
-  width: 85%;
-  margin: 15px auto 0;
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-.center-table th, 
-.center-table td {
-  border: 1px solid black;
-}
-
-.center-table th { 
-  text-align: center;
-  background-color: lightgray;
-}
-
-.politics-cell {
+.single-world-view h1{
+  position: absolute; 
+  top: 0; 
+  left: 15px; 
   text-align: left;
+  color:rgba(255, 255, 255, 0.6);
+  font-size: 4rem;
+  -webkit-text-stroke: 2px #1e2c2a;  
+}
+
+.single-world-view p{
+  font-size: 1.25rem;
+  padding: 0 20px;
+  color:#1e2c2a;
+  text-align: left;
+}
+
+.single-top{
+  position: relative;
+}
+
+.single-top-wrapper{
+  border-top:  #f1f6f9 2px solid;
+  border-bottom:  #f1f6f9 2px solid;
+  background-color:rgba(255, 255, 255, 0.6) ;
+}
+
+.attr-name{
+  color: #1e2c2a;
+  font-weight: bold;
+}
+.single-geo{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.single-mag-tech{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+}
+
+.single-mag-tech p{
+ /* padding:0px 50px; */
 }

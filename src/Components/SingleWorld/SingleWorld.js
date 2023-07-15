@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
+import './SingleWorld.css'
 import { useParams } from "react-router-dom";
 import { getSingleWorldData } from "../../apiCalls";
 import { Inhabitant } from "../Inhabitant/Inhabitant";
 import { Location } from "../Location/Location";
 import { Character } from "../Character/Character";
 import { Event } from "../Event/Event";
-import { NotableItem } from "../NotableItem/NotableItem";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { Error } from "../Error/Error";
-import './SingleWorld.css'
 
 export const SingleWorld = () => {
   const { id } = useParams();
@@ -19,7 +18,6 @@ export const SingleWorld = () => {
   useEffect(() => {
     getSingleWorldData(id)
       .then((data) => {
-        console.log(data)
         setWorld(data);
         setIsLoading(false);
       })
@@ -34,25 +32,6 @@ export const SingleWorld = () => {
   } else if (error) {
     return <Error />;
   }
-
-  // const highlights = world.notableItems
-  //   ? world.notableItems.map((item, index) => (
-  //     <NotableItem
-  //       key={index}
-  //       imagePositon={index % 2 === 0 ? 'left' : 'right'}
-  //       name={item.name}
-  //       type={item.type}
-  //       lore={item.lore}
-  //       img={item.img}
-  //       race={item.race}
-  //       alignment={item.alignment}
-  //       date={item.date}
-  //       outcome={item.outcome}
-  //       population={item.population}
-  //     />
-  //   ))
-  //   : null;
-
 
   const declareUnknown = (subject) => {
     return (
@@ -125,42 +104,43 @@ export const SingleWorld = () => {
       />
     )) : declareUnknown('events');
 
-    const history =
-    world.lore ? world.lore.map(par => <p>{par}</p>) : declareUnknown('history');
+  const history =
+    world.lore ? world.lore.map((par, index) => <p key={index}>{par}</p>) : declareUnknown('history');
 
   return (
 
     <section className="single-world-view">
-      <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
-      <h1>{world.name}</h1>
-      <p>{world.description}</p>
-
-      <h3>Geodynamics</h3>
-      <p>Size: {world.geoDynamics.size}</p>
-      <p>Shape: {world.geoDynamics.shape}</p>
-      <p>Climate: {world.geoDynamics.climate}</p>
-
-      <h3>Magic</h3>
-      <p>Magic Level: {world.magicTechnology.magicLvl}</p>
-      <p>Magic: {listDetails(world.magicTechnology.magic)}</p>
-      <h3>Technology</h3>
-      <p>Technology Level: {world.magicTechnology.techLvl}</p>
-      <p>Technology: {listDetails(world.magicTechnology.technology)}</p>
+      <div className="single-top">
+        <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
+        <h1>{world.name}</h1>
+      </div>
+      <div className="single-top-wrapper">
+        <div className="single-geo">
+          <p><span className="attr-name">Shape</span>: {world.geoDynamics.shape}</p>
+          <p><span className="attr-name">Size</span>: {world.geoDynamics.size}</p>
+          <p><span className="attr-name">Climate</span>: {world.geoDynamics.climate}</p>
+        </div>
+        <div className="single-mag-tech">
+          <p><span className="attr-name">Magic</span>: {listDetails(world.magicTechnology.magic)}</p>
+          <p><span className="attr-name">Level</span>: {world.magicTechnology.magicLvl}</p>
+        </div>
+        <div className="single-mag-tech">
+          <p><span className="attr-name">Techonology</span>: {listDetails(world.magicTechnology.technology)}</p>
+          <p><span className="attr-name">Level</span>: {world.magicTechnology.techLvl}</p>
+        </div>
+        <p>{world.description}</p>
+      </div>
 
       <h3>Inhabitants</h3>
       {inhabitants}
-
       <h3>Locations</h3>
       {locations}
-
       <h3>Characters</h3>
       {characters}
-
       <h3>Events</h3>
       {events}
       <h3>History</h3>
       {history}
-
     </section>
   );
 };
