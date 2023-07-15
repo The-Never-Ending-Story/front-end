@@ -1,6 +1,5 @@
 .single-world-view {
   background-color: rgb(3, 42, 37);
-  padding-top: 15px;
   padding: 15px 0;
 }
 
@@ -55,11 +54,10 @@
 .tabs {
   display: flex;
   width: 100%;
-  margin-bottom: 10px;
-  border-bottom: #f1f6f9 2px solid;;
+  
 }
 
-.tabs button {
+.tab {
   border: none;
   box-shadow: none;
   outline: none;
@@ -70,12 +68,35 @@
   height: 60px;
   text-align: center;
   font-size: 1.5rem;
+  border-bottom: #f1f6f9 2px solid;
+}
+
+.tab-active {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: #1e2c2a;
+  color: #15be8b;
+  inset: 0;
+  flex-grow: 1;
+  height: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 0px 1px;
+  border-color:#f1f6f9 ;
+  
+}
+
+.tab:hover,
+.tab-active:hover{
+  cursor: pointer;
+  color: #f1f6f9 ;
 }
 
 .single-det-wrapper {
   background-color:#1e2c2a;
   border-bottom: #f1f6f9 2px solid;
-  margin: 20px auto;
+  padding: 20px;
 }
 
 .single-det-wrapper h2,
@@ -95,6 +116,7 @@
 .single-det-container {
   display: flex;
 }
+
 .single-det-img{
   margin: 10px;
   width: 40vw;

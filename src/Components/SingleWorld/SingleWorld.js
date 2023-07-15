@@ -157,6 +157,7 @@ export const SingleWorld = () => {
           onClick={() => setCurrentTab(tabName)}
           aria-label={`Open ${tabName} tab`}
           tabIndex={0}
+          className={currentTab === tabName ? 'tab-active' : 'tab'}
         >
           {tabName}
         </button>
