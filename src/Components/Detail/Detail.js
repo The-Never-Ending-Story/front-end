@@ -1,7 +1,6 @@
-import React from "react";
-import './Location.css'
+import React from "react"
 
-export const Location = ({img, imgAlt, name, climate, lore}) =>{
+export const Detail = ({ img, imgAlt, name, additionalDetails, lore }) => {
 
   return (
     <div className="single-det-container">
@@ -10,7 +9,9 @@ export const Location = ({img, imgAlt, name, climate, lore}) =>{
       </div>
       <div>
         <h3>{name}</h3>
-        <p>Climate: {climate}</p>
+        {additionalDetails && additionalDetails.map((detail, index) => (
+          <p key={index}>{detail}</p>
+        ))}
         <p>{lore}</p>
       </div>
     </div>

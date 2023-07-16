@@ -12,18 +12,16 @@ export const WelcomePage = () => {
 
   const discoverNewWorld = ()=> {
     getRandomWorldData()
-      .then(data => {
-        const addOne = [...displayedWorlds, data]
-        dispatch(getDiscoveredWorlds(addOne))
-        // console.log(data.id)
-        history.push(`/world/${data.id}`)
-      }).catch((error) => {
-        console.log('This line replaced by error handling')
-      })
+    .then(data=> {
+      const addOne = [...displayedWorlds, data]
+      dispatch(getDiscoveredWorlds(addOne))
+      history.push(`/world/${data.id}`)
+    }).catch((error)=>{
+      console.log('This line replaced by error handling')
+    })
   }
 
   useEffect(()=> {
-    console.log('useEffect:', displayedWorlds)
   }, [displayedWorlds])
 
   return (

@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import './SingleWorld.css'
 import { useParams } from "react-router-dom";
 import { getSingleWorldData } from "../../apiCalls";
-import { Inhabitant } from "../Inhabitant/Inhabitant";
-import { Location } from "../Location/Location";
-import { Character } from "../Character/Character";
-import { Event } from "../Event/Event";
+import { Detail } from "../Detail/Detail";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { PageNotFound } from "../PageNotFound/PageNotFound";
 import { Error } from "../Error/Error";
@@ -22,7 +19,7 @@ export const SingleWorld = () => {
     getSingleWorldData(id)
       .then((data) => {
         setWorld(data);
-        console.log(data)
+        setCurrentTab('Inhabitants');
         setIsLoading(false);
       })
       .catch((res) => {
@@ -36,7 +33,7 @@ export const SingleWorld = () => {
         setIsLoading(false);
       })
   }, [id]);
-  
+
   if (isLoading) {
     return <LoadingIcon />;
   } else if (error) {
@@ -52,41 +49,44 @@ export const SingleWorld = () => {
   }
 
   const listDetails = (list) => {
-    return list.reduce((acc, cV, currentIndex) => {
-      if (currentIndex !== (list.length - 1)) {
-        acc += `${cV}, `
-      } else {
-        acc += `and ${cV}`
-      }
-      return acc;
-    }, '')
+    let sentenceFragment = '';
+
+    if (list.length > 1) {
+      let lastItem = list[list.length - 1];
+      sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
+    } else if (list.length === 1) {
+      sentenceFragment = list[0];
+    }
+
+    return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
   }
 
   const inhabitants =
     world.species ? world.species.map(inhabitant => (
-      <div className="single-det-wrapper">
-        <Inhabitant
-          key={inhabitant.id}
+      <div className="single-det-wrapper" key={inhabitant.id}>
+        <Detail
           img={inhabitant.img}
           imgAlt={inhabitant.imagine}
           name={inhabitant.name}
-          alignment={inhabitant.alignment}
-          politics={inhabitant.politics}
+          additionalDetails={[
+            `Alignment: ${inhabitant.alignment}`,
+            `Politics: ${inhabitant.politics}`
+          ]}
           lore={inhabitant.lore}
         />
       </div>
     )) : declareUnknown('inhabitants');
 
-
   const locations =
     world.locations ? world.locations.map(location => (
-      <div className="single-det-wrapper">
-        <Location
-          key={location.id}
+      <div className="single-det-wrapper" key={location.id}>
+        <Detail
           img={location.img}
           imgAlt={location.imagine}
           name={location.name}
-          climate={location.climate}
+          additionalDetails={[
+            `Climate: ${location.climate}`
+          ]}
           lore={location.lore}
         />
       </div>
@@ -94,31 +94,33 @@ export const SingleWorld = () => {
 
   const characters =
     world.characters ? world.characters.map(character => (
-      <div className="single-det-wrapper">
-        <Character
-          key={character.id}
+      <div className="single-det-wrapper" key={character.id}>
+        <Detail
           img={character.img}
           imgAlt={character.imagine}
           name={character.name}
-          species={character.species}
-          alignment={character.alignment}
-          age={character.age}
-          location={character.location}
+          additionalDetails={[
+            `Species: ${character.species}`,
+            `Alignment: ${character.alignment}`,
+            `Age: ${character.age}`,
+            `Location: ${character.location}`
+          ]}
           lore={character.lore}
         />
       </div>
-    )) : declareUnknown('locations');
+    )) : declareUnknown('characters');
 
   const events =
     world.events ? world.events.map(event => (
-      <div className="single-det-wrapper">
-        <Event
-          key={event.id}
+      <div className="single-det-wrapper" key={event.id}>
+        <Detail
           img={event.img}
           imgAlt={event.imagine}
           name={event.name}
-          time={event.time}
-          age={event.age}
+          additionalDetails={[
+            `${event.time} in the age of ${event.age}`
+          ]}
+
           lore={event.lore}
         />
       </div>
@@ -130,13 +132,13 @@ export const SingleWorld = () => {
       </div>
     ;
 
-    const tabContent = {
-      Inhabitants: inhabitants,
-      Locations: locations,
-      Characters: characters,
-      Events: events,
-      History: history
-    };
+  const tabContent = {
+    Inhabitants: inhabitants,
+    Locations: locations,
+    Characters: characters,
+    Events: events,
+    History: history
+  };
 
   return (
     <section className="single-world-view">
@@ -147,23 +149,23 @@ export const SingleWorld = () => {
       <div className="single-top-wrapper">
         <div className="single-geo">
           <p><span className="attr-name">Shape </span>  {world.geoDynamics.shape}</p>
-          <p><span className="attr-name">Size: </span> {world.geoDynamics.size}</p>
-          <p><span className="attr-name">Climate: </span> {world.geoDynamics.climate}</p>
+          <p><span className="attr-name">Size </span> {world.geoDynamics.size}</p>
+          <p><span className="attr-name">Climate </span> {world.geoDynamics.climate}</p>
         </div>
         <div className="single-mag-tech">
-          <p><span className="attr-name">Magic: </span> {listDetails(world.magicTechnology.magic)}</p>
-          <p><span className="attr-name">Level: </span> {world.magicTechnology.magicLvl}</p>
+          <p className="lvl-name">Magic<span className="level">Level {world.magicTechnology.magicLvl}</span></p>
+          <p className="lvl-detail">{listDetails(world.magicTechnology.magic)}</p>
         </div>
         <div className="single-mag-tech">
-          <p><span className="attr-name">Techonology: </span> {listDetails(world.magicTechnology.technology)}</p>
-          <p><span className="attr-name">Level: </span> {world.magicTechnology.techLvl}</p>
+          <p className="lvl-name">Techonology<span className="level">Level {world.magicTechnology.techLvl}</span></p>
+          <p className="lvl-detail">{listDetails(world.magicTechnology.technology)}</p>
         </div>
         <p>{world.description}</p>
       </div>
       <div className="tabs">
         {Object.keys(tabContent).map((tabName) => (
-          <button 
-            key={tabName} 
+          <button
+            key={tabName}
             onClick={() => setCurrentTab(tabName)}
             aria-label={`Open ${tabName} tab`}
             tabIndex={0}
