@@ -138,44 +138,43 @@ export const SingleWorld = () => {
     };
 
   return (
-
     <section className="single-world-view">
-    <div className="single-top">
-      <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
-      <h1>{world.name}</h1>
-    </div>
-    <div className="single-top-wrapper">
-      <div className="single-geo">
-        <p><span className="attr-name">Shape </span>  {world.geoDynamics.shape}</p>
-        <p><span className="attr-name">Size: </span> {world.geoDynamics.size}</p>
-        <p><span className="attr-name">Climate: </span> {world.geoDynamics.climate}</p>
+      <div className="single-top">
+        <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
+        <h1>{world.name}</h1>
       </div>
-      <div className="single-mag-tech">
-        <p><span className="attr-name">Magic: </span> {listDetails(world.magicTechnology.magic)}</p>
-        <p><span className="attr-name">Level: </span> {world.magicTechnology.magicLvl}</p>
+      <div className="single-top-wrapper">
+        <div className="single-geo">
+          <p><span className="attr-name">Shape </span>  {world.geoDynamics.shape}</p>
+          <p><span className="attr-name">Size: </span> {world.geoDynamics.size}</p>
+          <p><span className="attr-name">Climate: </span> {world.geoDynamics.climate}</p>
+        </div>
+        <div className="single-mag-tech">
+          <p><span className="attr-name">Magic: </span> {listDetails(world.magicTechnology.magic)}</p>
+          <p><span className="attr-name">Level: </span> {world.magicTechnology.magicLvl}</p>
+        </div>
+        <div className="single-mag-tech">
+          <p><span className="attr-name">Techonology: </span> {listDetails(world.magicTechnology.technology)}</p>
+          <p><span className="attr-name">Level: </span> {world.magicTechnology.techLvl}</p>
+        </div>
+        <p>{world.description}</p>
       </div>
-      <div className="single-mag-tech">
-        <p><span className="attr-name">Techonology: </span> {listDetails(world.magicTechnology.technology)}</p>
-        <p><span className="attr-name">Level: </span> {world.magicTechnology.techLvl}</p>
+      <div className="tabs">
+        {Object.keys(tabContent).map((tabName) => (
+          <button 
+            key={tabName} 
+            onClick={() => setCurrentTab(tabName)}
+            aria-label={`Open ${tabName} tab`}
+            tabIndex={0}
+            className={currentTab === tabName ? 'tab-active' : 'tab'}
+          >
+            {tabName}
+          </button>
+        ))}
       </div>
-      <p>{world.description}</p>
-    </div>
-    <div className="tabs">
-      {Object.keys(tabContent).map((tabName) => (
-        <button 
-          key={tabName} 
-          onClick={() => setCurrentTab(tabName)}
-          aria-label={`Open ${tabName} tab`}
-          tabIndex={0}
-          className={currentTab === tabName ? 'tab-active' : 'tab'}
-        >
-          {tabName}
-        </button>
-      ))}
-    </div>
-    <div className="tab-content">
-      {currentTab && tabContent[currentTab]}
-    </div>
-  </section>
+      <div className="tab-content">
+        {currentTab && tabContent[currentTab]}
+      </div>
+    </section>
   );
 };
