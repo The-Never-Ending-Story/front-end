@@ -1,6 +1,7 @@
 import React from "react"
 
 export const Detail = ({ img, imgAlt, name, additionalDetails, lore }) => {
+
   return (
     <div className="single-det-container">
       <div>

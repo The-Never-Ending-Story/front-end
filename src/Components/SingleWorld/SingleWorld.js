@@ -120,15 +120,16 @@ export const SingleWorld = () => {
           additionalDetails={[
             `${event.time} in the age of ${event.age}`
           ]}
+
           lore={event.lore}
         />
       </div>
     )) : declareUnknown('events');
 
   const history =
-    <div className="single-det-wrapper">
-      {world.lore ? world.lore.map((par, index) => <p key={index}>{par}</p>) : declareUnknown('history')}
-    </div>
+      <div className="single-det-wrapper">
+        { world.lore ? world.lore.map((par, index) => <p key={index}>{par}</p>) : declareUnknown('history') }
+      </div>
     ;
 
   const tabContent = {
