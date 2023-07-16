@@ -31,15 +31,15 @@ Hyperloom was created over a 2 week sprint as part of Turing's software developm
 ## Contributors:
 [//]: <>
 FE: \
-[Adam Meza] [GitHub](https://github.com/Adam-Meza) \ [LinkedIn](https://www.linkedin.com/in/adam-meza/)
-[Priscilla Paxton](https://github.com/priscillaapaxton) \ [LinkedIn](https://www.linkedin.com/in/priscilla-paxton/)
-[Sharie Trachsel](https://github.com/sdtrachsel) \ [LinkedIn](https://www.linkedin.com/in/sharie-trachsel/)
-[Shane Misra](https://github.com/sdmisra) [LinkedIn](https://www.linkedin.com/in/shanemisra/)
+Adam Meza: [GitHub](https://github.com/Adam-Meza) | [LinkedIn](https://www.linkedin.com/in/adam-meza/)
+Priscilla Paxton: [GitHub](https://github.com/priscillaapaxton) | [LinkedIn](https://www.linkedin.com/in/priscilla-paxton/)
+Sharie Trachsel: [GitHub](https://github.com/sdtrachsel) | [LinkedIn](https://www.linkedin.com/in/sharie-trachsel/)
+Shane Misra: [GitHub](https://github.com/sdmisra) | [LinkedIn](https://www.linkedin.com/in/shanemisra/)
 
 BE: \
-[Andrew Bowman](https://github.com/abwmn) \ [LinkedIn](https://www.linkedin.com/in/andrew-b0wman/)
-[Sean Cowans](https://github.com/sjcowans) \ [LinkedIn](https://www.linkedin.com/in/sean-cowans-985554267/)
-[Branden Ge](https://github.com/brandenge) \ [LinkedIn](https://www.linkedin.com/in/brandenge/)
+Andrew Bowman: [GitHub](https://github.com/abwmn) | [LinkedIn](https://www.linkedin.com/in/andrew-b0wman/)
+Sean Cowans: [GitHub](https://github.com/sjcowans) | [LinkedIn](https://www.linkedin.com/in/sean-cowans-985554267/)
+Branden Ge: [GitHub](https://github.com/brandenge) | [LinkedIn](https://www.linkedin.com/in/brandenge/)
 
 ## Learning Goals:
 [//]: <>
