@@ -53,14 +53,14 @@ export const SingleWorld = () => {
 
   const listDetails = (list) => {
     let sentenceFragment = '';
-  
+
     if (list.length > 1) {
       let lastItem = list[list.length - 1];
       sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
     } else if (list.length === 1) {
       sentenceFragment = list[0];
     }
-    
+
     return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
   }
 
@@ -146,16 +146,16 @@ export const SingleWorld = () => {
       <div className="single-top-wrapper">
         <div className="single-geo">
           <p><span className="attr-name">Shape </span>  {world.geoDynamics.shape}</p>
-          <p><span className="attr-name">Size: </span> {world.geoDynamics.size}</p>
-          <p><span className="attr-name">Climate: </span> {world.geoDynamics.climate}</p>
+          <p><span className="attr-name">Size </span> {world.geoDynamics.size}</p>
+          <p><span className="attr-name">Climate </span> {world.geoDynamics.climate}</p>
         </div>
         <div className="single-mag-tech">
-          <p><span className="attr-name">Magic: </span> {listDetails(world.magicTechnology.magic)}</p>
-          <p><span className="attr-name">Level: </span> {world.magicTechnology.magicLvl}</p>
+          <p className="lvl-name">Magic<span className="level">Level {world.magicTechnology.magicLvl}</span></p>
+          <p className="lvl-detail">{listDetails(world.magicTechnology.magic)}</p>
         </div>
         <div className="single-mag-tech">
-          <p><span className="attr-name">Techonology: </span> {listDetails(world.magicTechnology.technology)}</p>
-          <p><span className="attr-name">Level: </span> {world.magicTechnology.techLvl}</p>
+          <p className="lvl-name">Techonology<span className="level">Level {world.magicTechnology.techLvl}</span></p>
+          <p className="lvl-detail">{listDetails(world.magicTechnology.technology)}</p>
         </div>
         <p>{world.description}</p>
       </div>
