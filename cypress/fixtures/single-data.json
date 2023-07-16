@@ -39,7 +39,7 @@
               "politics": "Communal society",
               "lore": "Bipedal beings, resembling humans, but adapted to DigiVale's environment. Deeply interwoven with their planet's magic, they're natural enchanters, using the blend of rudimentary tech and magic to thrive and communicate.",
               "imagine": "Humanoid silhouette standing tall, skin glistening with sweat under a blazing sun, eyes glowing with incandescent magic, with augmentations of rudimentary cybernetics blended seamlessly with their anatomy, and a landscape of dramatic savanna and salt flats stretching out behind them.",
-              "img": "none",
+              "img": "https://cdn.discordapp.com/attachments/1128814452012220536/1129974195820965888/hyperloom_Humanoid_silhouette_standing_tall_skin_glistening_wit_8455020a-ab65-465a-8603-2d67b8cb754f.png",
               "type": "none",
               "world": 3
           }
@@ -52,7 +52,7 @@
               "climate": "Hot, dry",
               "lore": "Constructed amid saltpan, emblematically named for the encircling mystical crystals. Foundations are rooted within the caves beneath, buildings are magically reinforced, with abundant neon lighting.",
               "imagine": "A cityscape gleaming under the setting sun, tall buildings of glass and metal erected amid a desert of salt, surrounded by giant luminescent crystals, their reflections painting the city in a mesmerizing polychrome lightshow, while the hollow entrance of a cavernous abyss opens up beneath the city.",
-              "img": "none",
+              "img": "https://cdn.midjourney.com/97131eab-e646-44cd-9ee0-13cd3900ad57/0_0.png",
               "world": 3
           },
           {
@@ -62,7 +62,7 @@
               "climate": "Temperate, humid",
               "lore": "Nestled high in the cavernous caves where the humidity is bearable. It's interconnected with one another via suspended rope bridges, crystal-enhanced lighting refracts to the stalactites above.",
               "imagine": "High up within a cavernous void, a settlement hangs suspended. Wooden, artificially enhanced structures lit by glowing crystals, surrounded by stalactites, connected with rope bridges swaying slightly in the cave's gentle breathe.",
-              "img": "none",
+              "img": "https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_0.png",
               "world": 3
           }
       ],
@@ -75,7 +75,7 @@
               "age": 70,
               "lore": "The venerable elder of Crystaline, who paved the path for the fusion of magic and technology. Spread the teachings of harmony between both, despite the city's adversity towards technology initially.",
               "imagine": "An elderly figure, face lining wisdom, eyes glowing with powerful magic, stands before a holographic interface. In their extended hand, a magical orb pulses synchronous with the neon-lit cityscape behind.",
-              "img": "none",
+              "img": "https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_0.png",
               "location": "",
               "world": 3
           },

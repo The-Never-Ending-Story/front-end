@@ -22,6 +22,7 @@ export const SingleWorld = () => {
     getSingleWorldData(id)
       .then((data) => {
         setWorld(data);
+        console.log(data)
         setIsLoading(false);
       })
       .catch((res) => {
