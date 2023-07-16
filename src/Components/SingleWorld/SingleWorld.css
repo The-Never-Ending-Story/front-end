@@ -92,7 +92,6 @@ p.lvl-detail{
 }
 
 .tab-active {
-  border: none;
   box-shadow: none;
   outline: none;
   background-color: #1e2c2a;
@@ -102,9 +101,9 @@ p.lvl-detail{
   height: 60px;
   text-align: center;
   font-size: 1.5rem;
-  border: 0px 1px;
-  border-color: #f1f6f9;
-
+  border-right: 1px solid #f1f6f9;
+  border-left: 1px solid #f1f6f9;
+  border-bottom: none;
 }
 
 .tab:hover,
@@ -146,6 +145,10 @@ p.lvl-detail{
 
 @media screen and (max-width: 34em) {
   .tab {
+    font-size: 1rem;
+  }
+
+  .tab-active {
     font-size: 1rem;
   }
 
