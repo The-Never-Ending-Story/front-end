@@ -56,16 +56,16 @@ The 'Capstone' project is the final project at Turing School of Software and Des
 
 ## Installation Instructions:
 [//]: <>
--#Clone the Repository:
-git clone <https://github.com/The-Never-Ending-Story/front-end.git>
+# Clone the Repository:
+- git clone <https://github.com/The-Never-Ending-Story/front-end.git>
 
--#Navigate to the Project Directory to install dependencies:
-npm install
+# Navigate to the Project Directory to install dependencies:
+- npm install
 
--#Access the Application:
-npm start
-application will open in web broswer with 'http://localhost:3000'
-Open your web browser.
+# Access the Application:
+- npm start
+- application will open in web broswer with 'http://localhost:3000'
+
 
 ## Testing Instructions:
 [//]: <>
