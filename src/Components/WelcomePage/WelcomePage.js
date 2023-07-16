@@ -15,7 +15,6 @@ export const WelcomePage = () => {
     .then(data=> {
       const addOne = [...displayedWorlds, data]
       dispatch(getDiscoveredWorlds(addOne))
-      // console.log(data.id)
       history.push(`/world/${data.id}`)
     }).catch((error)=>{
       console.log('This line replaced by error handling')
@@ -23,7 +22,6 @@ export const WelcomePage = () => {
   }
 
   useEffect(()=> {
-    console.log('useEffect:', displayedWorlds)
   }, [displayedWorlds])
 
   return (
