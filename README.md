@@ -30,13 +30,13 @@ Hyperloom was created over a 2 week sprint as part of Turing's software developm
 
 ## Contributors:
 [//]: <>
-FE: \
+FE: 
 - Adam Meza: [GitHub](https://github.com/Adam-Meza) | [LinkedIn](https://www.linkedin.com/in/adam-meza/)
 - Priscilla Paxton: [GitHub](https://github.com/priscillaapaxton) | [LinkedIn](https://www.linkedin.com/in/priscilla-paxton/)
 - Sharie Trachsel: [GitHub](https://github.com/sdtrachsel) | [LinkedIn](https://www.linkedin.com/in/sharie-trachsel/)
 - Shane Misra: [GitHub](https://github.com/sdmisra) | [LinkedIn](https://www.linkedin.com/in/shanemisra/)
 
-BE: \
+BE: 
 - Andrew Bowman: [GitHub](https://github.com/abwmn) | [LinkedIn](https://www.linkedin.com/in/andrew-b0wman/)
 - Sean Cowans: [GitHub](https://github.com/sjcowans) | [LinkedIn](https://www.linkedin.com/in/sean-cowans-985554267/)
 - Branden Ge: [GitHub](https://github.com/brandenge) | [LinkedIn](https://www.linkedin.com/in/brandenge/)
@@ -56,9 +56,17 @@ The 'Capstone' project is the final project at Turing School of Software and Des
 
 ## Installation Instructions:
 [//]: <>
--
--
--
+-#Clone the Repository:
+git clone <https://github.com/The-Never-Ending-Story/front-end.git>
+
+-#Navigate to the Project Directory to install dependencies:
+npm install
+
+-#Access the Application:
+npm start
+application will open in web broswer with 'http://localhost:3000'
+Open your web browser.
+
 ## Testing Instructions:
 [//]: <>
 
