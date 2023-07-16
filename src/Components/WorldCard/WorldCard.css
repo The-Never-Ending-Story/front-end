@@ -1,7 +1,7 @@
 .world-card-container {
   display: flex;
   width: 50em;
-  height: 8em;
+  height: 9.5em;
   margin: 1em;
   transition: all 150ms ease-in-out;
   align-items: center;
@@ -27,6 +27,27 @@
 .world-card-text-container {
   display: flex;
   flex-direction: column;
-  align-content: left;
+  justify-content: center;
+  width: 70%;
   padding-left: 1em;
+}
+
+@media screen and (max-width: 54em) {
+  .world-card-container {
+    width: 85%;
+    font-size: 12px;
+  }
+  .world-image {
+    height: 65%
+  }
+}
+
+@media screen and (max-width: 38em) {
+  .world-card-container {
+    width: 85%;
+    font-size: 8px;
+  }
+  .world-card-text-container {
+    width: 60%;
+  }
 }

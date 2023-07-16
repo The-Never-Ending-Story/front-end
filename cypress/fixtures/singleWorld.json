@@ -1,0 +1,104 @@
+{
+  "id": 2,
+  "name": "Arcana Lumina",
+  "blurb": "A world where subtropical elements blend with the magic of the land, stretching from vibrant jungles to sparse tundra.",
+  "description": "Arcana Lumina punctuates the void of space as a dazzling jewel of diverse landscapes and climates. Subtropical jungles dominate the equatorial regions seeping with magic, projecting lifeforms distinctive yet integrally attached to the land. Medieval-style settlements with burgeoning technology house sparkling societies, while far north, the desolate beauty of the frozen tundra prevails, underlining the stark contrast of this enchanting world.",
+  "geoDynamics": {
+  "size": "Earth-like",
+  "shape": "Planet",
+  "climate": "subtropical",
+  "landscapes": [
+  "rolling hills",
+  "tundra"
+  ]
+  },
+  "magicTechnology": {
+  "magic": [
+  "Charm Craft",
+  "Elemental Control"
+  ],
+  "techLvl": 2,
+  "magicLvl": 7,
+  "technology": [
+  "Basic Mechanisms",
+  "Elemental Devices"
+  ]
+  },
+  "img": {
+  "landscape": "https://cdn.discordapp.com/attachments/1128814452012220536/1129838576826331206/hyperloom_Picture_an_ethereal_dawn_a_blend_of_subtropical_hues__1b190073-ca72-4024-9e3a-cddbcaf84087.png",
+  "thumbnail": "https://cdn.discordapp.com/attachments/1128814452012220536/1129835524354473994/hyperloom_Picture_an_ethereal_dawn_a_blend_of_subtropical_hues__8c46d351-ec7c-484c-a167-23797cb7a1df.png"
+  },
+  "species": [
+  {
+  "id": 2,
+  "name": "Humboldtai",
+  "alignment": "Neutral Good",
+  "politics": "Matriarchy",
+  "lore": "The Humboldtai are humanoid entities connected to the lifeblood of the jungles. They possess the ability to harness the vegetation around them, manipulating it to their will.",
+  "imagine": "Imagine a figure whose body seems to rise elegantly from the union between the woodland floor and living vines. Eyes as deep green as the heart of the forest and skin like soft timber. This inhabitant, with hands dancing towards the air, shapes the very vegetation surrounding it.",
+  "img": "https://cdn.discordapp.com/attachments/1128814452012220536/1129974470250070126/hyperloom_Imagine_a_figure_whose_body_seems_to_rise_elegantly_f_51297131-6b73-4c74-a4ea-bfa2251208f4.png",
+  "imgs": [],
+  "type": "none",
+  "world": 2
+  }
+  ],
+  "locations": [
+  {
+  "id": 3,
+  "name": "Ventonda",
+  "type": "Settlement",
+  "climate": "Subtropical",
+  "lore": "Ventonda is a bustling village in the heart of the subtropical jungle. Residents live in homes interwoven with the trees using organic magic, forming a harmonious blend of nature and inhabitants.",
+  "imagine": "Think of homes perched in oversized banyan branches, platforms built from living vines connecting multi-tiered structures. A jungle village bustling with the energy of day-to-day life, while soft bioluminescent blooms add an ethereal glow to the landscape.",
+  "img": "https://cdn.midjourney.com/4708ef4d-0275-476a-94d4-2ebd4852d09c/0_0.png",
+  "imgs": "['https://cdn.midjourney.com/4708ef4d-0275-476a-94d4-2ebd4852d09c/0_0.png', 'https://cdn.midjourney.com/4708ef4d-0275-476a-94d4-2ebd4852d09c/0_1.png', 'https://cdn.midjourney.com/4708ef4d-0275-476a-94d4-2ebd4852d09c/0_2.png', 'https://cdn.midjourney.com/4708ef4d-0275-476a-94d4-2ebd4852d09c/0_3.png']",
+  "world": 2
+  }
+  ],
+  "characters": [
+  {
+  "id": 2,
+  "name": "Klavandor",
+  "species": "Humboldtai",
+  "alignment": "Neutral Good",
+  "age": 68,
+  "lore": "Klavandor is a revered elder of the Humboldtai, a recognised figure in Ventonda and a pacifier between the diverse ecosystems of subtropical and tungs.",
+  "imagine": "Consider a figure rooted in age, with wisdom reflecting in the eyes. The verdant skin is embedded with patterns shaped like ancient runes, a running ivy swirling around an arm. This figure stands with grace, extending a hand towards a sprouting ground.",
+  "img": "https://cdn.midjourney.com/5577e3d1-630b-4057-afd6-4a24f2ab5e0d/0_0.png",
+  "imgs": [
+  "https://cdn.midjourney.com/5577e3d1-630b-4057-afd6-4a24f2ab5e0d/0_0.png",
+  "https://cdn.midjourney.com/5577e3d1-630b-4057-afd6-4a24f2ab5e0d/0_1.png",
+  "https://cdn.midjourney.com/5577e3d1-630b-4057-afd6-4a24f2ab5e0d/0_2.png",
+  "https://cdn.midjourney.com/5577e3d1-630b-4057-afd6-4a24f2ab5e0d/0_3.png"
+  ],
+  "location": "",
+  "world": 2
+  }
+  ],
+  "events": [
+  {
+  "id": 2,
+  "name": "The Grand Bloom",
+  "type": "Awakening",
+  "age": "Second Epoch",
+  "time": "Year 1572",
+  "lore": "The Grand Bloom was a rare miraculous event where every flora in Ventonda ignited with magic, shaping the future of the Humboldtai.",
+  "imagine": "Envision a wave of majestic hues illuminating the jungle, each plant and tree radiating with an ethereal glow. The entire habitat comes alive in a cascade of sparkling lights, mirroring the enchanted energy of the land.",
+  "img": "https://cdn.midjourney.com/6e08d7c3-f44b-4cd6-a7aa-537648ea5f9e/0_0.png",
+  "imgs": [
+  "https://cdn.midjourney.com/6e08d7c3-f44b-4cd6-a7aa-537648ea5f9e/0_0.png",
+  "https://cdn.midjourney.com/6e08d7c3-f44b-4cd6-a7aa-537648ea5f9e/0_1.png",
+  "https://cdn.midjourney.com/6e08d7c3-f44b-4cd6-a7aa-537648ea5f9e/0_2.png",
+  "https://cdn.midjourney.com/6e08d7c3-f44b-4cd6-a7aa-537648ea5f9e/0_3.png"
+  ],
+  "location": "",
+  "world": 2
+  }
+  ],
+  "lore": [
+  "In the First Epoch, the early Humboldtai emerged as a sentient species. Their peaceful existence in harmony with nature and mastery over vegetation flourished in the budding Ventonda, molding it as the heart of their culture.",
+  "Second Epoch started with the Grand Bloom, a landmark event that escalated the Humboldtai's magic to new heights. The burgeoning power shaped their knowledge, increasing the bio-diversity and weaving a stronger bond with the magically infused ecosystem.",
+  "The Third Epoch began as the Humboldtai mastered the synergy between magic and technology, marking the dawn of a golden age. While their territories remained primarily in the subtropical region, they began explorations to the tundra, planting seeds of their culture in the unfamiliar frozen landscapes."
+  ]
+  }
+  
