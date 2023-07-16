@@ -2,7 +2,6 @@ import React from "react";
 import './Inhabitant.css'
 
 export const Inhabitant = ({ img, imgAlt, name, alignment, politics, lore }) => {
-
   return (
     <div className="single-det-container">
       <div>

@@ -2,7 +2,6 @@ import React from "react";
 import './Event.css'
 
 export const Event = ({ img, imgAlt, name, time, age, lore }) => {
-
   return (
     <div className="single-det-container">
       <div>

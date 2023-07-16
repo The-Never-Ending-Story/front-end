@@ -64,15 +64,15 @@ export const SingleWorld = () => {
   const inhabitants =
     world.species ? world.species.map(inhabitant => (
       <div className="single-det-wrapper">
-      <Inhabitant
-        key={inhabitant.id}
-        img={inhabitant.img}
-        imgAlt={inhabitant.imagine}
-        name={inhabitant.name}
-        alignment={inhabitant.alignment}
-        politics={inhabitant.politics}
-        lore={inhabitant.lore}
-      />
+        <Inhabitant
+          key={inhabitant.id}
+          img={inhabitant.img}
+          imgAlt={inhabitant.imagine}
+          name={inhabitant.name}
+          alignment={inhabitant.alignment}
+          politics={inhabitant.politics}
+          lore={inhabitant.lore}
+        />
       </div>
     )) : declareUnknown('inhabitants');
 
@@ -80,52 +80,52 @@ export const SingleWorld = () => {
   const locations =
     world.locations ? world.locations.map(location => (
       <div className="single-det-wrapper">
-      <Location
-        key={location.id}
-        img={location.img}
-        imgAlt={location.imagine}
-        name={location.name}
-        climate={location.climate}
-        lore={location.lore}
-      />
+        <Location
+          key={location.id}
+          img={location.img}
+          imgAlt={location.imagine}
+          name={location.name}
+          climate={location.climate}
+          lore={location.lore}
+        />
       </div>
     )) : declareUnknown('locations');
 
   const characters =
     world.characters ? world.characters.map(character => (
       <div className="single-det-wrapper">
-      <Character
-        key={character.id}
-        img={character.img}
-        imgAlt={character.imagine}
-        name={character.name}
-        species={character.species}
-        alignment={character.alignment}
-        age={character.age}
-        location={character.location}
-        lore={character.lore}
-      />
+        <Character
+          key={character.id}
+          img={character.img}
+          imgAlt={character.imagine}
+          name={character.name}
+          species={character.species}
+          alignment={character.alignment}
+          age={character.age}
+          location={character.location}
+          lore={character.lore}
+        />
       </div>
     )) : declareUnknown('locations');
 
   const events =
     world.events ? world.events.map(event => (
       <div className="single-det-wrapper">
-      <Event
-        key={event.id}
-        img={event.img}
-        imgAlt={event.imagine}
-        name={event.name}
-        time={event.time}
-        age={event.age}
-        lore={event.lore}
-      />
+        <Event
+          key={event.id}
+          img={event.img}
+          imgAlt={event.imagine}
+          name={event.name}
+          time={event.time}
+          age={event.age}
+          lore={event.lore}
+        />
       </div>
     )) : declareUnknown('events');
 
   const history =
       <div className="single-det-wrapper">
-        {world.lore ? world.lore.map((par, index) => <p key={index}>{par}</p>) : declareUnknown('history')}
+        { world.lore ? world.lore.map((par, index) => <p key={index}>{par}</p>) : declareUnknown('history') }
       </div>
     ;
 
