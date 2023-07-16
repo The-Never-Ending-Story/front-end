@@ -122,3 +122,13 @@
   width: 40vw;
   border: #f1f6f9 2px solid ;
 }
+
+@media screen and (max-width: 34em) {
+.tab {
+  font-size: 1rem;
+}
+
+.single-world-view h1 {
+  font-size: 3.25rem;
+}
+}

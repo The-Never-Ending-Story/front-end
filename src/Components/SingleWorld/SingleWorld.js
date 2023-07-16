@@ -22,6 +22,7 @@ export const SingleWorld = () => {
     getSingleWorldData(id)
       .then((data) => {
         setWorld(data);
+        setCurrentTab('Inhabitants');
         setIsLoading(false);
       })
       .catch((res) => {
@@ -51,15 +52,15 @@ export const SingleWorld = () => {
   }
 
   const listDetails = (list) => {
-     let sentenceFragment = '';
-
+    let sentenceFragment = '';
+  
     if (list.length > 1) {
-      let lastItem = list.pop();
-      sentenceFragment = list.join(', ') + ' and ' + lastItem;
+      let lastItem = list[list.length - 1];
+      sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
     } else if (list.length === 1) {
       sentenceFragment = list[0];
     }
-
+    
     return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
   }
 
