@@ -19,6 +19,7 @@ function App() {
       dispatch(getDiscoveredWorlds(data))
       dispatch(changeIsLoading(false))
     }).catch(err => {
+      console.log('errorfound')
       dispatch(changeIsLoading(false))
       dispatch(changeError(err.message))
     })
