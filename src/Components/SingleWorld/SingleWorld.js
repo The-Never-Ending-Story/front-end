@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import './SingleWorld.css'
 import { useParams } from "react-router-dom";
 import { getSingleWorldData } from "../../apiCalls";
-import { Inhabitant } from "../Inhabitant/Inhabitant";
-import { Location } from "../Location/Location";
-import { Character } from "../Character/Character";
-import { Event } from "../Event/Event";
+import { Detail } from "../Detail/Detail";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { PageNotFound } from "../PageNotFound/PageNotFound";
 import { Error } from "../Error/Error";
@@ -67,26 +64,29 @@ export const SingleWorld = () => {
   const inhabitants =
     world.species ? world.species.map(inhabitant => (
       <div className="single-det-wrapper" key={inhabitant.id}>
-        <Inhabitant
+        <Detail
           img={inhabitant.img}
           imgAlt={inhabitant.imagine}
           name={inhabitant.name}
-          alignment={inhabitant.alignment}
-          politics={inhabitant.politics}
+          additionalDetails={[
+            `Alignment: ${inhabitant.alignment}`,
+            `Politics: ${inhabitant.politics}`
+          ]}
           lore={inhabitant.lore}
         />
       </div>
     )) : declareUnknown('inhabitants');
 
-
   const locations =
     world.locations ? world.locations.map(location => (
       <div className="single-det-wrapper" key={location.id}>
-        <Location
+        <Detail
           img={location.img}
           imgAlt={location.imagine}
           name={location.name}
-          climate={location.climate}
+          additionalDetails={[
+            `Climate: ${location.climate}`
+          ]}
           lore={location.lore}
         />
       </div>
@@ -95,28 +95,31 @@ export const SingleWorld = () => {
   const characters =
     world.characters ? world.characters.map(character => (
       <div className="single-det-wrapper" key={character.id}>
-        <Character
+        <Detail
           img={character.img}
           imgAlt={character.imagine}
           name={character.name}
-          species={character.species}
-          alignment={character.alignment}
-          age={character.age}
-          location={character.location}
+          additionalDetails={[
+            `Species: ${character.species}`,
+            `Alignment: ${character.alignment}`,
+            `Age: ${character.age}`,
+            `Location: ${character.location}`
+          ]}
           lore={character.lore}
         />
       </div>
-    )) : declareUnknown('locations');
+    )) : declareUnknown('characters');
 
   const events =
     world.events ? world.events.map(event => (
       <div className="single-det-wrapper" key={event.id}>
-        <Event
+        <Detail
           img={event.img}
           imgAlt={event.imagine}
           name={event.name}
-          time={event.time}
-          age={event.age}
+          additionalDetails={[
+            `${event.time} in the age of ${event.age}`
+          ]}
           lore={event.lore}
         />
       </div>
@@ -137,7 +140,6 @@ export const SingleWorld = () => {
   };
 
   return (
-
     <section className="single-world-view">
       <div className="single-top">
         <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
