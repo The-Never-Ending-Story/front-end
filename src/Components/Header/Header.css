@@ -22,11 +22,11 @@ h2 {
 }
 
 .header-button {
+  background: none;
     padding: 0.6em 2em;
     outline: none;
     border: none;
-    background: rgba(185, 229, 205, 0.5);
-    color:white;
+    color:#f1f6f9;
     cursor: pointer;
     border-radius: 10px;
     user-select: none;
@@ -34,44 +34,49 @@ h2 {
     touch-action: manipulation;
     font-family: 'DYLOVASTUFF', sans-serif;
 }
-  
 
 .header-container:hover {
-  animation: close-in ease 1s;
+  animation: close-in ease-in-out .55s;
+}
+
+.header-button:hover {
+  background: rgba(185, 229, 205, 0.5);
 }
 
 @keyframes close-in {
   0% {
-    background: radial-gradient(circle, rgba(42,51,52,) 30%, rgb(80, 158, 146) 37%, rgba(42,51,52,) 44%);
+    background: radial-gradient(
+      circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
   }
   10% {
-    background: radial-gradient(circle, rgba(42,51,52,) 27%, rgb(80, 158, 146) 34%, rgba(42,51,52,) 46%)
+    background: radial-gradient(circle, rgba(3,42,37,) 20%, rgb(80, 158, 146) 26%, rgba(3,42,57,) 50%)
   }
   20% {
-    background: radial-gradient(circle, rgba(42,51,52,) 25%, rgb(80, 158, 146) 31%,rgba(42,51,52,) 48%)
+    background: radial-gradient(circle, rgba(3,42,37,) 20%, rgb(80, 158, 146) 27%,rgba(3,42,57,) 50%)
   }
   30% {
-    background: radial-gradient(circle, rgba(42,51,52,) 23%, rgb(80, 158, 146) 28%, rgb(3, 42, 37) 49%)
+    background: radial-gradient(circle, rgba(3,42,37,) 20%, rgb(80, 158, 146) 28%, rgb(3, 42, 37) 50%)
   }
   40% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 25%, rgb(3, 42, 37) 50%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 29%, rgb(3, 42, 37) 50%)
   }
   50% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 17%, rgb(80, 158, 146) 23%,  rgb(3, 42, 37) 50%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 30%,  rgb(3, 42, 37) 50%)
   }
   60% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 25%, rgb(3, 42, 37) 50%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 29%, rgb(3, 42, 37) 50%)
   }
   70% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 23%, rgb(80, 158, 146) 28%, rgb(3, 42, 37) 49%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 28%, rgb(3, 42, 37) 50%)
   }
   80% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 25%, rgb(80, 158, 146) 31%, rgb(3, 42, 37) 48%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 27%, rgb(3, 42, 37) 50%)
   }
   90% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 27%, rgb(80, 158, 146) 33%, rgb(3, 42, 37) 46%)
+    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 26%, rgb(3, 42, 37) 50%)
   }
   100% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 30%, rgb(80, 158, 146) 37%, rgb(3, 42, 37) 44%)
+    background: radial-gradient(
+      circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
   }
 }

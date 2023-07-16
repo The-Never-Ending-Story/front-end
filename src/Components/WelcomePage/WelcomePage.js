@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { Link, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
@@ -15,16 +15,11 @@ export const WelcomePage = () => {
     .then(data=> {
       const addOne = [...displayedWorlds, data]
       dispatch(getDiscoveredWorlds(addOne))
-      // console.log(data.id)
       history.push(`/world/${data.id}`)
     }).catch((error)=>{
       console.log('This line replaced by error handling')
     })
   }
-
-  useEffect(()=> {
-    console.log('useEffect:', displayedWorlds)
-  }, [displayedWorlds])
 
   return (
     <main className="welcome-page">

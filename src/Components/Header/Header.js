@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import logo from '../../assets/hl_logo.png'
-import single from '../../assets/single.png'
-import saved from '../../assets/saved.png'
 import './Header.css'
 
 export const Header = () => {
-
+const {id} = useParams()
+console.log(id)
   return (
     <nav className='header-container'>
       <Link to='/worlds'>
@@ -15,8 +14,8 @@ export const Header = () => {
       <Link to='/'>
         <img className ='header-logo'src={logo} alt='hyper loom'/>
       </Link>
-      <Link to='/world/2'>
-          <button className="header-button">Create</button>
+      <Link to={`/world/`}>
+          <button className="header-button"></button>
       </Link>
     </nav>
   )
