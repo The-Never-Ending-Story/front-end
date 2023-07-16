@@ -31,18 +31,18 @@ Hyperloom was created over a 2 week sprint as part of Turing's software developm
 ## Contributors:
 [//]: <>
 FE: \
-Adam Meza: [GitHub](https://github.com/Adam-Meza) | [LinkedIn](https://www.linkedin.com/in/adam-meza/)
-Priscilla Paxton: [GitHub](https://github.com/priscillaapaxton) | [LinkedIn](https://www.linkedin.com/in/priscilla-paxton/)
-Sharie Trachsel: [GitHub](https://github.com/sdtrachsel) | [LinkedIn](https://www.linkedin.com/in/sharie-trachsel/)
-Shane Misra: [GitHub](https://github.com/sdmisra) | [LinkedIn](https://www.linkedin.com/in/shanemisra/)
+- Adam Meza: [GitHub](https://github.com/Adam-Meza) | [LinkedIn](https://www.linkedin.com/in/adam-meza/)
+- Priscilla Paxton: [GitHub](https://github.com/priscillaapaxton) | [LinkedIn](https://www.linkedin.com/in/priscilla-paxton/)
+- Sharie Trachsel: [GitHub](https://github.com/sdtrachsel) | [LinkedIn](https://www.linkedin.com/in/sharie-trachsel/)
+- Shane Misra: [GitHub](https://github.com/sdmisra) | [LinkedIn](https://www.linkedin.com/in/shanemisra/)
 
 BE: \
-Andrew Bowman: [GitHub](https://github.com/abwmn) | [LinkedIn](https://www.linkedin.com/in/andrew-b0wman/)
-Sean Cowans: [GitHub](https://github.com/sjcowans) | [LinkedIn](https://www.linkedin.com/in/sean-cowans-985554267/)
-Branden Ge: [GitHub](https://github.com/brandenge) | [LinkedIn](https://www.linkedin.com/in/brandenge/)
+- Andrew Bowman: [GitHub](https://github.com/abwmn) | [LinkedIn](https://www.linkedin.com/in/andrew-b0wman/)
+- Sean Cowans: [GitHub](https://github.com/sjcowans) | [LinkedIn](https://www.linkedin.com/in/sean-cowans-985554267/)
+- Branden Ge: [GitHub](https://github.com/brandenge) | [LinkedIn](https://www.linkedin.com/in/brandenge/)
 
 ## Learning Goals:
-[//]: <>
+The 'Capstone' project is the final project at Turing School of Software and Design's Software development program. It is a group project that is based on an initial application idea pitch and over 9 days is designed, developed, and deployed. This is the first combined team project of back end and front end students. During the process, both the back end and front end teams must chose an unfamiliar technology to implement in their development process.
 
 
 ## Challenges & Wins:
