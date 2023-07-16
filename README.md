@@ -1,19 +1,22 @@
 # HyperLoom:
 [//]: <>
 
-Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users new expansive fictional worlds. Users are able to browse previously generated worlds or create new ones with the click of a button. Hyperloom aims to foster the imagination and excitement of its users while providing them with high resolution images to give the sense of an immersive experience. 
+Hyperloom is a web based application that leverages ChatGPT and Midjourney to provide users new & expansive fictional worlds. Users are able to browse previously generated worlds or create new ones with the click of a button. Hyperloom aims to foster the imagination and excitement of its users while providing them with high resolution images to give the sense of an immersive experience. 
 
 
 ## Technologies
 - React
 - Router
-- Cypress 
+- Cypress
+- Redux
+- Github Actions Continuous Integration
 - GitHub Project Board
 - Miro - planning 
 - Google Sheets - daily standup
 
 #### Application is deployed live at:
 
+[Hyper Loom](https://hyper-loom-explorer.vercel.app/)
 
 ## Preview of App:
 [//]: <>
@@ -22,21 +25,21 @@ Hyperloom is a web based application that leverages ChatGPT and Midjourney to pr
 ## Context:
 [//]: <>
 
-Hyperloom was created over a 2 week sprint as part of Turings software development program as part of the final ‘capstone’ project. 
+Hyperloom was created over a 2 week sprint as part of Turing's software development program as part of the final ‘capstone’ project. 
 
 
 ## Contributors:
 [//]: <>
 FE: \
-[Adam Meza](https://github.com/Adam-Meza) \
-[Priscilla Paxton](https://github.com/priscillaapaxton) \
-[Sharie Trachsel](https://github.com/sdtrachsel) \
-[Shane Misra](https://github.com/sdmisra) 
+[Adam Meza] [GitHub](https://github.com/Adam-Meza) \ [LinkedIn](https://www.linkedin.com/in/adam-meza/)
+[Priscilla Paxton](https://github.com/priscillaapaxton) \ [LinkedIn](https://www.linkedin.com/in/priscilla-paxton/)
+[Sharie Trachsel](https://github.com/sdtrachsel) \ [LinkedIn](https://www.linkedin.com/in/sharie-trachsel/)
+[Shane Misra](https://github.com/sdmisra) [LinkedIn](https://www.linkedin.com/in/shanemisra/)
 
 BE: \
-[Andrew Bowman](https://github.com/abwmn) \
-[Sean Cowans](https://github.com/brandenge) \
-[Branden Ge](https://github.com/sjcowans) 
+[Andrew Bowman](https://github.com/abwmn) \ [LinkedIn](https://www.linkedin.com/in/andrew-b0wman/)
+[Sean Cowans](https://github.com/sjcowans) \ [LinkedIn](https://www.linkedin.com/in/sean-cowans-985554267/)
+[Branden Ge](https://github.com/brandenge) \ [LinkedIn](https://www.linkedin.com/in/brandenge/)
 
 ## Learning Goals:
 [//]: <>
