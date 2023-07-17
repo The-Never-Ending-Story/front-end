@@ -50,8 +50,9 @@ export const SingleWorld = () => {
 
   const listDetails = (list) => {
     let sentenceFragment = '';
-
-    if (list.length > 1) {
+    if(!Array.isArray(list)){
+      return null;
+    }else if (list.length > 1) {
       let lastItem = list[list.length - 1];
       sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
     } else if (list.length === 1) {
