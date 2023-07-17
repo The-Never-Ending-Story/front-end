@@ -113,8 +113,11 @@ h2 {
     max-height: 8vh;
     padding-bottom: .3rem;
   }
-
+  .header-logo:hover {
+  background: none;
+  }
   .header-button {
+
     font-size: .9rem;
     padding-right: 30px;
   }
