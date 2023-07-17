@@ -6,9 +6,10 @@ h2 {
   border-bottom:rgba(229, 235, 226, 0.696) solid 2px;
   padding-top: 20px;
   font-family: 'Share-TechMono', sans-serif;
-  justify-content: space-between;
+  justify-content: center;
   align-items:center;
   display: flex;
+  flex-direction: column;
   background: radial-gradient(
     circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
   line-height: 2rem;
@@ -20,23 +21,33 @@ h2 {
   border:rgba(229, 235, 226, 0.696) solid 2px;
   border-radius: .65rem;
 }
+.header-logo:hover {
+  background: rgba(185, 229, 205, 0.35);
+}
 
 .header-button {
+  padding: .5rem;
   background: none;
-    padding: 0.6em 2em;
-    outline: none;
-    border: none;
-    color:#f1f6f9;
-    cursor: pointer;
-    border-radius: 10px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    font-family: 'DYLOVASTUFF', sans-serif;
+  border: rgba(229, 235, 226, 0.696) solid .5px;
+  color:#f1f6f9;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'DYLOVASTUFF', sans-serif;
+}
+
+.hidden {
+  display:hidden;
+}
+
+.spaced-out {
+  justify-content: space-between;
 }
 
 .header-container:hover {
-  animation: close-in ease-in-out .55s;
+  animation: close-in ease-in-out .6s;
 }
 
 .header-button:hover {
