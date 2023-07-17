@@ -18,13 +18,14 @@ export const WorldBrowser = () => {
     return <LoadingIcon />;
   } else if (error) {
     return <Error />;
+  } else if (displayedWorlds.length > 0) {
+    return (
+      <div className='world-browser-container'>
+        {displayedWorlds.map((world) => {
+          
+          return <WorldCard world= {world} key= {world.id} />
+        })}
+      </div>
+    );
   }
-
-  return (
-    <div className='world-browser-container'>
-      {displayedWorlds.map((world) => (
-        <WorldCard world= {world} key= {world.id} />
-      ))}
-    </div>
-  );
 };

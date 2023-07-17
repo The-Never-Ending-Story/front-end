@@ -1,7 +1,6 @@
-import React from "react";
-import './Inhabitant.css'
+import React from "react"
 
-export const Inhabitant = ({ img, imgAlt, name, alignment, politics, lore }) => {
+export const Detail = ({ img, imgAlt, name, additionalDetails, lore }) => {
 
   return (
     <div className="single-det-container">
@@ -10,8 +9,9 @@ export const Inhabitant = ({ img, imgAlt, name, alignment, politics, lore }) => 
       </div>
       <div>
         <h3>{name}</h3>
-        <p>Alignment: {alignment}</p>
-        <p>Politics: {politics}</p>
+        {additionalDetails && additionalDetails.map((detail, index) => (
+          <p key={index}>{detail}</p>
+        ))}
         <p>{lore}</p>
       </div>
     </div>

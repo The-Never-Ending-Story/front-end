@@ -4,6 +4,7 @@ export function getAllWorldsData () {
     if(!response.ok) {
       throw new Error(response.status)
     } else {
+      console.log('fetched!')
       return response.json()
     }
   })

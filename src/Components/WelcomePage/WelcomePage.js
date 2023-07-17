@@ -23,9 +23,11 @@ export const WelcomePage = () => {
     })
   }
 
+
   if (error) {
     return <Error />
   }
+
   return (
     <main className="welcome-page">
       <section className="welcome-menu">
