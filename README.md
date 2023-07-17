@@ -55,6 +55,9 @@ The 'Capstone' project is the final project at Turing School of Software and Des
 
 ## Challenges & Wins:
 
+This project presented us with the new and unique challenges that come with working on a full stack team. Communicating across time-zones and teams required us to focus alot on communication. Figuring what a viable MVP would consist of highlighted the lack of understanding between teams. There were ideas that BE wanted to do that FE couldn't conceptualize and FE needed specific, considerations about UX/UI that BE hadn't articulated before. In the end we found that checking in during stand ups, having open communication via slack, and performing retros helped us bridge that gap and make a project were all proud of. 
+
+One win we all walked away from was the experience of working with new techologies, operating in a full stack team and leveraging AI to build a new expansive project. 
 
 ## Future Feature Ideas:
 [//]: <>
