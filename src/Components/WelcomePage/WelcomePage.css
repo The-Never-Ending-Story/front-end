@@ -1,11 +1,11 @@
 .welcome-page {
-  height: 35rem;
-  width: 100vw;
+  height: 85vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-    background-image: url('../../assets/background.webp');
-      background-position: center;
+  background-image: url('../../assets/background.webp');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }

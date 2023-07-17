@@ -7,26 +7,25 @@ import {Error} from '../Error/Error'
 import './WelcomePage.css'
 
 export const WelcomePage = () => {
-  const dispatch = useDispatch()
-  const history = useHistory()
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
-  const error = useSelector((state) => state.root.error)
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
+  const error = useSelector((state) => state.root.error);
 
   const discoverNewWorld = ()=> {
     getRandomWorldData()
     .then(data=> {
-      const addOne = [...displayedWorlds, data]
-      dispatch(getDiscoveredWorlds(addOne))
-      history.push(`/world/${data.id}`)
+      const addOne = [...displayedWorlds, data];
+      dispatch(getDiscoveredWorlds(addOne));
+      history.push(`/world/${data.id}`);
     }).catch((error)=>{
-      dispatch(changeError(error))
+      dispatch(changeError(error));
     })
-  }
-
+  };
 
   if (error) {
-    return <Error />
-  }
+    return <Error />;
+  };
 
   return (
     <main className="welcome-page">
@@ -48,4 +47,4 @@ export const WelcomePage = () => {
       </section>
     </main>
   )
-}
+};
