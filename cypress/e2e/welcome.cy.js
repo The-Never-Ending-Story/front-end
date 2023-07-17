@@ -18,6 +18,12 @@ describe('Welcome Page', () => {
     cy.get('.initial-text').should('have.text', 'Introducing HyperLoom');
   });
 
+  it('should display header with the logo upon initial load', ()=> {
+    cy.get('.header-container').should('be.visible').should('exist')
+
+    cy.get('.header-logo').should('be.visible').should('exist')
+  })
+
   it('should display correct intro text', () => {
     cy.get('.intro-text').should(
       'have.text',
@@ -26,13 +32,13 @@ describe('Welcome Page', () => {
   });
 
   it('should navigate to correct URLs when links are clicked', () => {
-    cy.contains('Explore').click();
+    cy.get('.menu-button').first().click();
     cy.url().should('include', '/worlds');
 
     cy.go('back');
 
-    cy.contains('Discover').click();
-    cy.url().should('include', '/world/3');
+    cy.contains('Create').click();
+    cy.url().should('include', '/world/');
   });
 
   it('should contain the button container', () => {
