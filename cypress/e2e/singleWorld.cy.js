@@ -12,7 +12,7 @@ describe('Single World View', () => {
       fixture: 'single-data'
     })
     .visit('http://localhost:3000/')
-    .contains('Discover').click();
+    .contains('Create').click();
   })
   
   it('should display the main details of a world', () => {
