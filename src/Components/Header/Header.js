@@ -5,10 +5,8 @@ import './Header.css'
 
 export const Header = () => {
 const {pathname} = useLocation();
-console.log(pathname)
 
-
-if (pathname !== '/') {  
+if (pathname !== '/' && pathname !== '/worlds') {  
   return (
     <nav className='header-container'>
       <Link to='/'>

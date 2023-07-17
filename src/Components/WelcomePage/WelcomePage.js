@@ -36,7 +36,7 @@ export const WelcomePage = () => {
           <Link to='/worlds'>
             <button className="menu-button">Explore</button>
           </Link>
-          <button className="menu-button" onClick={()=> {discoverNewWorld()}}>Discover</button>
+          <button className="menu-button" onClick={()=> {discoverNewWorld()}}>Create</button>
         </div>
       </section>
     </main>
