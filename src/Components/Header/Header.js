@@ -33,14 +33,14 @@ export const Header = () => {
       </div>
       <div className='buttons-container'>
         {pathname === '/worlds' && (
-          <button className="header-button" onClick={discoverNewWorld}>Create</button>
+          <button className="header-button" onClick={discoverNewWorld}>Discover</button>
         )}
         {pathname.includes('/world/') && (
           <>
             <Link to='/worlds'>
               <button className="header-button">Explore</button>
             </Link>
-            <button className="header-button" onClick={discoverNewWorld}>Create</button>
+            <button className="header-button" onClick={discoverNewWorld}>Discover</button>
           </>
         )}
       </div>

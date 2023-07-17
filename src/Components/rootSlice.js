@@ -4,6 +4,7 @@ const initialState = {
   discoveredWorlds: [],
   isLoading: true,
   error: '',
+  newlyFoundWorld:{}
 }
 
 export const rootSlice = createSlice( 
@@ -13,6 +14,9 @@ export const rootSlice = createSlice(
     reducers: {
       getDiscoveredWorlds: (state, action) => {
         state.discoveredWorlds = action.payload
+      },
+      findNewWorld:(state, action) => {
+        state.newlyFoundWorld = action.payload
       },
       changeIsLoading: (state, action) => {
         state.isLoading = action.payload

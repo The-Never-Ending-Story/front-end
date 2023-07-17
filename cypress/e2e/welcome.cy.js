@@ -37,7 +37,7 @@ describe('Welcome Page', () => {
 
     cy.go('back');
 
-    cy.contains('Create').click();
+    cy.contains('Discover').click();
     cy.url().should('include', '/world/');
   });
 
