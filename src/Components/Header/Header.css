@@ -31,13 +31,13 @@ h2 {
 .header-logo {
   margin: 0 auto;
   padding: .2rem;
-  max-height: 10vh;
-  border:rgba(229, 235, 226, 0.696) solid 2px;
+  max-height: 12vh;
   border-radius: .65rem;
+  padding-bottom: .5rem;
 }
 
 .header-logo:hover {
-  background: rgba(185, 229, 205, 0.25);
+  background: rgba(185, 229, 205, 0.15);
 }
 
 .header-button {
@@ -103,5 +103,22 @@ h2 {
   100% {
     background: radial-gradient(
       circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
+  }
+}
+
+@media screen and (max-width: 34em) {
+  .header-logo {
+    margin: 0 auto;
+    padding: .2rem;
+    max-height: 8vh;
+    padding-bottom: .3rem;
+  }
+  .header-logo:hover {
+  background: none;
+  }
+  .header-button {
+
+    font-size: .9rem;
+    padding-right: 30px;
   }
 }
