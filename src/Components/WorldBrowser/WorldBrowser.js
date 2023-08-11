@@ -15,6 +15,14 @@ export const WorldBrowser = () => {
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
 
+
+  // ok first you need to create the component
+  // then make sure its taking in the props and adding the info 
+  // the right way
+  // then stylize
+  //then repeat
+  // building the carousel components pause and research for a little
+  
   if (useLocation().pathname !== '/worlds') {
     return <PageNotFound />;
   } else if (loading) {
