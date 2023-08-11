@@ -7,11 +7,13 @@
 }
 
 .grid-preview-wrapper {
-  height: 100rem;
-  width: 100rem;
+  height: 45rem;
+  width: 48rem;
   display: flex;
   flex-wrap: wrap;
-  
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 @media screen and (max-width: 54em) {

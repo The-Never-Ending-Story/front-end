@@ -15,7 +15,7 @@ export const WorldBrowser = () => {
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
 
-  const gridPreviews = displayedWorlds.map(world => <GridPreview world={world}/>)
+  const gridPreviews = displayedWorlds.slice(0, 9).map(world => <GridPreview world={world}/>)
 
   // ok first you need to create the component
   // then make sure its taking in the props and adding the info 
