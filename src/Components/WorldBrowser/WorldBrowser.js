@@ -33,14 +33,16 @@ export const WorldBrowser = () => {
   } else if (displayedWorlds.length > 0) {
     return (
       <div className='world-browser-container'>
-        <section className='main-preview-wrapper'>
+        <section className='preview-section red'>
 
         </section>
-        <section className='carousel-preview-wrapper'>
+        <section className='preview-section blue'>
           
         </section>
-        <section className='grid-preview-wrapper'>
-          {gridPreviews}
+        <section className='preview-section'>
+          <div className='grid-preview-wrapper'>
+            {gridPreviews}
+          </div>
         </section>
       </div>
     );
