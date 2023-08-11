@@ -1,11 +1,12 @@
-.world-browser-container {
-  background: linear-gradient(rgb(3, 42, 37), rgba(183, 179, 146, 0.969) 70%);
+.world-browser-container,
+.grid-preview-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 
 @media screen and (max-width: 54em) {
   .world-browser-container{

@@ -15,6 +15,7 @@ export const WorldBrowser = () => {
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
 
+  const gridPreviews = displayedWorlds.map(world => <GridPreview world={world}/>)
 
   // ok first you need to create the component
   // then make sure its taking in the props and adding the info 
@@ -22,7 +23,7 @@ export const WorldBrowser = () => {
   // then stylize
   //then repeat
   // building the carousel components pause and research for a little
-  
+
   if (useLocation().pathname !== '/worlds') {
     return <PageNotFound />;
   } else if (loading) {
@@ -32,14 +33,14 @@ export const WorldBrowser = () => {
   } else if (displayedWorlds.length > 0) {
     return (
       <div className='world-browser-container'>
-        <section className='main-preview-container'>
+        <section className='main-preview-wrapper'>
 
         </section>
-        <section className='carousel-previews-container'>
+        <section className='carousel-preview-wrapper'>
           
         </section>
-        <section className='grid-preview-container'>
-        
+        <section className='grid-preview-wrapper'>
+          {gridPreviews}
         </section>
       </div>
     );
