@@ -1,5 +1,4 @@
-.world-browser-container,
-.grid-preview-wrapper {
+.world-browser-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,6 +6,13 @@
   align-items: center;
 }
 
+.grid-preview-wrapper {
+  height: 100rem;
+  width: 100rem;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
 
 @media screen and (max-width: 54em) {
   .world-browser-container{
