@@ -1,0 +1,45 @@
+.carousel {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  /* aspect-ratio: calc(16/9); */
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.carousel-btn {
+  padding: 16px;
+  font-size: 18px;
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 32px;
+  border: none;
+  background-color: lightgray;
+  cursor: pointer;
+  text-align: center;
+}
+
+.carousel-item {
+  margin-right: 5rem;
+  width: 20rem;
+  height: 20rem;
+}
+
+.carousel-btn:hover {
+  background-color: grey;
+}
+
+.prev-button {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(-50%);
+}
+
+.next-button {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translate(-50%);
+}

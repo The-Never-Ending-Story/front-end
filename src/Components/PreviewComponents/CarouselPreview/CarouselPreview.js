@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const CarouselPreview = (world) => {
+export const CarouselPreview = ({world}) => {
   const { id, img, name, blurb } = world
-  
+
   return (
-    <div>CarouselPreview</div>
+    <img src="" className='slides' />
   )
 }

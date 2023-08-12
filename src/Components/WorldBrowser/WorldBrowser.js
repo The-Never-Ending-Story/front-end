@@ -8,7 +8,7 @@ import { Error } from '../Error/Error';
 import WorldCard from '../WorldCard/WorldCard';
 import { MainPreview } from '../PreviewComponents/MainPreview/MainPreview';
 import { GridPreview } from '../PreviewComponents/GridPreview/GridPreview';
-import { CarouselPreview } from '../PreviewComponents/CarouselPreview/CarouselPreview';
+import { Carousel } from '../PreviewComponents/CarouselPreview/Carousel';
 
 export const WorldBrowser = () => {
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
@@ -37,7 +37,7 @@ export const WorldBrowser = () => {
 
         </section>
         <section className='preview-section blue'>
-          
+          <Carousel worlds={displayedWorlds}/>
         </section>
         <section className='preview-section'>
           <div className='grid-preview-wrapper'>
