@@ -34,12 +34,9 @@ export const WorldBrowser = () => {
     const worldView = `world/${id}`
     history.push(worldView)
   }
-  
-  
 
- /// possible categories
- // 
-  console.log(displayedWorlds[120])
+  console.log(displayedWorlds[121])
+
   console.log(displayedWorlds.reduce((acc, currentValue) => {
     currentValue.genres.forEach(genre => {
       if (!acc[genre]) {
@@ -61,6 +58,15 @@ export const WorldBrowser = () => {
   //then repeat
   // building the carousel components pause and research for a little
 
+  //index of cool worlds 114, 56, 61, 49, 26, 21
+  const mainPreviewWorlds = [displayedWorlds[59],
+                            displayedWorlds[114],
+                            displayedWorlds[56],
+                            displayedWorlds[61],
+                            displayedWorlds[49],
+                            displayedWorlds[26],
+                            displayedWorlds[59]]
+
   if (useLocation().pathname !== '/worlds') {
     return <PageNotFound />;
   } else if (loading) {
@@ -71,7 +77,7 @@ export const WorldBrowser = () => {
     return (
       <div className='world-browser-container'>
         <section className='preview-section red'>
-          <MainPreview world={displayedWorlds[120]}/>
+          <MainPreview world={displayedWorlds[59]} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section blue'>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
