@@ -27,8 +27,8 @@ export const Header = () => {
   return (
     <nav className='header-container'>
       <div className='logo-container'>
-        <Link to='/'>
-          <img className ='header-logo'src={logo} alt='hyper loom'/>
+        <Link to='/' className="title">
+          <h1>HyperLoom</h1>
         </Link>
       </div>
       <div className='buttons-container'>
