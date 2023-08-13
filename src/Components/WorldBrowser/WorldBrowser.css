@@ -11,10 +11,6 @@
   border: 1px red solid;
 }
 
-.blue {
-  border: 1px blue solid;
-}
-
 .preview-section {
   margin-bottom: 10rem;
   height: 50rem;
@@ -24,6 +20,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.blue {
+  border: 1px blue solid;
+  justify-content: flex-start;
+}
+
 
 .grid-preview-wrapper {
   height: 45rem;

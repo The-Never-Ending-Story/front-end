@@ -1,8 +1,9 @@
 .carousel {
   display: flex;
-  margin: auto;
-  width: 80%;
-  /* aspect-ratio: calc(16/9); */
+  justify-content: space-evenly;
+  /* margin: auto; */
+  width: 75%;
+  /* aspect-ratio: calc(16/4); */
   position: relative;
   overflow: hidden;
   border-radius: 16px;
@@ -21,9 +22,12 @@
 }
 
 .carousel-item {
-  margin-right: 5rem;
-  width: 20rem;
-  height: 20rem;
+  margin-right: 3rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 32px;
+  aspect-ratio: 1;
+
 }
 
 .carousel-btn:hover {
@@ -33,13 +37,13 @@
 .prev-button {
   position: absolute;
   top: 50%;
-  left: 16px;
+  left: 4rem;
   transform: translate(-50%);
 }
 
 .next-button {
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 4rem;
   transform: translate(-50%);
 }

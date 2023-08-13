@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom';
 import { PageNotFound } from '../PageNotFound/PageNotFound';
 import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
 import { Error } from '../Error/Error';
-import WorldCard from '../WorldCard/WorldCard';
 import { MainPreview } from '../PreviewComponents/MainPreview/MainPreview';
 import { GridPreview } from '../PreviewComponents/GridPreview/GridPreview';
 import { Carousel } from '../PreviewComponents/CarouselPreview/Carousel';
@@ -15,6 +14,20 @@ export const WorldBrowser = () => {
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
 
+ /// possible categories
+ // 
+
+  console.log(displayedWorlds.reduce((acc, currentValue) => {
+    currentValue.genres.forEach(genre => {
+      if (!acc[genre]) {
+        acc[genre] = [currentValue.id]
+      } else {
+        acc[genre].push(currentValue.id)
+      }
+    })
+
+    return acc
+  }, []))
   const gridPreviews = displayedWorlds.slice(0, 9).map(world => <GridPreview world={world}/>)
 
   // ok first you need to create the component
