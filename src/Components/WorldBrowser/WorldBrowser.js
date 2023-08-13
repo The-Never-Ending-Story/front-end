@@ -39,7 +39,7 @@ export const WorldBrowser = () => {
 
  /// possible categories
  // 
-
+  console.log(displayedWorlds[120])
   console.log(displayedWorlds.reduce((acc, currentValue) => {
     currentValue.genres.forEach(genre => {
       if (!acc[genre]) {
@@ -71,7 +71,7 @@ export const WorldBrowser = () => {
     return (
       <div className='world-browser-container'>
         <section className='preview-section red'>
-
+          <MainPreview world={displayedWorlds[120]}/>
         </section>
         <section className='preview-section blue'>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>

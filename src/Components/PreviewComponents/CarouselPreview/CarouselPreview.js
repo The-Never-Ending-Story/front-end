@@ -23,7 +23,7 @@ export const CarouselPreview = ({world, routeToWorld}) => {
         initial={{ opacity: 0, scale: 0.7}}
         transition={{ duration: 0.3 }}
         whileInView={{ opacity: 1, scale: 1}}
-        whileHover={{ scale: 1.3 }} 
+        whileHover={{ scale: 1.3, transition: { delay: 0.2 }}} 
         onClick={() => routeToWorld(id)}
         onMouseEnter={handleOpenModal}
         onMouseLeave={handleCloseModal}
@@ -31,6 +31,7 @@ export const CarouselPreview = ({world, routeToWorld}) => {
 
       {isModalOpen && (
         <motion.div
+          transition= {{ delay: 0.2 }}
           className="modal"
           initial={{ y: '100%' }}
           animate={{ y: 0 }}

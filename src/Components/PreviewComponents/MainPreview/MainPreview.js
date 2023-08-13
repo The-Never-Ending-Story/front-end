@@ -1,17 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import './MainPreview.css'
 
-export const MainPreview = (world) => {
+export const MainPreview = ({world, routeToWorld}) => {
   const { id, img, name, blurb } = world;
-  
+
   return (
-    <NavLink to={`/world/${id}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
-      <div className='main-preview-container' style={{backgroundImage: img.thumbnail}} alt ={name}>
-        <div className='main-preview-text-container'>
-          <p className='main-preview-name'>{name}</p>
-          <p className='main-preview-preview'>{blurb}</p>
-        </div>
+      <div className='main-preview-container' 
+          style={{backgroundImage: `url(${img.landscape})`}}
+          alt ={name}
+          onClick={() => routeToWorld(id)}
+          key={id}
+      >
+        <p className='main-preview-name'>{name}</p>
+        <p className='main-preview-preview'>{blurb}</p>
       </div>
-    </NavLink>
   )
 };

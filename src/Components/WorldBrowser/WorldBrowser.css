@@ -7,9 +7,9 @@
   align-items: center;
 }
 
-.red {
+/* .red {
   border: 1px red solid;
-}
+} */
 
 .preview-section {
   margin-bottom: 10rem;
@@ -22,7 +22,7 @@
 }
 
 .blue {
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
   height: 100rem;
   width: 100%;
 }
