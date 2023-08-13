@@ -4,15 +4,15 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 import './CarouselPreview.css'
 import { motion } from 'framer-motion';
 
-export const Carousel = () => {
+export const Carousel = ({worlds}) => {
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // change this to arrays of filter()ed arrays
-  const visibleImages = displayedWorlds.slice(currentIndex, currentIndex + 6);
+  const visibleImages = worlds.slice(currentIndex, currentIndex + 7);
 
   const handleNext = () => {
-    setCurrentIndex(Math.min(currentIndex + 1, displayedWorlds.length - 6));
+    setCurrentIndex(Math.min(currentIndex + 1, worlds.length - 7));
   };
 
   const handlePrev = () => {
@@ -33,7 +33,7 @@ export const Carousel = () => {
             />
           ))}
           { currentIndex !== 0 ? <button className='prev-button carousel-btn' onClick={handlePrev}>◀</button> : null }
-          { currentIndex !== displayedWorlds.length - 6 ? <button className='next-button carousel-btn'  onClick={handleNext}>▶</button> : null }
+          { currentIndex !== worlds.length - 7 ? <button className='next-button carousel-btn'  onClick={handleNext}>▶</button> : null }
         </div>
       </div>
 

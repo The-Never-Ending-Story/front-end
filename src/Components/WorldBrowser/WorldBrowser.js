@@ -14,6 +14,22 @@ export const WorldBrowser = () => {
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
 
+  const chooseRandomWorlds = (worlds) => {
+    const selectedWorlds = [];
+    
+    while (selectedWorlds.length < 15) {
+      const randomIndex = Math.floor(Math.random() * worlds.length);
+      
+      if (!selectedWorlds.includes(randomIndex)) {
+        selectedWorlds.push(worlds[randomIndex]);
+      }
+    }
+    
+    return selectedWorlds;
+  }
+  
+  
+
  /// possible categories
  // 
 
@@ -28,7 +44,7 @@ export const WorldBrowser = () => {
 
     return acc
   }, []))
-  
+
   const gridPreviews = displayedWorlds.slice(0, 9).map(world => <GridPreview world={world}/>)
 
   // ok first you need to create the component
@@ -51,7 +67,11 @@ export const WorldBrowser = () => {
 
         </section>
         <section className='preview-section blue'>
-          <Carousel worlds={displayedWorlds}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
         </section>
         <section className='preview-section'>
           <div className='grid-preview-wrapper'>

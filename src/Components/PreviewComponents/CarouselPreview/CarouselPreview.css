@@ -1,4 +1,5 @@
 .carousel-wrapper {
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8,7 +9,8 @@
 .carousel {
   display: flex;
   justify-content: space-evenly;
-  width: 90%;
+  align-items: center;
+  width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 16px;
@@ -29,7 +31,7 @@
 }
 
 .carousel-item {
-  margin-right: 2rem;
+  margin-right: 1rem;
   width: 10rem;
   height: 10rem;
   border-radius: 15px;
@@ -42,15 +44,13 @@
 
 .prev-button {
   position: absolute;
-  top: 50%;
-  left: 4rem;
+  left: 3rem;
   transform: translate(-50%);
 }
 
 .next-button {
   position: absolute;
-  top: 50%;
-  right: 0rem;
+  right: 2rem;
   transform: translate(-50%);
 }
 

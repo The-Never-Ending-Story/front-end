@@ -23,7 +23,8 @@
 
 .blue {
   border: 1px blue solid;
-  justify-content: flex-start;
+  height: 100rem;
+  width: 100%;
 }
 
 
