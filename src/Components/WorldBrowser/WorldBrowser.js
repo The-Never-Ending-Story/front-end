@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { PageNotFound } from '../PageNotFound/PageNotFound';
 import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
 import { Error } from '../Error/Error';
-import { MainPreview } from '../PreviewComponents/MainPreview/MainPreview';
+import { MainCarousel } from '../PreviewComponents/MainPreview/MainCarousel';
 import { GridPreview } from '../PreviewComponents/GridPreview/GridPreview';
 import { Carousel } from '../PreviewComponents/CarouselPreview/Carousel';
 import { useHistory } from 'react-router-dom';
@@ -77,7 +77,7 @@ export const WorldBrowser = () => {
     return (
       <div className='world-browser-container'>
         <section className='preview-section red'>
-          <MainPreview world={displayedWorlds[59]} routeToWorld={routeToWorld}/>
+          <MainCarousel worlds={mainPreviewWorlds} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section blue'>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>

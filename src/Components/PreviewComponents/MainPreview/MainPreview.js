@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainPreview.css'
+
 
 export const MainPreview = ({world, routeToWorld}) => {
   const { id, img, name, blurb } = world;

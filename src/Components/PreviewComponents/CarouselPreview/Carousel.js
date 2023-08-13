@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 
 export const Carousel = ({worlds, routeToWorld}) => {
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
+  // const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // change this to arrays of filter()ed arrays
