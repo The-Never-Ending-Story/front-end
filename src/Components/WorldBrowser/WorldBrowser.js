@@ -8,15 +8,17 @@ import { Error } from '../Error/Error';
 import { MainPreview } from '../PreviewComponents/MainPreview/MainPreview';
 import { GridPreview } from '../PreviewComponents/GridPreview/GridPreview';
 import { Carousel } from '../PreviewComponents/CarouselPreview/Carousel';
+import { useHistory } from 'react-router-dom';
 
 export const WorldBrowser = () => {
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
+  const history = useHistory()
 
   const chooseRandomWorlds = (worlds) => {
     const selectedWorlds = [];
-    
+
     while (selectedWorlds.length < 15) {
       const randomIndex = Math.floor(Math.random() * worlds.length);
       
@@ -24,8 +26,13 @@ export const WorldBrowser = () => {
         selectedWorlds.push(worlds[randomIndex]);
       }
     }
-    
+
     return selectedWorlds;
+  }
+
+  const routeToWorld = (id) => {
+    const worldView = `world/${id}`
+    history.push(worldView)
   }
   
   
@@ -67,11 +74,11 @@ export const WorldBrowser = () => {
 
         </section>
         <section className='preview-section blue'>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section'>
           <div className='grid-preview-wrapper'>

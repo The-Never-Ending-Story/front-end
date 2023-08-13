@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 import './CarouselPreview.css'
 import { motion } from 'framer-motion';
 
-export const Carousel = ({worlds}) => {
+
+export const Carousel = ({worlds, routeToWorld}) => {
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -23,11 +24,12 @@ export const Carousel = ({worlds}) => {
       <div className='carousel-wrapper'>
         <h2 className='genre'>Genre</h2>
         <div className='carousel'>
-          {visibleImages.map((image, index) => (
+          {visibleImages.map((world, index) => (
             <motion.img
-              key={index}
+              onClick={() => routeToWorld(index)}
+              key={world.id}
               className="carousel-item"
-              src={image.img.thumbnail}
+              src={world.img.thumbnail}
               alt={`Image ${currentIndex}`}
               whileHover={{ scale: 1.3 }} // Apply animation on tap/click
             />
