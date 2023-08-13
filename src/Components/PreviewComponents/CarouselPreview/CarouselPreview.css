@@ -1,5 +1,5 @@
 .carousel-wrapper {
-  width: 80%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -50,10 +50,10 @@
 }
 
 .carousel-item {
-  margin-right: 1rem;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 15px;
+  margin-right: 0rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 10px;
   aspect-ratio: 1;
 }
 
@@ -63,13 +63,13 @@
 
 .prev-button {
   position: absolute;
-  left: 3rem;
+  left: 4rem;
   transform: translate(-50%);
 }
 
 .next-button {
   position: absolute;
-  right: 2rem;
+  right: 1rem;
   transform: translate(-50%);
 }
 

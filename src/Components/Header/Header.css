@@ -16,28 +16,10 @@
   background-color:black;
 }
 
-.logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .buttons-container {
   position: absolute;
   right: 0;
   display: flex;
-}
-
-.header-logo {
-  margin: 0 auto;
-  padding: .2rem;
-  max-height: 12vh;
-  border-radius: .65rem;
-  padding-bottom: .5rem;
-}
-
-.header-logo:hover {
-  background: rgba(185, 229, 205, 0.15);
 }
 
 .header-button {
@@ -60,24 +42,12 @@
   justify-content: space-between;
 }
 
-.header-container:hover {
-  animation: close-in ease-in-out .6s;
-}
-
 .header-button:hover {
   color:#f1f6f9 ;
 }
 
 @media screen and (max-width: 34em) {
-  .header-logo {
-    margin: 0 auto;
-    padding: .2rem;
-    max-height: 8vh;
-    padding-bottom: .3rem;
-  }
-  .header-logo:hover {
-  background: none;
-  }
+
   .header-button {
 
     font-size: .9rem;

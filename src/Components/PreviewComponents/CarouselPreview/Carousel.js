@@ -10,10 +10,10 @@ export const Carousel = ({worlds, routeToWorld}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // change this to arrays of filter()ed arrays
-  const visibleImages = worlds.slice(currentIndex, currentIndex + 7);
+  const visibleImages = worlds.slice(currentIndex, currentIndex + 6);
 
   const handleNext = () => {
-    setCurrentIndex(Math.min(currentIndex + 1, worlds.length - 7));
+    setCurrentIndex(Math.min(currentIndex + 1, worlds.length - 6));
   };
 
   const handlePrev = () => {
@@ -32,11 +32,11 @@ export const Carousel = ({worlds, routeToWorld}) => {
           { currentIndex !== 0 ? <motion.button 
                                     className='prev-button carousel-btn' 
                                     onClick={handlePrev}
-                                    whileHover={{ scale: 1.1 }}
+                                    // whileHover={{ scale: 1.1 }}
                                   >◀</motion.button> 
                                 : null }
                                   
-          { currentIndex !== worlds.length - 7 ? <motion.button
+          { currentIndex !== worlds.length - 6 ? <motion.button
                                                     className='next-button carousel-btn' 
                                                     onClick={handleNext}
                                                   >▶</motion.button> 

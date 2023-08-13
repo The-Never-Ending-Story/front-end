@@ -7,9 +7,9 @@
   align-items: center;
 }
 
-/* .red {
-  border: 1px red solid;
-} */
+.red {
+  margin-top: 5rem;
+}
 
 .preview-section {
   margin-bottom: 10rem;
@@ -28,7 +28,7 @@
 }
 
 .grid-preview-wrapper {
-  height: 45rem;
+  height: 43rem;
   width: 50%;
   display: flex;
   flex-wrap: wrap;

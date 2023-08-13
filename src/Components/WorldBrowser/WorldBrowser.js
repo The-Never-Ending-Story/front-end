@@ -16,10 +16,10 @@ export const WorldBrowser = () => {
   const error = useSelector((state) => state.root.error);
   const history = useHistory()
 
-  const chooseRandomWorlds = (worlds) => {
+  const chooseRandomWorlds = (worlds, numberToDisplay) => {
     const selectedWorlds = [];
 
-    while (selectedWorlds.length < 15) {
+    while (selectedWorlds.length < numberToDisplay) {
       const randomIndex = Math.floor(Math.random() * worlds.length);
       
       if (!selectedWorlds.includes(randomIndex)) {
@@ -35,30 +35,26 @@ export const WorldBrowser = () => {
     history.push(worldView)
   }
 
-  console.log(displayedWorlds[121])
+  // console.log(displayedWorlds[121])
 
-  console.log(displayedWorlds.reduce((acc, currentValue) => {
-    currentValue.genres.forEach(genre => {
-      if (!acc[genre]) {
-        acc[genre] = [currentValue.id]
-      } else {
-        acc[genre].push(currentValue.id)
-      }
-    })
+  // console.log(displayedWorlds.reduce((acc, currentValue) => {
+  //   currentValue.genres.forEach(genre => {
+  //     if (!acc[genre]) {
+  //       acc[genre] = [currentValue.id]
+  //     } else {
+  //       acc[genre].push(currentValue.id)
+  //     }
+  //   })
 
-    return acc
-  }, []))
+  //   return acc
+  // }, []))
 
-  const gridPreviews = displayedWorlds.slice(0, 12).map(world => <GridPreview world={world}/>)
-
-  // ok first you need to create the component
-  // then make sure its taking in the props and adding the info 
-  // the right way
-  // then stylize
-  //then repeat
-  // building the carousel components pause and research for a little
-
-  //index of cool worlds 114, 56, 61, 49, 26, 21
+  const gridPreviews = chooseRandomWorlds(displayedWorlds, 12)
+                        .map(world => <GridPreview 
+                                        world={world}
+                                        routeToWorld={routeToWorld}
+                                      />)
+  
   const mainPreviewWorlds = [displayedWorlds[59],
                             displayedWorlds[114],
                             displayedWorlds[56],
@@ -80,11 +76,11 @@ export const WorldBrowser = () => {
           <MainCarousel worlds={mainPreviewWorlds} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section blue'>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section'>
           <div className='grid-preview-wrapper'>

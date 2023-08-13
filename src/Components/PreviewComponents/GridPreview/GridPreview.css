@@ -10,6 +10,12 @@
   width: 13.5rem;
   height: 13.5rem;
   margin-right: 3rem;
+  border-radius: 10px;
+}
+
+.grid-preview-image:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6); 
+
 }
 
 
