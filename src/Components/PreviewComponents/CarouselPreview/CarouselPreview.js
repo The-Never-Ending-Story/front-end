@@ -1,9 +1,44 @@
-import React from 'react'
+import React, {useState} from 'react';
+import { motion } from 'framer-motion';
 
-export const CarouselPreview = ({world}) => {
-  const { id, img, name, blurb } = world
+export const CarouselPreview = ({world, routeToWorld}) => {
+  const { id, img, name } = world;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
-    <img src="" className='slides' />
+    <div className="carousel-preview-container">
+      <motion.img
+        key={id}
+        className="carousel-item"
+        src={img.thumbnail}
+        alt={`Image ${id}`}
+        initial={{ opacity: 0, scale: 0.7}}
+        transition={{ duration: 0.3 }}
+        whileInView={{ opacity: 1, scale: 1}}
+        whileHover={{ scale: 1.3 }} 
+        onClick={() => routeToWorld(id)}
+        onMouseEnter={handleOpenModal}
+        onMouseLeave={handleCloseModal}
+      />
+
+      {isModalOpen && (
+        <motion.div
+          className="modal"
+          initial={{ y: '100%' }}
+          animate={{ y: 0 }}
+          exit={{ y: '100%' }}
+        >
+          <p>{name}</p>
+        </motion.div>
+      )}
+    </div>
   )
-}
+};

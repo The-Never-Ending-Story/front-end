@@ -30,7 +30,7 @@
 
 .grid-preview-wrapper {
   height: 45rem;
-  width: 48rem;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
