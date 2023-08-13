@@ -33,7 +33,7 @@ export const MainCarousel = ({worlds, routeToWorld}) => {
                                     >◀</motion.button> 
                                   : null }
                                     
-        { currentIndex !== worlds.length - 1 ? <motion.button
+        { currentIndex !== worlds.length - 2 ? <motion.button
                                                   className='carousel-btn' 
                                                   onClick={handleNext}
                                                 >▶</motion.button> 
