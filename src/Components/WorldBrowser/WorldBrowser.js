@@ -28,6 +28,7 @@ export const WorldBrowser = () => {
 
     return acc
   }, []))
+  
   const gridPreviews = displayedWorlds.slice(0, 9).map(world => <GridPreview world={world}/>)
 
   // ok first you need to create the component
