@@ -82,7 +82,7 @@ export const WorldBrowser = () => {
           <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
         </section>
-        <section className='preview-section'>
+        <section className='preview-section green'>
           <div className='grid-preview-wrapper'>
             {gridPreviews}
           </div>

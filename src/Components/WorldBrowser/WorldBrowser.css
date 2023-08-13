@@ -8,11 +8,13 @@
 }
 
 .red {
+  border: 1px red solid;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .preview-section {
-  margin-bottom: 10rem;
+
   height: 50rem;
   width: 100%;
   display: flex;
@@ -22,8 +24,16 @@
 }
 
 .blue {
-  /* border: 1px blue solid; */
+  border: 1px blue solid;
   height: 100rem;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.green {
+  justify-content: flex-start;
+  border: 1px green solid;
+  height: 60rem;
   width: 100%;
 }
 
