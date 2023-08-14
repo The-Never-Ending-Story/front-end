@@ -1,10 +1,9 @@
 import React from 'react';
-import './GridPreview.css';
 import { motion } from 'framer-motion';
 
 export const GridPreview = ({world, routeToWorld}) => {
   const { id, img, name, blurb } = world;
-
+  
   return (
     <motion.div className='grid-preview-container' key ={id}>
       <motion.img 

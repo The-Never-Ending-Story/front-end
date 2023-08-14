@@ -78,3 +78,32 @@
   margin: 0px;
   margin-left: 4.5rem;
 }
+
+@media (max-width: 1500px ) {
+  .carousel-item {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .carousel-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1250px ) {
+  .carousel-item {
+    width: 11rem;
+    height: 11rem;
+  } 
+}
+
+@media (max-width: 1000px ) {
+  .carousel-item {
+    width: 12rem;
+    height: 12rem;
+  } 
+
+  .carousel-wrapper {
+    width: 85%;
+  }
+}

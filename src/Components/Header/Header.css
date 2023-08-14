@@ -6,9 +6,7 @@
 
 .header-container {
   position: relative;
-  min-height: 3rem;
   border-bottom:white solid 1px;
-  padding-top: 20px;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
   align-items:center;
@@ -34,9 +32,7 @@
   font-family: 'Share-TechMono', sans-serif;
 }
 
-.hidden {
-  display:hidden;
-}
+
 
 .spaced-out {
   justify-content: space-between;

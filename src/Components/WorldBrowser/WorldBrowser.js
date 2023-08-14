@@ -9,6 +9,7 @@ import { MainCarousel } from '../PreviewComponents/MainPreview/MainCarousel';
 import { GridPreview } from '../PreviewComponents/GridPreview/GridPreview';
 import { Carousel } from '../PreviewComponents/CarouselPreview/Carousel';
 import { useHistory } from 'react-router-dom';
+import { Grid } from '../PreviewComponents/GridPreview/Grid';
 
 export const WorldBrowser = () => {
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
@@ -49,12 +50,7 @@ export const WorldBrowser = () => {
   //   return acc
   // }, []))
 
-  const gridPreviews = chooseRandomWorlds(displayedWorlds, 12)
-                        .map(world => <GridPreview 
-                                        world={world}
-                                        routeToWorld={routeToWorld}
-                                      />)
-  
+    
   const mainPreviewWorlds = [displayedWorlds[59],
                             displayedWorlds[114],
                             displayedWorlds[56],
@@ -83,9 +79,7 @@ export const WorldBrowser = () => {
           <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section green'>
-          <div className='grid-preview-wrapper'>
-            {gridPreviews}
-          </div>
+          <Grid worlds={displayedWorlds} routeToWorld={routeToWorld}/>
         </section>
       </div>
     );

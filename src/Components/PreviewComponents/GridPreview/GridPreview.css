@@ -1,3 +1,13 @@
+.grid-preview-wrapper {
+  height: 43rem;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
 .grid-preview-container {
   width: 13rem;
   height: 13rem;
@@ -15,7 +25,38 @@
 
 .grid-preview-image:hover {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6); 
+}
 
+@media (max-width: 1500px ) {
+  .grid-preview-wrapper {
+    height: 40rem;
+    width: 65%;
+  }
+
+  .grid-preview-image {
+    width: 12rem;
+    height: 12rem;
+    margin-right: 0rem;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 1300px ) {
+  .grid-preview-wrapper {
+    height: 40rem;
+    width: 75%;
+  }
+}
+
+@media (max-width: 1000px ) {
+  .carousel-item {
+    width: 12rem;
+    height: 12rem;
+  } 
+
+  .carousel-wrapper {
+    width: 85%;
+  }
 }
 
 
