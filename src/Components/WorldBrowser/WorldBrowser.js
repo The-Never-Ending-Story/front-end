@@ -6,7 +6,6 @@ import { PageNotFound } from '../PageNotFound/PageNotFound';
 import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
 import { Error } from '../Error/Error';
 import { MainCarousel } from '../PreviewComponents/MainPreview/MainCarousel';
-import { GridPreview } from '../PreviewComponents/GridPreview/GridPreview';
 import { Carousel } from '../PreviewComponents/CarouselPreview/Carousel';
 import { useHistory } from 'react-router-dom';
 import { Grid } from '../PreviewComponents/GridPreview/Grid';
@@ -68,18 +67,18 @@ export const WorldBrowser = () => {
   } else if (displayedWorlds.length > 0) {
     return (
       <div className='world-browser-container'>
-        <section className='preview-section red'>
+        <section className='preview-section main-preview-display'>
           <MainCarousel worlds={mainPreviewWorlds} routeToWorld={routeToWorld}/>
         </section>
-        <section className='preview-section blue'>
+        <section className='preview-section carousel-preview-display'>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
           <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
         </section>
-        <section className='preview-section green'>
-          <Grid worlds={displayedWorlds} routeToWorld={routeToWorld}/>
+        <section className='preview-section grid-preview-display'>
+          <Grid routeToWorld={routeToWorld}/>
         </section>
       </div>
     );

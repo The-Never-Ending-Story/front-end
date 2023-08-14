@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import { GridPreview } from './GridPreview';
 import './GridPreview.css';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 
-export const Grid = ({worlds, routeToWorld}) => {
+export const Grid = ({routeToWorld}) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
- 
+  const worlds = useSelector((state) => state.root.discoveredWorlds);
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -39,7 +41,7 @@ export const Grid = ({worlds, routeToWorld}) => {
     return selectedWorlds;
   }
 
-  const gridPreviews = chooseRandomWorlds(worlds, numberOfPreviews)
+  const gridPreviews = worlds.slice(0, numberOfPreviews)
                         .map(world =>
                           <GridPreview 
                             world={world}

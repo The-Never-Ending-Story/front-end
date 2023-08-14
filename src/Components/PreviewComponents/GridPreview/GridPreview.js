@@ -5,7 +5,7 @@ export const GridPreview = ({world, routeToWorld}) => {
   const { id, img, name, blurb } = world;
   
   return (
-    <motion.div className='grid-preview-container' key ={id}>
+    <div className='grid-preview-container' key ={id}>
       <motion.img 
         className="grid-preview-image"
         src={img.thumbnail}
@@ -16,6 +16,6 @@ export const GridPreview = ({world, routeToWorld}) => {
         onClick={() => routeToWorld(id)}
       />
       <div className='grid-preview-modal'></div>
-    </motion.div>
+    </div>
   )
 };

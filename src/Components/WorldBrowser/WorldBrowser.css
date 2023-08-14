@@ -7,14 +7,13 @@
   align-items: center;
 }
 
-.red {
+.main-preview-display {
   /* border: 1px red solid; */
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
 .preview-section {
-
   height: 50rem;
   width: 100%;
   display: flex;
@@ -23,14 +22,14 @@
   align-items: center;
 }
 
-.blue {
+.carousel-preview-display {
   /* border: 1px blue solid; */
   height: 100rem;
   width: 100%;
   margin-bottom: 10rem;
 }
 
-.green {
+.grid-preview-display {
   justify-content: flex-start;
   /* border: 1px green solid; */
   height: 60rem;
