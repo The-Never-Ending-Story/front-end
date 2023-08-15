@@ -29,7 +29,7 @@ export const Carousel = ({worlds, routeToWorld}) => {
     numberToDisplay = 4;
   } else if (windowWidth < 1550) {
     numberToDisplay = 5;
-  } else {git 
+  } else {
     numberToDisplay = 6;
   }
 

@@ -23,22 +23,18 @@ export const MainCarousel = ({worlds, routeToWorld}) => {
 
   return (
     <div className='main-carousel'>
-      { MainPreviews[currentIndex] }
-      <div className='main-preview-button-container'>
-      
+      { MainPreviews[currentIndex] }      
         { currentIndex !== 0 ? <motion.button 
-                                      className='carousel-btn' 
-                                      onClick={handlePrev}
-                                      whileHover={{ scale: 1.1 }}
-                                    >◀</motion.button> 
-                                  : null }
-                                    
-        { currentIndex !== worlds.length - 2 ? <motion.button
-                                                  className='carousel-btn' 
-                                                  onClick={handleNext}
-                                                >▶</motion.button> 
-                                              : null }
-      </div>
+                                    className='main-prev' 
+                                    onClick={handlePrev}
+                                >◀</motion.button> 
+                              : null }
+                                  
+      { currentIndex !== worlds.length - 2 ? <motion.button
+                                                className='main-next' 
+                                                onClick={handleNext}
+                                              >▶</motion.button> 
+                                            : null }
     </div>
   )
 }

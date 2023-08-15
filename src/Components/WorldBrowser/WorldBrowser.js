@@ -14,7 +14,7 @@ export const WorldBrowser = () => {
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
   const loading = useSelector((state) => state.root.isLoading);
   const error = useSelector((state) => state.root.error);
-  const history = useHistory()
+  const history = useHistory();
 
   const chooseRandomWorlds = (worlds, numberToDisplay) => {
     const selectedWorlds = [];
@@ -25,10 +25,10 @@ export const WorldBrowser = () => {
       if (!selectedWorlds.includes(randomIndex)) {
         selectedWorlds.push(worlds[randomIndex]);
       }
-    }
+    };
 
     return selectedWorlds;
-  }
+  };
 
   const routeToWorld = (id) => {
     const worldView = `world/${id}`
@@ -36,7 +36,6 @@ export const WorldBrowser = () => {
   }
 
   // console.log(displayedWorlds[121])
-
   // console.log(displayedWorlds.reduce((acc, currentValue) => {
   //   currentValue.genres.forEach(genre => {
   //     if (!acc[genre]) {
@@ -49,7 +48,6 @@ export const WorldBrowser = () => {
   //   return acc
   // }, []))
 
-    
   const mainPreviewWorlds = [displayedWorlds[59],
                             displayedWorlds[114],
                             displayedWorlds[56],
