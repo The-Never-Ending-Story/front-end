@@ -23,11 +23,13 @@ export const Carousel = ({worlds, routeToWorld}) => {
 
   let numberToDisplay;
 
-  if ( windowWidth < 1000) {
+  if ( windowWidth < 600) {
+    numberToDisplay = 1;
+  }  else if (windowWidth < 1100) {
     numberToDisplay = 3;
-  } else if (windowWidth < 1250) {
+  } else if (windowWidth < 1350) {
     numberToDisplay = 4;
-  } else if (windowWidth < 1550) {
+  } else if (windowWidth < 1650) {
     numberToDisplay = 5;
   } else {
     numberToDisplay = 6;
