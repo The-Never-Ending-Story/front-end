@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { motion } from 'framer-motion'; 
 import { Link, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
@@ -11,6 +11,7 @@ export const WelcomePage = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
+  const worldPreviews = useSelector((state)=>state.root.worldPreviews)
   const error = useSelector((state) => state.root.error);
 
   const discoverNewWorld = ()=> {
@@ -23,6 +24,11 @@ export const WelcomePage = () => {
       dispatch(changeError(error));
     })
   };
+
+  useEffect(()=> {
+    console.log(worldPreviews)
+  },[worldPreviews])
+
   const sentence = {
     hidden: {opacity:0},
     visible: {
@@ -34,7 +40,6 @@ export const WelcomePage = () => {
       }
     }
   }
-
   const introText ='HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore. Explore barely known worlds, or discover new domains:'
   const letter = {
     hidden: {opacity: 0},
@@ -52,8 +57,7 @@ export const WelcomePage = () => {
   };
 // animate intro text, welcome menu itself upon arrival, and iterate through a selection of the backgrounds once the api call is made
   return (
-    <main className="welcome-page"
-    >
+    <main className="welcome-page">
       <motion.section className="welcome-menu" variants={sentence} initial='hidden' animate='visible'>
         <motion.div className="initial-text" variants={sentence} initial='hidden' animate='visible'>
           Introducing HyperLoom

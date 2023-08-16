@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   discoveredWorlds: [],
+  worldPreviews:[],
   isLoading: true,
   error: '',
 }
@@ -12,6 +13,12 @@ export const rootSlice = createSlice(
     initialState, 
     reducers: {
       getDiscoveredWorlds: (state, action) => {
+        const idAndUrls = action.payload.map(world=>{
+          const repackage = {'id':world.id, 'previewUrl':world.img.landscape}
+          return repackage
+        })
+        console.log(idAndUrls)
+        state.worldPreviews = idAndUrls
         state.discoveredWorlds = action.payload
       },
       changeIsLoading: (state, action) => {
