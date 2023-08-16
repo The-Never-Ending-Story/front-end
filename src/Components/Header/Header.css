@@ -6,13 +6,13 @@ h2 {
   position: relative;
   min-height: 100px;
   border-bottom:rgba(229, 235, 226, 0.696) solid 2px;
-  padding-top: 20px;
+  padding-top: 1rem;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
   align-items:center;
   display: flex;
   background: radial-gradient(
-    circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
+    circle,rgba(3, 42, 37, 0.506) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
   line-height: 2rem;
 }
 

@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
-import { motion } from 'framer-motion'; 
 import { Link, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError } from '../rootSlice';
 import {Error} from '../Error/Error'
+import { animate, motion } from 'framer-motion'; 
 import './WelcomePage.css'
 
 export const WelcomePage = () => {
@@ -29,8 +29,8 @@ export const WelcomePage = () => {
     console.log(worldPreviews)
   },[worldPreviews])
 
-  const sentence = {
-    hidden: {opacity:0},
+  const quickFadeIn = {
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
@@ -40,17 +40,19 @@ export const WelcomePage = () => {
       }
     }
   }
-  const introText ='HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore. Explore barely known worlds, or discover new domains:'
-  const letter = {
-    hidden: {opacity: 0},
+  const slowFadeIn = {
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        delay: 3.5,
-        duration: 3,
+        delay: 3,
+        duration: 2,
+        staggerChildren: .75,
       }
     }
   }
+
+  const animatedTitleText = ['Introducing ', 'Hyperloom']
 
   if (error) {
     return <Error />;
@@ -58,25 +60,21 @@ export const WelcomePage = () => {
 // animate intro text, welcome menu itself upon arrival, and iterate through a selection of the backgrounds once the api call is made
   return (
     <main className="welcome-page">
-      <motion.section className="welcome-menu" variants={sentence} initial='hidden' animate='visible'>
-        <motion.div className="initial-text" variants={sentence} initial='hidden' animate='visible'>
-          Introducing HyperLoom
+      <motion.section className="welcome-menu" variants={quickFadeIn} initial='hidden' animate='visible'>
+        <motion.div className="initial-text" variants={quickFadeIn} initial='hidden' animate='visible'>
+          <motion.span variants={slowFadeIn} initial='hidden' animate='visible'>{animatedTitleText[0]}</motion.span >
+          <motion.span variants={slowFadeIn} initial='hidden' animate='visible'>{animatedTitleText[1]}</motion.span>
         </motion.div>
-        <motion.p className="intro-text" variants={letter} initial='hidden' animate='visible'>
-          {introText.split('').map((char, index)=> {
-            return (
-            <motion.span key={char+'-'+index}>
-              {char}
-            </motion.span>
-            )
-          })}
+        <motion.p className="intro-text" variants={slowFadeIn} initial='hidden' animate='visible'>
+          {'HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore.'}
+          {'Explore barely known worlds, or discover new domains:'}
         </motion.p>
-        <div className="button-container">
+        <motion.div className="button-container" variants={slowFadeIn} initial='hidden' animate='visible'>
           <Link to='/worlds'>
             <button className="menu-button">Explore</button>
           </Link>
           <button className="menu-button" onClick={()=> {discoverNewWorld()}}>Discover</button>
-        </div>
+        </motion.div>
       </motion.section>
     </main>
   )
