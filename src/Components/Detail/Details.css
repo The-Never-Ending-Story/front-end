@@ -30,8 +30,19 @@
 
 .single-det-container {
   display: flex;
-  justify-content: center;
-  width: 60%;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+
+.single-det-text-wrapper {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply blur effect for frosted glass */
+  border-radius: 10px; /* Rounded corners */
+  color: white; /* White text color */
+  max-height: 50%;
+  width: 30%;
+  text-align: center; /* Center the text horizontally */
 }
 
 .single-det-img {
@@ -57,7 +68,7 @@
 
 .details-next {
   position: absolute;
-  right: 20%;
+  right: 42%;
   top: 50%; 
   transform: translateY(-50%); 
 }

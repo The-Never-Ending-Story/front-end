@@ -1,9 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { motion } from 'framer-motion';
 import './Details.css'
 
 export const DetailCarousel = ({content}) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [content]);
 
   const handleNext = () => {
     setCurrentIndex(Math.min(currentIndex + 1, content.length - 1));

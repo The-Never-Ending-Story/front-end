@@ -50,19 +50,19 @@ export const SingleWorld = () => {
     );
   };
 
-  // const listDetails = (list) => {
-  //   let sentenceFragment = '';
-  //   if(!Array.isArray(list)){
-  //     return null;
-  //   } else if (list.length > 1) {
-  //     let lastItem = list[list.length - 1];
-  //     sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
-  //   } else if (list.length === 1) {
-  //     sentenceFragment = list[0];
-  //   }
+  const listDetails = (list) => {
+    let sentenceFragment = '';
+    if(!Array.isArray(list)){
+      return null;
+    } else if (list.length > 1) {
+      let lastItem = list[list.length - 1];
+      sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
+    } else if (list.length === 1) {
+      sentenceFragment = list[0];
+    }
 
-  //   return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
-  // }
+    return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
+  }
 
   const makeDetailsCards = (category) => {
     let additionalDetails;
@@ -133,24 +133,25 @@ export const SingleWorld = () => {
     <section className="single-world-view">
       <div className="single-top">
         <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
-        <h1>{world.name}</h1>
+        <div className="single-top-wrapper">
+          <h2>{world.name}</h2>
+          <div className="single-geo">
+            <p><span className="attr-name">Shape </span>  {world.geoDynamics.shape}</p>
+            <p><span className="attr-name">Size </span> {world.geoDynamics.size}</p>
+            <p><span className="attr-name">Climate </span> {world.geoDynamics.climate}</p>
+          </div>
+          <div className="single-mag-tech">
+            <p className="lvl-name">Magic<span className="level">Level {world.magicTechnology.magicLvl}</span></p>
+            <p className="lvl-detail">{listDetails(world.magicTechnology.magic)}</p>
+          </div>
+          <div className="single-mag-tech">
+            <p className="lvl-name">Techonology<span className="level">Level {world.magicTechnology.techLvl}</span></p>
+            <p className="lvl-detail">{listDetails(world.magicTechnology.technology)}</p>
+          </div>
+          <p>{world.description}</p>
+        </div>
       </div>
-      {/* <div className="single-top-wrapper">
-        <div className="single-geo">
-          <p><span className="attr-name">Shape </span>  {world.geoDynamics.shape}</p>
-          <p><span className="attr-name">Size </span> {world.geoDynamics.size}</p>
-          <p><span className="attr-name">Climate </span> {world.geoDynamics.climate}</p>
-        </div>
-        <div className="single-mag-tech">
-          <p className="lvl-name">Magic<span className="level">Level {world.magicTechnology.magicLvl}</span></p>
-          <p className="lvl-detail">{listDetails(world.magicTechnology.magic)}</p>
-        </div>
-        <div className="single-mag-tech">
-          <p className="lvl-name">Techonology<span className="level">Level {world.magicTechnology.techLvl}</span></p>
-          <p className="lvl-detail">{listDetails(world.magicTechnology.technology)}</p>
-        </div>
-        <p>{world.description}</p>
-      </div> */}
+
       <div className="tabs">
         {Object.keys(tabContent).map((tabName) => (
           <button
@@ -166,7 +167,7 @@ export const SingleWorld = () => {
       </div>
       <div className="tab-content">
         <div className="details carousel">
-          {currentTab && <DetailCarousel content={tabContent[currentTab]}/>}
+          {currentTab && <DetailCarousel content={tabContent[currentTab]} />}
         </div>
       </div>
     </section>
