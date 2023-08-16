@@ -12,7 +12,7 @@ export const MainPreview = ({world, routeToWorld}) => {
           key={id}
       >
         <p className='main-preview-name'>{name}</p>
-        <p className='main-preview-preview'>{blurb}</p>
+        <p className='main-preview-blurb'>{blurb}</p>
       </div>
   )
 };

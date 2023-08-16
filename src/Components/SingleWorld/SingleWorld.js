@@ -48,83 +48,62 @@ export const SingleWorld = () => {
     )
   }
 
-  const listDetails = (list) => {
-    let sentenceFragment = '';
-    if(!Array.isArray(list)){
-      return null;
-    }else if (list.length > 1) {
-      let lastItem = list[list.length - 1];
-      sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
-    } else if (list.length === 1) {
-      sentenceFragment = list[0];
-    }
+  // const listDetails = (list) => {
+  //   let sentenceFragment = '';
+  //   if(!Array.isArray(list)){
+  //     return null;
+  //   }else if (list.length > 1) {
+  //     let lastItem = list[list.length - 1];
+  //     sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
+  //   } else if (list.length === 1) {
+  //     sentenceFragment = list[0];
+  //   }
 
-    return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
-  }
+  //   return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
+  // }
 
   const inhabitants =
     world.species ? world.species.map(inhabitant => (
-      <div className="single-det-wrapper" key={inhabitant.id}>
         <Detail
-          img={inhabitant.img}
-          imgAlt={inhabitant.imagine}
-          name={inhabitant.name}
+          item={inhabitant}
           additionalDetails={[
             `Alignment: ${inhabitant.alignment}`,
             `Politics: ${inhabitant.politics}`
           ]}
-          lore={inhabitant.lore}
         />
-      </div>
     )) : declareUnknown('inhabitants');
 
   const locations =
     world.locations ? world.locations.map(location => (
-      <div className="single-det-wrapper" key={location.id}>
-        <Detail
-          img={location.img}
-          imgAlt={location.imagine}
-          name={location.name}
-          additionalDetails={[
-            `Climate: ${location.climate}`
-          ]}
-          lore={location.lore}
-        />
-      </div>
+      <Detail
+        item={location}
+        additionalDetails={[
+          `Climate: ${location.climate}`
+        ]}
+      />
     )) : declareUnknown('locations');
 
   const characters =
     world.characters ? world.characters.map(character => (
-      <div className="single-det-wrapper" key={character.id}>
-        <Detail
-          img={character.img}
-          imgAlt={character.imagine}
-          name={character.name}
-          additionalDetails={[
-            `Species: ${character.species}`,
-            `Alignment: ${character.alignment}`,
-            `Age: ${character.age}`,
-            `Location: ${character.location}`
-          ]}
-          lore={character.lore}
-        />
-      </div>
+      <Detail
+        item={character}
+        additionalDetails={[
+          `Species: ${character.species}`,
+          `Alignment: ${character.alignment}`,
+          `Age: ${character.age}`,
+          `Location: ${character.location}`
+        ]}
+      />
     )) : declareUnknown('characters');
 
   const events =
     world.events ? world.events.map(event => (
-      <div className="single-det-wrapper" key={event.id}>
-        <Detail
-          img={event.img}
-          imgAlt={event.imagine}
-          name={event.name}
-          additionalDetails={[
-            `${event.time} in the age of ${event.age}`
-          ]}
-
-          lore={event.lore}
-        />
-      </div>
+      <Detail
+        item={event}
+        additionalDetails={[
+          `${event.time} in the age of ${event.age}`
+        ]}
+      />
     )) : declareUnknown('events');
 
   const history =
@@ -147,7 +126,7 @@ export const SingleWorld = () => {
         <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
         <h1>{world.name}</h1>
       </div>
-      <div className="single-top-wrapper">
+      {/* <div className="single-top-wrapper">
         <div className="single-geo">
           <p><span className="attr-name">Shape </span>  {world.geoDynamics.shape}</p>
           <p><span className="attr-name">Size </span> {world.geoDynamics.size}</p>
@@ -162,7 +141,7 @@ export const SingleWorld = () => {
           <p className="lvl-detail">{listDetails(world.magicTechnology.technology)}</p>
         </div>
         <p>{world.description}</p>
-      </div>
+      </div> */}
       <div className="tabs">
         {Object.keys(tabContent).map((tabName) => (
           <button

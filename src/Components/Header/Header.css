@@ -32,8 +32,6 @@
   font-family: 'Share-TechMono', sans-serif;
 }
 
-
-
 .spaced-out {
   justify-content: space-between;
 }
@@ -45,7 +43,6 @@
 @media screen and (max-width: 34em) {
 
   .header-button {
-
     font-size: .9rem;
     padding-right: 30px;
   }
