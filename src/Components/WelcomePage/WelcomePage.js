@@ -29,10 +29,11 @@ export const WelcomePage = () => {
     console.log(worldPreviews)
   },[worldPreviews])
 
-  const quickFadeIn = {
-    hidden: { opacity: 0 },
+  const fadeInRise = {
+    hidden: { opacity: 0, marginTop:'27rem' },
     visible: {
-      opacity: 1,
+      opacity: 1, 
+      marginTop:'20rem',
       transition: {
         delay:.25,
         duration:3.75,
@@ -47,7 +48,7 @@ export const WelcomePage = () => {
       transition: {
         delay: 3,
         duration: 2,
-        staggerChildren: .75,
+        staggerChildren: 1.75,
       }
     }
   }
@@ -60,14 +61,16 @@ export const WelcomePage = () => {
 // animate intro text, welcome menu itself upon arrival, and iterate through a selection of the backgrounds once the api call is made
   return (
     <main className="welcome-page">
-      <motion.section className="welcome-menu" variants={quickFadeIn} initial='hidden' animate='visible'>
-        <motion.div className="initial-text" variants={quickFadeIn} initial='hidden' animate='visible'>
+      <motion.section className="welcome-menu" variants={fadeInRise} initial='hidden' animate='visible'>
+        <motion.div className="initial-text" variants={slowFadeIn} initial='hidden' animate='visible'>
           <motion.span variants={slowFadeIn} initial='hidden' animate='visible'>{animatedTitleText[0]}</motion.span >
           <motion.span variants={slowFadeIn} initial='hidden' animate='visible'>{animatedTitleText[1]}</motion.span>
         </motion.div>
         <motion.p className="intro-text" variants={slowFadeIn} initial='hidden' animate='visible'>
-          {'HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore.'}
-          {'Explore barely known worlds, or discover new domains:'}
+          HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore.
+          <br/>
+          <br/>
+          Explore barely known worlds, or discover new domains:
         </motion.p>
         <motion.div className="button-container" variants={slowFadeIn} initial='hidden' animate='visible'>
           <Link to='/worlds'>
