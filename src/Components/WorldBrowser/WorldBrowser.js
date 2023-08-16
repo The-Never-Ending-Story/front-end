@@ -1,4 +1,4 @@
-import './WorldBrowser.css'
+import './WorldBrowser.css';
 import React from  'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
@@ -24,16 +24,16 @@ export const WorldBrowser = () => {
       
       if (!selectedWorlds.includes(randomIndex)) {
         selectedWorlds.push(worlds[randomIndex]);
-      }
+      };
     };
 
     return selectedWorlds;
   };
 
   const routeToWorld = (id) => {
-    const worldView = `world/${id}`
-    history.push(worldView)
-  }
+    const worldView = `world/${id}`;
+    history.push(worldView);
+  };
 
   // console.log(displayedWorlds[121])
   // console.log(displayedWorlds.reduce((acc, currentValue) => {
@@ -48,13 +48,9 @@ export const WorldBrowser = () => {
   //   return acc
   // }, []))
 
-  const mainPreviewWorlds = [displayedWorlds[59],
-                            displayedWorlds[114],
-                            displayedWorlds[56],
-                            displayedWorlds[61],
-                            displayedWorlds[49],
-                            displayedWorlds[26],
-                            displayedWorlds[59]]
+  const mainPreviewWorlds = [40, 103, 60, 56, 25, 30].map(id => {
+    return displayedWorlds.find(world => world.id === id);
+  });
 
   if (useLocation().pathname !== '/worlds') {
     return <PageNotFound />;

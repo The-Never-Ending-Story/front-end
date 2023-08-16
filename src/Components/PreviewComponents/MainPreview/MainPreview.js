@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const MainPreview = ({world, routeToWorld}) => {
   const { id, img, name, blurb } = world;
 
@@ -14,5 +13,5 @@ export const MainPreview = ({world, routeToWorld}) => {
         <p className='main-preview-name'>{name}</p>
         <p className='main-preview-blurb'>{blurb}</p>
       </div>
-  )
+  );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './SingleWorld.css'
+import './SingleWorld.css';
 import { useParams } from "react-router-dom";
 import { getSingleWorldData } from "../../apiCalls";
 import { Detail } from "../Detail/Detail";
@@ -15,6 +15,7 @@ export const SingleWorld = () => {
   const [wrongPath, setWrongPath] = useState(false);
   const [currentTab, setCurrentTab] = useState('');
 
+  // console.log(world)
   useEffect(() => {
     getSingleWorldData(id)
       .then((data) => {
@@ -40,19 +41,19 @@ export const SingleWorld = () => {
     return <Error />;
   } else if (wrongPath) {
     return <PageNotFound />
-  }
+  };
 
   const declareUnknown = (subject) => {
     return (
       <p>This world's {subject} is unknown.</p>
-    )
-  }
+    );
+  };
 
   // const listDetails = (list) => {
   //   let sentenceFragment = '';
   //   if(!Array.isArray(list)){
   //     return null;
-  //   }else if (list.length > 1) {
+  //   } else if (list.length > 1) {
   //     let lastItem = list[list.length - 1];
   //     sentenceFragment = list.slice(0, -1).join(', ') + ' and ' + lastItem;
   //   } else if (list.length === 1) {
@@ -62,55 +63,60 @@ export const SingleWorld = () => {
   //   return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
   // }
 
-  const inhabitants =
-    world.species ? world.species.map(inhabitant => (
-        <Detail
-          item={inhabitant}
-          additionalDetails={[
-            `Alignment: ${inhabitant.alignment}`,
-            `Politics: ${inhabitant.politics}`
-          ]}
-        />
-    )) : declareUnknown('inhabitants');
+  const makeDetailsCard = (item) => {
+    let additionalDetails;
 
-  const locations =
-    world.locations ? world.locations.map(location => (
-      <Detail
-        item={location}
-        additionalDetails={[
-          `Climate: ${location.climate}`
-        ]}
-      />
-    )) : declareUnknown('locations');
+    switch (item) {
+      case world.species:
+        additionalDetails = [
+          `Alignment: ${item.alignment}`,
+          `Politics: ${item.politics}`
+        ];
+        break;
+      case world.locations:
+        additionalDetails = [
+          `Climate: ${item.climate}` 
+        ];
+        break;
+      case world.characters:
+        additionalDetails = [
+          `Species: ${item.species}`,
+          `Alignment: ${item.alignment}`,
+          `Age: ${item.age}`,
+          `Location: ${item.location}`
+        ];
+        break;
+      case world.events:
+        additionalDetails = [
+          `${item.time} in the age of ${item.age}`
+        ];
+        break;
+    };
 
-  const characters =
-    world.characters ? world.characters.map(character => (
+    return item.map(inhabitant => (
       <Detail
-        item={character}
-        additionalDetails={[
-          `Species: ${character.species}`,
-          `Alignment: ${character.alignment}`,
-          `Age: ${character.age}`,
-          `Location: ${character.location}`
-        ]}
+        item={inhabitant}
+        additionalDetails={additionalDetails}
       />
-    )) : declareUnknown('characters');
+    ));
+  };
 
-  const events =
-    world.events ? world.events.map(event => (
-      <Detail
-        item={event}
-        additionalDetails={[
-          `${event.time} in the age of ${event.age}`
-        ]}
-      />
-    )) : declareUnknown('events');
+  const inhabitants = world.species ? makeDetailsCard(world.species)
+                      : declareUnknown('inhabitants');
+
+  const locations = world.locations ? makeDetailsCard(world.locations)
+                      : declareUnknown('locations');
+
+  const characters = world.characters ? makeDetailsCard(world.characters)
+                      : declareUnknown('characters');
+
+  const events = world.characters ? makeDetailsCard(world.events)
+                      : declareUnknown('events');
 
   const history =
       <div className="single-det-wrapper">
         { world.lore ? world.lore.map((par, index) => <p key={index}>{par}</p>) : declareUnknown('history') }
-      </div>
-    ;
+      </div>;
 
   const tabContent = {
     Inhabitants: inhabitants,

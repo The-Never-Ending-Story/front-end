@@ -7,8 +7,8 @@ import { motion } from 'framer-motion';
 export const Carousel = ({worlds, routeToWorld}) => {
   // const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [numberToDisplay, setDisplay] = useState(0)
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -16,24 +16,23 @@ export const Carousel = ({worlds, routeToWorld}) => {
 
     window.addEventListener('resize', handleResize);
 
+    if (windowWidth < 600) {
+      setDisplay(1);
+    }  else if (windowWidth < 1100) {
+      setDisplay(3);
+    } else if (windowWidth < 1350) {
+      setDisplay(4);
+    } else if (windowWidth < 1650) {
+      setDisplay(5);
+    } else {
+      setDisplay(6);
+    };
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [windowWidth]);
 
-  let numberToDisplay;
-
-  if ( windowWidth < 600) {
-    numberToDisplay = 1;
-  }  else if (windowWidth < 1100) {
-    numberToDisplay = 3;
-  } else if (windowWidth < 1350) {
-    numberToDisplay = 4;
-  } else if (windowWidth < 1650) {
-    numberToDisplay = 5;
-  } else {
-    numberToDisplay = 6;
-  }
 
   // change this to arrays of filter()ed arrays
   const visibleImages = worlds.slice(currentIndex, currentIndex + numberToDisplay);
