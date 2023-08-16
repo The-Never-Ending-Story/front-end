@@ -6,9 +6,10 @@ import { motion } from 'framer-motion';
 
 export const Carousel = ({worlds, routeToWorld}) => {
   // const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [numberToDisplay, setDisplay] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0),
+        [windowWidth, setWindowWidth] = useState(window.innerWidth),
+        [numberToDisplay, setDisplay] = useState(0);
+        
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);

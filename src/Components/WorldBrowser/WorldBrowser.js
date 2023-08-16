@@ -11,10 +11,10 @@ import { useHistory } from 'react-router-dom';
 import { Grid } from '../PreviewComponents/GridPreview/Grid';
 
 export const WorldBrowser = () => {
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
-  const loading = useSelector((state) => state.root.isLoading);
-  const error = useSelector((state) => state.root.error);
-  const history = useHistory();
+  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds),
+        loading = useSelector((state) => state.root.isLoading),
+        error = useSelector((state) => state.root.error),
+        history = useHistory();
 
   const chooseRandomWorlds = (worlds, numberToDisplay) => {
     const selectedWorlds = [];
@@ -33,6 +33,7 @@ export const WorldBrowser = () => {
   const routeToWorld = (id) => {
     const worldView = `world/${id}`;
     history.push(worldView);
+    window.scrollTo(0, 0);
   };
 
   // console.log(displayedWorlds[121])

@@ -3,13 +3,12 @@ import { Link, useLocation, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError } from '../rootSlice';
-import logo from '../../assets/hl_logo.png'
-import './Header.css'
+import './Header.css';
 
 export const Header = () => {
-  const dispatch = useDispatch()
-  const history = useHistory()
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds)
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
 
   const discoverNewWorld = ()=> {
     getRandomWorldData()
@@ -20,7 +19,7 @@ export const Header = () => {
     }).catch((error)=>{
       dispatch(changeError(error))
     })
-  }
+  };
 
   const {pathname} = useLocation();
 
@@ -45,5 +44,5 @@ export const Header = () => {
         )}
       </div>
     </nav>
-  )
-}
+  );
+};

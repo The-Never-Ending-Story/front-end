@@ -1,9 +1,8 @@
-import React from "react"
+import React from "react";
 
 export const Detail = ({ item, additionalDetails }) => {
-// change the prop here to not split until here
-// also make the wrapper div part of this
-  const { img, imgAlt, name, lore, id } = item
+  const { img, imgAlt, name, lore, id } = item;
+
   return (
     <div className="single-det-wrapper" key={id}>
       <div className="single-det-container">
@@ -19,5 +18,5 @@ export const Detail = ({ item, additionalDetails }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

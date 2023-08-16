@@ -6,14 +6,15 @@ import { Detail } from "../Detail/Detail";
 import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { PageNotFound } from "../PageNotFound/PageNotFound";
 import { Error } from "../Error/Error";
+import { DetailCarousel } from "../Detail/DetailCarousel";
 
 export const SingleWorld = () => {
-  const { id } = useParams();
-  const [world, setWorld] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [wrongPath, setWrongPath] = useState(false);
-  const [currentTab, setCurrentTab] = useState('');
+  const { id } = useParams(),
+        [world, setWorld] = useState({}),
+        [isLoading, setIsLoading] = useState(true),
+        [error, setError] = useState(false),
+        [wrongPath, setWrongPath] = useState(false),
+        [currentTab, setCurrentTab] = useState('');
 
   // console.log(world)
   useEffect(() => {
@@ -63,54 +64,56 @@ export const SingleWorld = () => {
   //   return sentenceFragment.charAt(0).toUpperCase() + sentenceFragment.slice(1).toLowerCase();
   // }
 
-  const makeDetailsCard = (item) => {
+  const makeDetailsCards = (category) => {
     let additionalDetails;
 
-    switch (item) {
-      case world.species:
-        additionalDetails = [
-          `Alignment: ${item.alignment}`,
-          `Politics: ${item.politics}`
-        ];
-        break;
-      case world.locations:
-        additionalDetails = [
-          `Climate: ${item.climate}` 
-        ];
-        break;
-      case world.characters:
-        additionalDetails = [
-          `Species: ${item.species}`,
-          `Alignment: ${item.alignment}`,
-          `Age: ${item.age}`,
-          `Location: ${item.location}`
-        ];
-        break;
-      case world.events:
-        additionalDetails = [
-          `${item.time} in the age of ${item.age}`
-        ];
-        break;
-    };
-
-    return item.map(inhabitant => (
-      <Detail
-        item={inhabitant}
-        additionalDetails={additionalDetails}
-      />
-    ));
+    return category.map(item => {
+      switch (category) {
+        case world.species:
+          additionalDetails = [
+            `Alignment: ${item.alignment}`,
+            `Politics: ${item.politics}`
+          ];
+          break;
+        case world.locations:
+          additionalDetails = [
+            `Climate: ${item.climate}` 
+          ];
+          break;
+        case world.characters:
+          additionalDetails = [
+            `Species: ${item.species}`,
+            `Alignment: ${item.alignment}`,
+            `Age: ${item.age}`,
+            `Location: ${item.location}`
+          ];
+          break;
+        case world.events:
+          additionalDetails = [
+            `${item.time} in the age of ${item.age}`
+          ];
+          break;
+      };
+      
+      return (
+        <Detail
+          item={item}
+          additionalDetails={additionalDetails}
+        />
+      );
+    });
   };
 
-  const inhabitants = world.species ? makeDetailsCard(world.species)
+  const inhabitants = world.species ? makeDetailsCards(world.species)
                       : declareUnknown('inhabitants');
 
-  const locations = world.locations ? makeDetailsCard(world.locations)
+  const locations = world.locations ? makeDetailsCards(world.locations)
                       : declareUnknown('locations');
 
-  const characters = world.characters ? makeDetailsCard(world.characters)
+  const characters = world.characters ? makeDetailsCards(world.characters)
                       : declareUnknown('characters');
 
-  const events = world.characters ? makeDetailsCard(world.events)
+  const events = world.characters ? makeDetailsCards(world.events)
                       : declareUnknown('events');
 
   const history =
@@ -162,7 +165,9 @@ export const SingleWorld = () => {
         ))}
       </div>
       <div className="tab-content">
-        {currentTab && tabContent[currentTab]}
+        <div className="details carousel">
+          {currentTab && <DetailCarousel content={tabContent[currentTab]}/>}
+        </div>
       </div>
     </section>
   );

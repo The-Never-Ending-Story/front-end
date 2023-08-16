@@ -113,39 +113,6 @@ p.lvl-detail{
   justify-content: center;
 }
 
-.single-det-wrapper {
-  background-color: #000000;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.single-det-wrapper h2,
-.single-det-wrapper h3 {
-  color: #15be8b;
-  text-align: left;
-  margin-left: 10px;
-}
-
-.single-det-wrapper h2 {
-  font-size: 2rem;
-}
-
-.single-det-wrapper h3 {
-  font-size: 1.5rem;
-}
-
-.single-det-container {
-  display: flex;
-  justify-content: center;
-  width: 60%;
-}
-
-.single-det-img {
-  margin: 10px;
-  height: 90vh;
-}
-
 @media screen and (max-width: 34em) {
   .tab {
     font-size: 1rem;

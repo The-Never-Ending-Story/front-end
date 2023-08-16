@@ -1,18 +1,18 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { useState } from "react";
-import './Error.css'
+import './Error.css';
 
 export const Error = () => {
-  const [redirect, setRedirect] = useState(false)
+  const [redirect, setRedirect] = useState(false);
 
   const handleClick = () => {
-    setRedirect(true)
-  }
+    setRedirect(true);
+  };
 
   if (redirect) {
     return <Redirect to="/" />;
-  }
+  };
 
   return (
     <div className="not-found-wrapper">
@@ -23,5 +23,5 @@ export const Error = () => {
         <button className="not-found-home" onClick={() => handleClick()}>Home</button>
       </div>
     </div>
-  )
-}
+  );
+};

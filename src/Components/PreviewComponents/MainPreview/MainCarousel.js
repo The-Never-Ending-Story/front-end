@@ -24,12 +24,12 @@ export const MainCarousel = ({worlds, routeToWorld}) => {
   return (
     <div className='main-carousel'>
       { MainPreviews[currentIndex] }      
-        { currentIndex !== 0 ? <motion.button 
-                                    className='main-prev' 
-                                    onClick={handlePrev}
-                                >◀</motion.button> 
-                              : null }
-                                  
+      { currentIndex !== 0 ? <motion.button 
+                                  className='main-prev' 
+                                  onClick={handlePrev}
+                              >◀</motion.button> 
+                            : null }
+                                
       { currentIndex !== worlds.length - 1 ? <motion.button
                                                 className='main-next' 
                                                 onClick={handleNext}

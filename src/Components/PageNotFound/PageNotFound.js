@@ -1,18 +1,18 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { useState } from "react";
-import './PageNotFound.css'
+import './PageNotFound.css';
 
 export const PageNotFound = () => {
-  const [redirect, setRedirect] = useState(false)
+  const [redirect, setRedirect] = useState(false);
 
   const handleClick = () => {
-    setRedirect(true)
-  }
+    setRedirect(true);
+  };
 
   if (redirect) {
     return <Redirect to="/" />;
-  }
+  };
 
   return (
     <div className="not-found-wrapper">
@@ -22,5 +22,5 @@ export const PageNotFound = () => {
         <button className="not-found-home" onClick={() => handleClick()}>Home</button>
       </div>
     </div>
-  )
-}
+  );
+};

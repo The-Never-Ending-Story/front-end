@@ -4,7 +4,7 @@ import './GridPreview.css';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 export const Grid = ({routeToWorld}) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const worlds = useSelector((state) => state.root.discoveredWorlds);
 
   useEffect(() => {

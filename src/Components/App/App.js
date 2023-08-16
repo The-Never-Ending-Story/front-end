@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect } from 'react';
-import { getAllWorldsData } from '../../apiCalls.js'
+import { getAllWorldsData } from '../../apiCalls.js';
 import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError, changeIsLoading } from '../rootSlice';
 import { Route, Switch } from 'react-router-dom';
