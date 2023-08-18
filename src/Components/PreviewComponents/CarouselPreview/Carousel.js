@@ -4,11 +4,12 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 import './CarouselPreview.css';
 import { motion } from 'framer-motion';
 
-export const Carousel = ({worlds, routeToWorld}) => {
-  // const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
+export const Carousel = ({makeFilteredArray, routeToWorld, category}) => {
+  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
   const [currentIndex, setCurrentIndex] = useState(0),
         [windowWidth, setWindowWidth] = useState(window.innerWidth),
-        [numberToDisplay, setDisplay] = useState(0);
+        [numberToDisplay, setDisplay] = useState(0),
+        [worlds, setWorlds] = useState(makeFilteredArray(category))
         
   useEffect(() => {
     const handleResize = () => {
@@ -48,7 +49,7 @@ export const Carousel = ({worlds, routeToWorld}) => {
 
   return (
       <div className='carousel-wrapper'>
-        <h2 className='genre'>Genre</h2>
+        <h2 className='genre'>{category}</h2>
         <div className='carousel'>
 
           { visibleImages.map(world => (

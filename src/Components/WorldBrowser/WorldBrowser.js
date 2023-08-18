@@ -15,7 +15,8 @@ export const WorldBrowser = () => {
         loading = useSelector((state) => state.root.isLoading),
         error = useSelector((state) => state.root.error),
         history = useHistory();
-
+  
+  console.log(displayedWorlds)
   const chooseRandomWorlds = (worlds, numberToDisplay) => {
     const selectedWorlds = [];
 
@@ -36,20 +37,10 @@ export const WorldBrowser = () => {
     window.scrollTo(0, 0);
   };
 
-  // console.log(displayedWorlds[121])
-  // console.log(displayedWorlds.reduce((acc, currentValue) => {
-  //   currentValue.genres.forEach(genre => {
-  //     if (!acc[genre]) {
-  //       acc[genre] = [currentValue.id]
-  //     } else {
-  //       acc[genre].push(currentValue.id)
-  //     }
-  //   })
+  const makeFilteredArray = (category) => {
+    return displayedWorlds.filter(world => world.category === category)
+  }
 
-  //   return acc
-  // }, []))
-
-  //get 155 and 120
 
   const mainPreviewWorlds = [40, 103, 60, 56, 25].map(id => {
     return displayedWorlds.find(world => world.id === id);
@@ -68,11 +59,11 @@ export const WorldBrowser = () => {
           <MainCarousel worlds={mainPreviewWorlds} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section carousel-preview-display'>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel category={'Fantasy & Mystical'} makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld}/>
+          <Carousel makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld} category={'Futuristic & Tech'}/>
+          <Carousel makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld} category={'Nature & Environment'}/>
+          <Carousel makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld} category={'Urban & Modern'}/>
+          <Carousel makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld} category={'Miscellaneous & Niche'}/>
         </section>
         <section className='preview-section grid-preview-display'>
           <Grid routeToWorld={routeToWorld}/>

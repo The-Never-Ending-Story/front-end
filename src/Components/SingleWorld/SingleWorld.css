@@ -9,6 +9,7 @@
   color: rgb(255, 255, 255);
   font-size: 4rem;
   margin: 0px;
+  margin-top: 2rem;
 }
 
 .single-world-view p {
@@ -28,12 +29,11 @@
 .single-top-wrapper {
   border-radius: 20px;
   top: 50%;
-  left: 50%;
-  transform: translate(-140%, -50%);
+  transform: translate(50%, -50%);
   position: absolute;
   background-color: rgba(101, 99, 99, 0.6);
   padding: 0 20px;
-  width: 30%;
+  width: 28rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -41,7 +41,7 @@
 
 .attr-name,
 p.lvl-name {
-  color: #1e2c2a;
+  color: white;
   font-weight: bold;
 }
 
