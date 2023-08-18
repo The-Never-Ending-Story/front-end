@@ -2,8 +2,7 @@
   height: 85vh;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-image: url('../../assets/background.webp');
   background-position: center;
   background-repeat: no-repeat;
@@ -23,18 +22,36 @@
   border-radius: .40rem;
 }
 
-.intro-text {
+.first-intro-text {
+  display: flex;
+  justify-items: center;
+  color: white;
+  font-size: 2.5rem;
   margin: 1rem;
 }
 
+.second-intro-text {
+  display: flex;
+  justify-items: center;
+  color: white;
+  font-size: 1rem;
+  margin: 1rem;
+}
+.first-box {
+  height: 8rem;
+  border: 1px solid white;
+  border-radius: .15rem;
+}
+.second-box {
+  display:flex;
+  align-items: center;
+  height: 4rem;
+  border: 1px solid white;
+  border-radius: .15rem;
+}
 .initial-text {
   color: white;
   font-size: 1.25rem;
-}
-
-.intro-text {
-  color: white;
-  font-size: 1rem;
 }
 
 .button-container {

@@ -8,8 +8,6 @@ import { Error } from '../Error/Error'
 import { motion } from 'framer-motion'; 
 import './WelcomePage.css'
 
-// Tasks for this refactor branch: animate intro text, welcome menu itself upon arrival, and iterate through a selection of the backgrounds once the api call is made
-
 export const WelcomePage = () => {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -34,12 +32,12 @@ export const WelcomePage = () => {
     console.log(worldPreviews)
   },[worldPreviews])
 
-  // framer variables, can probably be put into a utility file so other components can use similar animations
+
   const fadeInRise = {
     hidden: { opacity: 0, marginTop:'30rem' },
     visible: {
       opacity: 1, 
-      marginTop:'15rem',
+      marginTop:'4rem',
       transition: {
         delay:.25,
         duration:3,
@@ -58,38 +56,23 @@ export const WelcomePage = () => {
       }
     }
   };
-  // This doesn't actually render as two separate strings yet, but I think it will be useful soon:
-  const animatedTitleText = ['Introducing ', 'Hyperloom']
 
   if (error) {
     return <Error />;
   };
 
   return (
-    <main className="welcome-page">
-      <motion.section className="welcome-menu" variants={fadeInRise} initial='hidden' animate='visible'>
-        <motion.div className="initial-text" variants={slowFadeIn} initial='hidden' animate='visible'>
-          <motion.span variants={slowFadeIn} initial='hidden' animate='visible'>{animatedTitleText[0]}
-          </motion.span>
-          <motion.span variants={slowFadeIn} initial='hidden' animate='visible'>{animatedTitleText[1]}
-          </motion.span>
-        </motion.div>
-        <motion.div className="button-container" variants={slowFadeIn} initial='hidden' animate='visible'>
-          <Link to='/worlds'>
-            <button className="menu-button">Explore</button>
-          </Link>
-          <button className="menu-button" onClick={()=> {discoverNewWorld()}}>
-            Discover
-          </button>
-        </motion.div>
-          <motion.div className='modal-box'variants={slowFadeIn} initial='hidden' animate='visible'>
-          <button
-					className='menu-button'
-					onClick={() => setAboutModal(!aboutModalVisible)}
-				>About</button>
-        {aboutModalVisible && <WelcomeModal aboutModalVisible={aboutModalVisible} setAboutModal={setAboutModal}/>}
-          </motion.div>
-      </motion.section>
+    <main className="welcome-page" >
+      <motion.div className='first-box' variants={fadeInRise} initial='hidden' animate='visible'>
+        <motion.span className='first-intro-text'>
+          Introducing Hyperloom
+        </motion.span>
+      </motion.div>
+      <motion.div className='second-box' variants={slowFadeIn} initial='hidden' animate='visible'>
+        <motion.span className='second-intro-text'>
+          Explore new worlds built with ChatGPT and MidJourney, rich with inhabitants, histories, and futures yet unknown...
+        </motion.span>
+      </motion.div>
     </main>
   )
 };

@@ -14,17 +14,17 @@ function App() {
   const dispatch = useDispatch()
 
 
-  useEffect( () => {
-    getAllWorldsData()
-    .then(data => {
-      dispatch(getDiscoveredWorlds(data))
-      dispatch(changeIsLoading(false))
-    }).catch(err => {
-      console.log('errorfound')
-      dispatch(changeIsLoading(false))
-      dispatch(changeError(err.message))
-    })
-  }, [dispatch] )
+  // useEffect( () => {
+  //   getAllWorldsData()
+  //   .then(data => {
+  //     dispatch(getDiscoveredWorlds(data))
+  //     dispatch(changeIsLoading(false))
+  //   }).catch(err => {
+  //     console.log('errorfound')
+  //     dispatch(changeIsLoading(false))
+  //     dispatch(changeError(err.message))
+  //   })
+  // }, [dispatch] )
 
   return (
     <div className="App">
