@@ -22,7 +22,7 @@ describe('Single World View', () => {
       .should('have.attr', 'src')
       .and('include', "https://cdn.discordapp.com/attachments/1128814452012220536/1129842151103148173/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_44ee86aa-76d6-416b-9526-75abd158ae6b.png");
 
-    cy.get('h1').should('have.text', "DigiVale"); 
+    cy.get('h2').should('have.text', "DigiVale"); 
     cy.get('.single-geo').should('exist');
     cy.get('.attr-name').eq(0).should('have.text', 'Shape ')
     cy.get('.attr-name').eq(1).should('have.text', 'Size ')
