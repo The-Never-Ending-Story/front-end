@@ -49,7 +49,9 @@ export const WorldBrowser = () => {
   //   return acc
   // }, []))
 
-  const mainPreviewWorlds = [40, 103, 60, 56, 25, 30].map(id => {
+  //get 155 and 120
+
+  const mainPreviewWorlds = [40, 103, 60, 56, 25].map(id => {
     return displayedWorlds.find(world => world.id === id);
   });
 

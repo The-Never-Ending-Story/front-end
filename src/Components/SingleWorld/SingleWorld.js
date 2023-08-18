@@ -50,6 +50,14 @@ export const SingleWorld = () => {
     );
   };
 
+  const handleTabClick = (tabName) => {
+    window.scrollTo({
+      top: 1000,
+      behavior: 'smooth'
+    });
+    setCurrentTab(tabName)
+  }
+
   const listDetails = (list) => {
     let sentenceFragment = '';
     if(!Array.isArray(list)){
@@ -156,7 +164,7 @@ export const SingleWorld = () => {
         {Object.keys(tabContent).map((tabName) => (
           <button
             key={tabName}
-            onClick={() => setCurrentTab(tabName)}
+            onClick={() => handleTabClick(tabName)}
             aria-label={`Open ${tabName} tab`}
             tabIndex={0}
             className={currentTab === tabName ? 'tab-active' : 'tab'}

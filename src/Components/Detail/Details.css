@@ -7,7 +7,6 @@
 }
 
 .single-det-wrapper {
-  background-color: #000000;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -36,18 +35,20 @@
 }
 
 .single-det-text-wrapper {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Apply blur effect for frosted glass */
-  border-radius: 10px; /* Rounded corners */
-  color: white; /* White text color */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  color: white; 
   max-height: 50%;
   width: 30%;
-  text-align: center; /* Center the text horizontally */
+  text-align: center; 
 }
 
 .single-det-img {
   margin: 10px;
   height: 90vh;
+  border-radius: 15px;
+  box-shadow: 10px 10px 40px 2px;
 }
 
 .details-prev, .details-next {

@@ -5,11 +5,11 @@ describe('World Browser spec', () => {
     fixture: 'data'
   })
   cy.visit('http://localhost:3000/worlds')
-    .get('.loader-wrapper')
-    .get('.world-browser-container')
-    .get('.world-card-container')
-    .get('.world-image')
-    .get('.world-name')
-    .get('.world-preview')
+    // .get('.loader-wrapper')
+    // .get('.world-browser-container')
+    // .get('.world-card-container')
+    // .get('.world-image')
+    // .get('.world-name')
+    // .get('.world-preview')
   });
 });

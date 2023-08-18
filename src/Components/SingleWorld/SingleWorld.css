@@ -84,7 +84,7 @@ p.lvl-detail{
 
   box-shadow: none;
   outline: none;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(25, 27, 25);
   color: #15be8b;
   inset: 0;
   flex-grow: 1;
@@ -98,7 +98,7 @@ p.lvl-detail{
   border-radius: 15px;
   box-shadow: none;
   outline: none;
-  background-color: #000000;
+  background-color: rgb(25, 27, 25);
   color: #15be8b;
   inset: 0;
   flex-grow: 1;

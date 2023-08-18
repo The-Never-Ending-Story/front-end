@@ -64,5 +64,6 @@
 }
 
 .main-prev:hover, .main-next:hover {
-  background-color: rgba(62, 62, 62, 0.5);
+  color: rgb(20, 213, 133);
+  border: rgb(20, 213, 133) 1px solid;
 }

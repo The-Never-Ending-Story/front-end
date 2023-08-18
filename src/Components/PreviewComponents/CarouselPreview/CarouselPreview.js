@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
 
 export const CarouselPreview = ({world, routeToWorld}) => {
-  const { id, img, name } = world;
+  const { id, img, name, blurb} = world;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -21,9 +21,9 @@ export const CarouselPreview = ({world, routeToWorld}) => {
         src={img.thumbnail}
         alt={`Image ${id}`}
         initial={{ opacity: 0, scale: 0.7}}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.2 }}
         whileInView={{ opacity: 1, scale: 1}}
-        whileHover={{ scale: 1.2, transition: { delay: 0.4 }}} 
+        whileHover={{ scale: 1.2}} 
         onClick={() => routeToWorld(id)}
         onMouseEnter={handleOpenModal}
         onMouseLeave={handleCloseModal}
@@ -31,13 +31,14 @@ export const CarouselPreview = ({world, routeToWorld}) => {
 
       {isModalOpen && (
         <motion.div
-          transition= {{ delay: 0.5 }}
+          transition= {{ delay: 0.1, type:'just' }}
           className="modal"
           initial={{ y: '100%' }}
           animate={{ y: 0 }}
           exit={{ y: '100%' }}
         >
-          <p>{name}</p>
+          <p className='modal-name'>{name}</p>
+          <p>{blurb}</p>
         </motion.div>
       )}
     </div>

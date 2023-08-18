@@ -16,6 +16,7 @@ function App() {
   useEffect( () => {
     getAllWorldsData()
     .then(data => {
+      console.log(data)
       dispatch(getDiscoveredWorlds(data))
       dispatch(changeIsLoading(false))
     }).catch(err => {

@@ -6,12 +6,11 @@
 
 .header-container {
   position: relative;
-  border-bottom:white solid 1px;
+  border-bottom:rgb(20, 213, 133) solid 1px;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
   align-items:center;
   display: flex;
-  background-color:black;
 }
 
 .buttons-container {
@@ -32,6 +31,10 @@
   font-family: 'Share-TechMono', sans-serif;
 }
 
+.hidden {
+  display:hidden;
+}
+
 .spaced-out {
   justify-content: space-between;
 }
@@ -43,6 +46,7 @@
 @media screen and (max-width: 34em) {
 
   .header-button {
+
     font-size: .9rem;
     padding-right: 30px;
   }

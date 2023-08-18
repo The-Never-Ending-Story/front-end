@@ -1,5 +1,5 @@
 .carousel-wrapper {
-  width: 75%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -20,9 +20,9 @@
 .carousel-btn {
   padding: 16px;
   font-size: 12px;
-  width: 50px;
+  width: 60px;
   aspect-ratio: 1;
-  border-radius: 25px;
+  border-radius: 30px;
   border: white 1px solid;
   color: white;
   background: none;
@@ -32,34 +32,52 @@
 
 .carousel-preview-container {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* display: inline-block; */
   width: 15%;
+  aspect-ratio: 1;
 }
 
 .modal {
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 60%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   padding: 10px;
+  transform: translateY(50%);
+  border-radius: 10px;
+}
+
+.modal p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px
+}
+
+.modal-name {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .carousel-item {
   margin-right: 0rem;
   width: 100%;
-  height: 12rem;
   border-radius: 10px;
   aspect-ratio: 1;
 }
 
 .carousel-btn:hover {
-  background-color: rgba(62, 62, 62, 0.5);
+  color: rgb(20, 213, 133);
+  border: rgb(20, 213, 133) 1px solid;
 }
 
 .prev-button {
@@ -98,12 +116,8 @@
 
 @media (max-width: 1100px) {
   .carousel-preview-container {
-    width: 30%
+    width: 25%
   } 
-
-  .carousel-wrapper {
-    width: 85%;
-  }
 }
 
 @media (max-width: 600px) {
