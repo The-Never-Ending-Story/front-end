@@ -1,9 +1,10 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { Link, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError } from '../rootSlice';
-import {Error} from '../Error/Error'
+import WelcomeModal from './WelcomeModal'
+import { Error } from '../Error/Error'
 import { motion } from 'framer-motion'; 
 import './WelcomePage.css'
 
@@ -15,6 +16,7 @@ export const WelcomePage = () => {
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
   const worldPreviews = useSelector((state)=>state.root.worldPreviews)
   const error = useSelector((state) => state.root.error);
+  const [aboutModalVisible, setAboutModal] = useState(false)
 
   const discoverNewWorld = ()=> {
     getRandomWorldData()
@@ -72,12 +74,6 @@ export const WelcomePage = () => {
           <motion.span variants={slowFadeIn} initial='hidden' animate='visible'>{animatedTitleText[1]}
           </motion.span>
         </motion.div>
-        <motion.p className="intro-text" variants={slowFadeIn} initial='hidden' animate='visible'>
-          HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore.
-          <br/>
-          <br/>
-          Explore barely known worlds, or discover new domains:
-        </motion.p>
         <motion.div className="button-container" variants={slowFadeIn} initial='hidden' animate='visible'>
           <Link to='/worlds'>
             <button className="menu-button">Explore</button>
@@ -86,6 +82,13 @@ export const WelcomePage = () => {
             Discover
           </button>
         </motion.div>
+          <motion.div className='modal-box'variants={slowFadeIn} initial='hidden' animate='visible'>
+          <button
+					className='menu-button'
+					onClick={() => setAboutModal(!aboutModalVisible)}
+				>About</button>
+        {aboutModalVisible && <WelcomeModal aboutModalVisible={aboutModalVisible} setAboutModal={setAboutModal}/>}
+          </motion.div>
       </motion.section>
     </main>
   )

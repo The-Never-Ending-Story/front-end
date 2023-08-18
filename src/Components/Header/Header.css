@@ -9,7 +9,6 @@ h2 {
   padding-top: 1rem;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
-  align-items:center;
   display: flex;
   background: radial-gradient(
     circle,rgba(3, 42, 37, 0.506) 20%,rgb(80, 158, 146) 25%,rgb(2, 24, 21) 50%);
@@ -59,15 +58,15 @@ h2 {
 .spaced-out {
   justify-content: space-between;
 }
-
+/* 
 .header-container:hover {
   animation: close-in ease-in-out .6s;
-}
+} */
 
 .header-button:hover {
   color:#f1f6f9 ;
 }
-
+/* 
 @keyframes close-in {
   0% {
     background: radial-gradient(
@@ -104,7 +103,7 @@ h2 {
     background: radial-gradient(
       circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(2, 24, 21) 50%);
   }
-}
+} */
 
 @media screen and (max-width: 34em) {
   .header-logo {

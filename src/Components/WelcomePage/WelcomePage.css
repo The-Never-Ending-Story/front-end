@@ -12,18 +12,15 @@
 
 .welcome-menu {
   color: white;
-  width: 40rem;
-  height: 13rem;
+  width: 32rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 20rem;
   background: rgb(3, 42, 37, .5);
-  border: .75rem #43675ded solid;
   border-radius: .40rem;
-  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-	animation: borderRotate var(--d) ease-out infinite forwards;
 }
 
 .intro-text {
@@ -65,56 +62,4 @@
 
 .menu-button:hover {
   animation: increase 2s ease-out;
-}
-
-@keyframes increase {
-  25% {
-    scale: 1.01;
-    background:#2c36383c;
-  }
-  50% {
-    scale: 1.02;
-    background:#2c363876;
-  }
-  75% {
-    scale: 1.06;
-    background:#2c3638af;
-  }
-  100% {
-    scale: 1..02;
-    background:#2C3638;
-  }
-}
-
-@keyframes borderRotate {
-  100% {
-    --angle: 420deg;
-  }
-}
-
-:root {
-	--d:  10000ms;
-	--angle: 90deg;
-	--gradX: 100%;
-	--gradY: 50%;
-	--c1: #CDD2CA;
-	--c2: #4a7166;
-}
-
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 90deg;
-  inherits: true;
-}
-
-@property --gradX {
-  syntax: '<percentage>';
-  initial-value: 50%;
-  inherits: true;
-}
-
-@property --gradY {
-  syntax: '<percentage>';
-  initial-value: 0%;
-  inherits: true;
 }
