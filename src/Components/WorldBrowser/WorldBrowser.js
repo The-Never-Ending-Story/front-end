@@ -15,21 +15,6 @@ export const WorldBrowser = () => {
         loading = useSelector((state) => state.root.isLoading),
         error = useSelector((state) => state.root.error),
         history = useHistory();
-  
-  console.log(displayedWorlds)
-  const chooseRandomWorlds = (worlds, numberToDisplay) => {
-    const selectedWorlds = [];
-
-    while (selectedWorlds.length < numberToDisplay) {
-      const randomIndex = Math.floor(Math.random() * worlds.length);
-      
-      if (!selectedWorlds.includes(randomIndex)) {
-        selectedWorlds.push(worlds[randomIndex]);
-      };
-    };
-
-    return selectedWorlds;
-  };
 
   const routeToWorld = (id) => {
     const worldView = `world/${id}`;
@@ -41,6 +26,19 @@ export const WorldBrowser = () => {
     return displayedWorlds.filter(world => world.category === category)
   }
 
+  const carouselPreviews = ['Fantasy & Mystical',
+                            'Futuristic & Tech',
+                            'Nature & Environment',
+                            'Urban & Modern',
+                            'Miscellaneous & Niche'
+                          ].map((category, index) => 
+                            <Carousel
+                              category={category}
+                              filteredWorlds={makeFilteredArray(category)}
+                              routeToWorld={routeToWorld}
+                              key={index}
+                              />
+                            )
 
   const mainPreviewWorlds = [40, 103, 60, 56, 25].map(id => {
     return displayedWorlds.find(world => world.id === id);
@@ -59,11 +57,7 @@ export const WorldBrowser = () => {
           <MainCarousel worlds={mainPreviewWorlds} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section carousel-preview-display'>
-          <Carousel category={'Fantasy & Mystical'} makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld}/>
-          <Carousel makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld} category={'Futuristic & Tech'}/>
-          <Carousel makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld} category={'Nature & Environment'}/>
-          <Carousel makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld} category={'Urban & Modern'}/>
-          <Carousel makeFilteredArray={makeFilteredArray} routeToWorld={routeToWorld} category={'Miscellaneous & Niche'}/>
+          {carouselPreviews}
         </section>
         <section className='preview-section grid-preview-display'>
           <Grid routeToWorld={routeToWorld}/>

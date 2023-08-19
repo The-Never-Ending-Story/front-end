@@ -4,13 +4,12 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 import './CarouselPreview.css';
 import { motion } from 'framer-motion';
 
-export const Carousel = ({makeFilteredArray, routeToWorld, category}) => {
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds).slice(19, 30);
+export const Carousel = ({filteredWorlds, routeToWorld, category}) => {
   const [currentIndex, setCurrentIndex] = useState(0),
         [windowWidth, setWindowWidth] = useState(window.innerWidth),
         [numberToDisplay, setDisplay] = useState(0),
-        [worlds, setWorlds] = useState(makeFilteredArray(category))
-        
+        [worlds, setWorlds] = useState(filteredWorlds)
+  
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -35,9 +34,7 @@ export const Carousel = ({makeFilteredArray, routeToWorld, category}) => {
     };
   }, [windowWidth]);
 
-
-  // change this to arrays of filter()ed arrays
-  const visibleImages = worlds.slice(currentIndex, currentIndex + numberToDisplay);
+  const visibleImages = worlds ? worlds.slice(currentIndex, currentIndex + numberToDisplay) : [] ;
 
   const handleNext = () => {
     setCurrentIndex(Math.min(currentIndex + 1, worlds.length - numberToDisplay));
@@ -53,7 +50,7 @@ export const Carousel = ({makeFilteredArray, routeToWorld, category}) => {
         <div className='carousel'>
 
           { visibleImages.map(world => (
-            <CarouselPreview world ={world} routeToWorld={routeToWorld}/>
+            <CarouselPreview world ={world} routeToWorld={routeToWorld} key={world.id}/>
           ))}
 
           { currentIndex !== 0 ? <motion.button 
