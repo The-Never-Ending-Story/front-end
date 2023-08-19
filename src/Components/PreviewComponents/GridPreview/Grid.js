@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 export const Grid = ({routeToWorld}) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth),
-        [numberToDisplay, setDisplay] = useState(0)
-  const worlds = useSelector((state) => state.root.discoveredWorlds);
+        [numberToDisplay, setDisplay] = useState(0);
+  const worlds = useSelector(state => state.root.discoveredWorlds);
 
     // console.log(displayedWorlds)
   // const chooseRandomWorlds = (worlds, numberToDisplay) => {
@@ -34,39 +34,25 @@ export const Grid = ({routeToWorld}) => {
       setDisplay(9);
     } else {
       setDisplay(12);
-    }
+    };
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-
-  // const chooseRandomWorlds = (worlds, numberToDisplay) => {
-  //   const selectedWorlds = [];
-
-  //   while (selectedWorlds.length < numberToDisplay) {
-  //     const randomIndex = Math.floor(Math.random() * worlds.length);
-      
-  //     if (!selectedWorlds.includes(randomIndex)) {
-  //       selectedWorlds.push(worlds[randomIndex]);
-  //     }
-  //   }
-
-  //   return selectedWorlds;
-  // }
-
-  const gridPreviews = worlds.slice(0, numberToDisplay)
+  const gridPreviews = worlds
+                        .slice(0, numberToDisplay)
                         .map(world =>
                           <GridPreview 
                             world={world}
                             routeToWorld={routeToWorld}
                           />
-                        )
+                        );
 
   return (
     <div className='grid-preview-wrapper'>
       {gridPreviews}
     </div>
-  )
-}
+  );
+};

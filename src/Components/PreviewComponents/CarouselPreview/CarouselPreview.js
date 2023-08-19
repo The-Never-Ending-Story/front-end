@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
 
 export const CarouselPreview = ({world, routeToWorld}) => {
-  const { id, img, name, blurb} = world;
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { id, img, name, blurb} = world,
+        [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);

@@ -11,20 +11,20 @@ import { useHistory } from 'react-router-dom';
 import { Grid } from '../PreviewComponents/GridPreview/Grid';
 
 export const WorldBrowser = () => {
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds),
-        loading = useSelector((state) => state.root.isLoading),
-        error = useSelector((state) => state.root.error),
+  const displayedWorlds = useSelector(state => state.root.discoveredWorlds),
+        loading = useSelector(state => state.root.isLoading),
+        error = useSelector(state => state.root.error),
         history = useHistory();
 
-  const routeToWorld = (id) => {
+  const routeToWorld = id => {
     const worldView = `world/${id}`;
     history.push(worldView);
     window.scrollTo(0, 0);
   };
 
-  const makeFilteredArray = (category) => {
-    return displayedWorlds.filter(world => world.category === category)
-  }
+  const makeFilteredArray = category => {
+    return displayedWorlds.filter(world => world.category === category);
+  };
 
   const carouselPreviews = ['Fantasy & Mystical',
                             'Futuristic & Tech',
@@ -38,7 +38,7 @@ export const WorldBrowser = () => {
                               routeToWorld={routeToWorld}
                               key={index}
                               />
-                            )
+                            );
 
   const mainPreviewWorlds = [40, 103, 60, 56, 25].map(id => {
     return displayedWorlds.find(world => world.id === id);

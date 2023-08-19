@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { CarouselPreview } from './CarouselPreview';
-import { useSelector } from 'react-redux/es/hooks/useSelector';
 import './CarouselPreview.css';
 import { motion } from 'framer-motion';
 
