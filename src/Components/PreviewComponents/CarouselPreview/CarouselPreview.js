@@ -36,6 +36,7 @@ export const CarouselPreview = ({world, routeToWorld}) => {
           initial={{ y: '100%' }}
           animate={{ y: 0 }}
           exit={{ y: '100%' }}
+          onClick={() => routeToWorld(id)}
         >
           <p className='modal-name'>{name}</p>
           <p>{blurb}</p>

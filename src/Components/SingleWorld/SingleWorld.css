@@ -33,10 +33,12 @@
   position: absolute;
   background-color: rgba(101, 99, 99, 0.6);
   padding: 0 20px;
-  width: 28rem;
+  min-width: 28rem;
+  max-width: 45rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  max-height: 90vh;
 }
 
 .attr-name,

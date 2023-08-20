@@ -3,7 +3,9 @@ describe('World Browser spec', () => {
     cy.intercept('https://hyperloom-d209dae18b26.herokuapp.com/worlds?format=json', {
     statusCode: 200,
     fixture: 'data'
-    }).intercept('https://hyperloom-d209dae18b26.herokuapp.com/worlds/60?format=json', {
+    }).as('getWorlds')
+    
+    .intercept('https://hyperloom-d209dae18b26.herokuapp.com/worlds/60?format=json', {
       statusCode: 200,
       fixture: 'single-data'
     })
@@ -24,7 +26,6 @@ describe('World Browser spec', () => {
     cy.get('.main-next').click()
 
 
-
     cy.get('.main-preview-container')
       .get('.main-preview-name').eq(0).should('have.text', "Nexus Astralis")
       .get('.main-preview-blurb').eq(0).should('have.text', "A world of mystic energies, advanced machinery, and shifting dimensions")
@@ -38,7 +39,7 @@ describe('World Browser spec', () => {
   })
 
   it('should have carousel previews sorted by category', () => {
-    cy.get('.carousel').eq(0)
+    cy.wait('@getWorlds').get('.carousel')
       .get('.carousel-preview-container')
       .get('.carousel-item')
 
@@ -48,8 +49,6 @@ describe('World Browser spec', () => {
     cy.get('.genre').eq(3).should('have.text', 'Urban & Modern')
     cy.get('.genre').eq(4).should('have.text', 'Miscellaneous & Niche')
 
-  
-  
   })
 
 
