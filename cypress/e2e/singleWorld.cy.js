@@ -56,8 +56,8 @@ describe('Single World View', () => {
 
   it('should display the locations tab and check its elements', () => {
     cy.contains('Locations').click()
-    cy.contains("Climate: Temperate, humid")
-    cy.contains("Nestled high in the cavernous caves where the humidity is bearable. It's interconnected with one another via suspended rope bridges, crystal-enhanced lighting refracts to the stalactites above.")
+    cy.contains("Climate: Hot, dry")
+    cy.contains("Constructed amid saltpan, emblematically named for the encircling mystical crystals. Foundations are rooted within the caves beneath, buildings are magically reinforced, with abundant neon lighting.")
 
     cy.get('.single-det-img')
       .should('have.attr', 'src')
