@@ -82,9 +82,30 @@
   transform: translateY(-50%);
 }
 
+.modal-det-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+
+.single-det-modal {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  color: white; 
+  text-align: center; 
+}
+
+
+
 @media (max-width: 1500px) {
   .single-det-container {
-    width: 80%;
 
   }
 }

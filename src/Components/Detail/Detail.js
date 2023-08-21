@@ -1,10 +1,14 @@
-import React, {useState, useEffect} from "react";
+
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 export const Detail = ({ item, additionalDetails }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth),
-        [isModalOpen, setIsModalOpen] = useState(false),
-        { img, imgAlt, name, lore, id } = item;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { img, imgAlt, name, lore, id } = item;
+
+  // Ref for the modal container
+  const modalContainerRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,61 +30,54 @@ export const Detail = ({ item, additionalDetails }) => {
     setIsModalOpen(false);
   };
 
+  const handleMouseEnter = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleMouseLeave = (e) => {
+    // Check if the mouse is leaving the modal container
+    if (!modalContainerRef.current.contains(e.relatedTarget)) {
+      setIsModalOpen(false);
+    }
+  };
 
   return (
-
     <div className="single-det-wrapper" key={id}>
-
-      { windowWidth > 1200 && 
+      {windowWidth > 1200 && (
         <div className="single-det-container">
-          <img className="single-det-img" src={img} alt={imgAlt} />
-          <div className="single-det-text-wrapper">
-            <h3>{name}</h3>
-            {additionalDetails && additionalDetails.map((detail, index) => (
-              <p key={index}>{detail}</p>
-            ))}
-            <p>{lore}</p>
-          </div>
+          {/* ... */}
         </div>
-      }
+      )}
 
-      { windowWidth < 1200 && 
+      {windowWidth < 1200 && (
         <div className="modal-det-container">
-          
-          <img 
+          <img
             className="single-det-img"
-            src={img} alt={imgAlt}         
-            onMouseEnter={handleOpenModal}
-            onMouseLeave={handleCloseModal}
+            src={img}
+            alt={imgAlt}
+            onClick={handleOpenModal}
+            onMouseEnter={handleMouseEnter}
           />
-          
+
           {isModalOpen && (
             <motion.div
-              transition= {{ delay: 0.1, type:'just' }}
+              ref={modalContainerRef}
+              transition={{ delay: 0.1, type: 'just' }}
               className="single-det-modal"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
-              
+              onMouseLeave={handleMouseLeave}
             >
-              <div className="single-det-text-wrapper">
-                <h3>{name}</h3>
-                  {additionalDetails && additionalDetails.map((detail, index) => (
-                    <p key={index}>{detail}</p>
-                  ))}
-                <p>{lore}</p>
-              </div>
-            </motion.div>
+              <h3>{name}</h3>
+                {additionalDetails && additionalDetails.map((detail, index) => (
+                  <p key={index}>{detail}</p>
+                ))}
+              <p>{lore}</p>
+           </motion.div>
           )}
-    </div>
-          
-
-      }
-
-
-
-
-
+        </div>
+      )}
     </div>
   );
 };
