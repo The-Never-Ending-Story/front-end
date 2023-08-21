@@ -5,7 +5,7 @@ const HeroCarousel = () => {
   return (
     <section className='my-hero'>
       <div className='test-words'>
-        Preview World Name
+        Aetheria
       </div>
     </section>
   )

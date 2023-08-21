@@ -25,7 +25,7 @@ export const Header = () => {
 
   return (
     <nav className='header-container'>
-        <Link to='/'>
+        <Link to='/' className='header-link' style={{textDecoration: 'none', color: 'white'}}>
           HyperLoom
         </Link>
       <div className='buttons-container'>
