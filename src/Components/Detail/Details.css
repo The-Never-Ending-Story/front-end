@@ -70,7 +70,7 @@
 
 .details-next {
   position: absolute;
-  right: 42%;
+  right: 12%;
   top: 50%; 
   transform: translateY(-50%); 
 }
@@ -80,4 +80,11 @@
   left: 15%;
   top: 50%; 
   transform: translateY(-50%);
+}
+
+@media (max-width: 1500px) {
+  .single-det-container {
+    width: 80%;
+
+  }
 }
