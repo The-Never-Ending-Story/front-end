@@ -7,6 +7,7 @@ import WelcomeModal from './WelcomeModal'
 import { Error } from '../Error/Error'
 import { motion } from 'framer-motion'; 
 import './WelcomePage.css'
+import HeroCarousel from "../HeroCarousel/HeroCarousel";
 
 export const WelcomePage = () => {
   const dispatch = useDispatch();
@@ -63,6 +64,7 @@ export const WelcomePage = () => {
 
   return (
     <main className="welcome-page" >
+      <HeroCarousel/>
       <motion.div className='first-box' variants={fadeInRise} initial='hidden' animate='visible'>
         <motion.span className='first-intro-text'>
           Introducing Hyperloom

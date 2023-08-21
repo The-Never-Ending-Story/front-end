@@ -1,0 +1,21 @@
+.my-hero {
+  color: white;
+  position:absolute;
+  display:flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+  z-index: -1;
+  background-image: url('../../assets/background.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.test-words {
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}

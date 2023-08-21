@@ -6,8 +6,8 @@ const WelcomeModal = ({setAboutModal, aboutModalVisible}) => {
     <AnimatePresence>
       {aboutModalVisible && (
         <>
-        <p>HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore.</p>
-        <p>Explore barely known worlds, or discover new domains:</p>
+        <motion.p>HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore.</motion.p>
+        <motion.p>Explore barely known worlds, or discover new domains:</motion.p>
         </>
       )}
     </AnimatePresence>

@@ -3,8 +3,10 @@ h2 {
 }
 
 .header-container {
-  position: relative;
-  min-height: 100px;
+  position: absolute;
+  z-index: 1;
+  min-height: 5vh;
+  width: 100vw;
   border-bottom:rgba(229, 235, 226, 0.25) solid .15rem;
   padding-top: 1rem;
   font-family: 'Share-TechMono', sans-serif;
