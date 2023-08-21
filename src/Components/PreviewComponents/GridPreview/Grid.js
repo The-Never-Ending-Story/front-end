@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 export const Grid = ({routeToWorld}) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth),
         [numberToDisplay, setDisplay] = useState(0),
-        [isModalOpen, setIsModalOpen] = useState(false),
         [worlds, setWorlds] = useState(useSelector(state => state.root.discoveredWorlds));
 
     // console.log(displayedWorlds)

@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from "react";
+import { motion } from "framer-motion";
 
 export const Detail = ({ item, additionalDetails }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const { img, imgAlt, name, lore, id } = item;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth),
+        [isModalOpen, setIsModalOpen] = useState(false),
+        { img, imgAlt, name, lore, id } = item;
 
   useEffect(() => {
     const handleResize = () => {
@@ -16,14 +18,19 @@ export const Detail = ({ item, additionalDetails }) => {
     };
   }, []);
 
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+
   return (
 
-
-
-
-    
     <div className="single-det-wrapper" key={id}>
-      
+
       { windowWidth > 1200 && 
         <div className="single-det-container">
           <img className="single-det-img" src={img} alt={imgAlt} />
@@ -38,16 +45,36 @@ export const Detail = ({ item, additionalDetails }) => {
       }
 
       { windowWidth < 1200 && 
-        <div className="single-det-container">
-          <img className="single-det-img" src={img} alt={imgAlt} />
-          <div className="single-det-text-wrapper">
-            <h3>{name}</h3>
-            {additionalDetails && additionalDetails.map((detail, index) => (
-              <p key={index}>{detail}</p>
-            ))}
-            <p>{lore}</p>
-          </div>
-        </div>
+        <div className="modal-det-container">
+          
+          <img 
+            className="single-det-img"
+            src={img} alt={imgAlt}         
+            onMouseEnter={handleOpenModal}
+            onMouseLeave={handleCloseModal}
+          />
+          
+          {isModalOpen && (
+            <motion.div
+              transition= {{ delay: 0.1, type:'just' }}
+              className="single-det-modal"
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              
+            >
+              <div className="single-det-text-wrapper">
+                <h3>{name}</h3>
+                  {additionalDetails && additionalDetails.map((detail, index) => (
+                    <p key={index}>{detail}</p>
+                  ))}
+                <p>{lore}</p>
+              </div>
+            </motion.div>
+          )}
+    </div>
+          
+
       }
 
 
