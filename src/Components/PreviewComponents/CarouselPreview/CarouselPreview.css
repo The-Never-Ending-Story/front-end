@@ -42,7 +42,7 @@
 .modal {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 80%;
   height: 60%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;

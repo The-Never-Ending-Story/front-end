@@ -4,24 +4,36 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-
 }
 
 .about-info {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  color: white; 
+  width: 25%;
+  text-align: center; 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   color: white;
-  width: 40vw;
-  padding: 20px;
-  border: grey 1px solid;
+  aspect-ratio: calc(3/3);
+  padding: 25px;
   border-radius: 15px;
+}
+
+.about-title {
+  margin: 10px;
+  font-size: 48px;
 }
 
 .about-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 0px;
+  font-size: 18px;
 }
 
 .button-container {
@@ -41,5 +53,8 @@
 }
 
 .about-image {
-  
+  margin: 10px;
+  height: 70vh;
+  border-radius: 15px;
+  box-shadow: 10px 10px 40px 2px;
 }

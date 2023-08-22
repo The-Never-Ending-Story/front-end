@@ -2,13 +2,9 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export const CarouselPreview = ({ world, routeToWorld }) => {
-  const { id, img, name, blurb } = world;
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const modalContainerRef = useRef(null);
-
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
+  const { id, img, name, blurb } = world,
+        [isModalOpen, setIsModalOpen] = useState(false),
+        modalContainerRef = useRef(null);
 
   const handleMouseEnter = () => {
     setIsModalOpen(true);
@@ -21,7 +17,9 @@ export const CarouselPreview = ({ world, routeToWorld }) => {
   };
 
   return (
-    <div className="carousel-preview-container">
+    <div className="carousel-preview-container"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
       <motion.img
         key={id}
         className="carousel-item"
@@ -32,7 +30,7 @@ export const CarouselPreview = ({ world, routeToWorld }) => {
         whileInView={{ opacity: 1, scale: 1 }}
         whileHover={{ scale: 1.2 }}
         onClick={() => routeToWorld(id)}
-        onMouseEnter={handleMouseEnter}
+
       />
 
       {isModalOpen && (
@@ -43,7 +41,6 @@ export const CarouselPreview = ({ world, routeToWorld }) => {
           animate={{ y: 0 }}
           exit={{ y: '100%' }}
           onClick={() => routeToWorld(id)}
-          onMouseLeave={handleMouseLeave}
         >
           <p className="modal-name">{name}</p>
           <p>{blurb}</p>

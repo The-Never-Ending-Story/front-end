@@ -1,13 +1,11 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 export const Detail = ({ item, additionalDetails }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const { img, imgAlt, name, lore, id } = item;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth),
+        [isModalOpen, setIsModalOpen] = useState(false),
+        { img, imgAlt, name, lore, id } = item;
 
-  // Ref for the modal container
   const modalContainerRef = useRef(null);
 
   useEffect(() => {
