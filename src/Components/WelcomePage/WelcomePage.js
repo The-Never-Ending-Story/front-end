@@ -6,7 +6,8 @@ import { getDiscoveredWorlds, changeError } from '../rootSlice';
 import { Error } from '../Error/Error'
 import { motion } from 'framer-motion'; 
 import './WelcomePage.css'
-import HeroCarousel from "../HeroCarousel/HeroCarousel";
+import { About } from "../About/About";
+import {HeroImageSlider} from '../HeroImageSlider/HeroImageSlider'
 
 export const WelcomePage = () => {
   const dispatch = useDispatch();
@@ -26,12 +27,6 @@ export const WelcomePage = () => {
       dispatch(changeError(error));
     })
   };
-
-  useEffect(()=> {
-    // This is probably where we will begin a function that is responsible for rotating the background image on an interval, and giving a button in the background the id#, worldPreviews is based off of a new rootSlice state that is updated at the same time as the full discoveredWorlds array.
-    console.log(worldPreviews)
-  },[worldPreviews])
-
 
   const fadeInRise = {
     hidden: { opacity: 0, marginTop:'30rem' },
@@ -63,7 +58,7 @@ export const WelcomePage = () => {
 
   return (
     <main className="welcome-page" >
-      <HeroCarousel worldPreviews={worldPreviews}/>
+      <HeroImageSlider/>
       <motion.div className='first-box' variants={fadeInRise} initial='hidden' animate='visible'>
         <motion.span className='first-intro-text' >
           Introducing Hyperloom
@@ -85,6 +80,7 @@ export const WelcomePage = () => {
           Explore new worlds built with ChatGPT and MidJourney, rich with inhabitants, histories, and futures yet unknown...
         </motion.span>
         }
+      <About discoverNewWorld={discoverNewWorld}/>
     </main>
   )
 };

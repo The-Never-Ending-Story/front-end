@@ -1,18 +1,15 @@
-h2 {
+.title {
   font-size: 1.75rem;
+  all: unset;
+  color: #ffffff;
 }
 
 .header-container {
-  position: absolute;
-  z-index: 1;
-  min-height: 5vh;
-  width: 100vw;
-  border-bottom:rgba(229, 235, 226, 0.25) solid .15rem;
-  padding-top: 1rem;
+  position: relative;
+  border-bottom:rgb(20, 213, 133) solid 1px;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
   display: flex;
-  line-height: 2rem;
 }
 
 .buttons-container {
@@ -21,9 +18,18 @@ h2 {
   display: flex;
 }
 
-.header-logo:hover {
-  background: rgba(185, 229, 205, 0.15);
+.header-button {
+  font-size: 1.25rem;
+  padding-right: 40px;
+  outline: none;
+  background: none;
+  border-style: none;
+  color: white ;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-family: 'Share-TechMono', sans-serif;
 }
+
 .hidden {
   display:hidden;
 }
@@ -32,16 +38,12 @@ h2 {
   justify-content: space-between;
 }
 
+.header-button:hover {
+  color:#f1f6f9 ;
+}
+
 @media screen and (max-width: 34em) {
-  .header-logo {
-    margin: 0 auto;
-    padding: .2rem;
-    max-height: 8vh;
-    padding-bottom: .3rem;
-  }
-  .header-logo:hover {
-  background: none;
-  }
+
   .header-button {
 
     font-size: .9rem;

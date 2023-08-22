@@ -1,0 +1,71 @@
+.main-preview-container{
+  min-height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: white;
+  padding: 2rem;
+  font-size: 18px;
+  border-radius: 15px;
+  box-shadow: 5px 3px 15px 2px rgba(20, 213, 133, .4);
+
+}
+
+.main-preview-name,
+.main-preview-blurb {
+  margin: 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-preview-name {
+  font-size: 24px;
+}
+
+.main-carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.main-preview-button-container {
+  margin-top: 2rem;
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-next, .main-prev {
+  padding: 16px;
+  font-size: 18px;
+  height: 5rem;
+  width: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: white 1px solid;
+  color: white;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  transform: translate(-50%);
+  position: absolute;
+}
+
+.main-next {
+  right: 2rem;
+}
+
+.main-prev {
+  left: 6rem;
+}
+
+.main-prev:hover, .main-next:hover {
+  color: rgb(20, 213, 133);
+  border: rgb(20, 213, 133) 1px solid;
+}

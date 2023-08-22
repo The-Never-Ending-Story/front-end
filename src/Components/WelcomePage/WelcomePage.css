@@ -1,8 +1,13 @@
 .welcome-page {
-  height: 85vh;
+  height: 200vh;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .welcome-menu {
@@ -55,14 +60,11 @@
   font-size: 1.25rem;
 }
 
-.button-container {
-  display:flex;
-  justify-content: space-between;
-  border-radius:.75rem;
-  margin: .45rem;
-  padding: .45rem;
-  min-width: 20rem;
+.intro-text {
+  color: white;
+  font-size: 1rem;
 }
+
 
 .menu-button {
   padding: 0.6em 2em;
