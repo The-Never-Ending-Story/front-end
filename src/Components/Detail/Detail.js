@@ -26,16 +26,11 @@ export const Detail = ({ item, additionalDetails }) => {
     setIsModalOpen(true);
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
   const handleMouseEnter = () => {
     setIsModalOpen(true);
   };
 
   const handleMouseLeave = (e) => {
-    // Check if the mouse is leaving the modal container
     if (!modalContainerRef.current.contains(e.relatedTarget)) {
       setIsModalOpen(false);
     }
