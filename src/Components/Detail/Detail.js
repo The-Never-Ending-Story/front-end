@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const Detail = ({ item, additionalDetails }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth),
         [isModalOpen, setIsModalOpen] = useState(false),
-        { img, imgAlt, name, lore, id } = item;
+        {img, imgAlt, name, lore, id } = item;
 
   const modalContainerRef = useRef(null);
 
@@ -50,13 +50,15 @@ export const Detail = ({ item, additionalDetails }) => {
       )}
 
       {windowWidth < 1200 && (
-        <div className="modal-det-container">
+        <div
+          className="modal-det-container"
+          onClick={handleOpenModal}
+          onMouseEnter={handleMouseEnter}
+        >
           <img
             className="single-det-img"
             src={img}
             alt={imgAlt}
-            onClick={handleOpenModal}
-            onMouseEnter={handleMouseEnter}
           />
 
           {isModalOpen && (

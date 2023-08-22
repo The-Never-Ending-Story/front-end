@@ -140,7 +140,7 @@ export const SingleWorld = () => {
   return (
     <section className="single-world-view">
       <div className="single-top">
-        <img className="world-img" src={world.img.landscape} alt={`${world.name}`} />
+        <img className="world-img" src={world.imgs.landscapes[2]} alt={`${world.name}`} />
         <div className="single-top-wrapper">
           <h2>{world.name}</h2>
           <div className="single-geo">

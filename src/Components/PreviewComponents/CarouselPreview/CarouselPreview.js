@@ -1,25 +1,37 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export const CarouselPreview = ({ world, routeToWorld }) => {
-  const { id, img, name, blurb } = world,
-        [isModalOpen, setIsModalOpen] = useState(false),
-        modalContainerRef = useRef(null);
+  const { id, img, name, blurb } = world;
 
-  const handleMouseEnter = () => {
-    setIsModalOpen(true);
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMouseInside, setIsMouseInside] = useState(false);
+  const modalContainerRef = useRef(null);
 
-  const handleMouseLeave = (e) => {
-    if (!modalContainerRef.current.contains(e.relatedTarget)) {
-      setIsModalOpen(false);
-    }
-  };
+  useEffect(() => {
+    
+    const handleMouseEnter = () => {
+      setIsMouseInside(true);
+      setIsModalOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsMouseInside(false);
+    };
+
+    modalContainerRef.current.addEventListener('mouseenter', handleMouseEnter);
+    modalContainerRef.current.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+    };
+
+  }, [isModalOpen]);
 
   return (
-    <div className="carousel-preview-container"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}>
+    <div 
+      className="carousel-preview-container"
+      ref={modalContainerRef} // Attach ref to the container
+    >
       <motion.img
         key={id}
         className="carousel-item"
@@ -30,12 +42,10 @@ export const CarouselPreview = ({ world, routeToWorld }) => {
         whileInView={{ opacity: 1, scale: 1 }}
         whileHover={{ scale: 1.2 }}
         onClick={() => routeToWorld(id)}
-
       />
 
-      {isModalOpen && (
+      {isModalOpen && isMouseInside && (
         <motion.div
-          ref={modalContainerRef}
           className="modal"
           initial={{ y: '100%' }}
           animate={{ y: 0 }}
