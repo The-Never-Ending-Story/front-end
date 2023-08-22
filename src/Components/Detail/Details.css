@@ -39,7 +39,8 @@
   backdrop-filter: blur(10px); 
   border-radius: 10px; 
   color: white; 
-  max-height: 50%;
+  min-height: 50%;
+  max-height: 100%;
   width: 30%;
   text-align: center; 
 }
@@ -69,7 +70,7 @@
 
 .details-next {
   position: absolute;
-  right: 42%;
+  right: 12%;
   top: 50%; 
   transform: translateY(-50%); 
 }
@@ -79,4 +80,24 @@
   left: 15%;
   top: 50%; 
   transform: translateY(-50%);
+}
+
+.modal-det-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+
+.single-det-modal {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  color: white; 
+  text-align: center; 
 }

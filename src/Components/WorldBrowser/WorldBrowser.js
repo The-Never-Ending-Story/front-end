@@ -11,45 +11,34 @@ import { useHistory } from 'react-router-dom';
 import { Grid } from '../PreviewComponents/GridPreview/Grid';
 
 export const WorldBrowser = () => {
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds),
-        loading = useSelector((state) => state.root.isLoading),
-        error = useSelector((state) => state.root.error),
+  const displayedWorlds = useSelector(state => state.root.discoveredWorlds),
+        loading = useSelector(state => state.root.isLoading),
+        error = useSelector(state => state.root.error),
         history = useHistory();
 
-  const chooseRandomWorlds = (worlds, numberToDisplay) => {
-    const selectedWorlds = [];
-
-    while (selectedWorlds.length < numberToDisplay) {
-      const randomIndex = Math.floor(Math.random() * worlds.length);
-      
-      if (!selectedWorlds.includes(randomIndex)) {
-        selectedWorlds.push(worlds[randomIndex]);
-      };
-    };
-
-    return selectedWorlds;
-  };
-
-  const routeToWorld = (id) => {
+  const routeToWorld = id => {
     const worldView = `world/${id}`;
     history.push(worldView);
     window.scrollTo(0, 0);
   };
 
-  // console.log(displayedWorlds[121])
-  // console.log(displayedWorlds.reduce((acc, currentValue) => {
-  //   currentValue.genres.forEach(genre => {
-  //     if (!acc[genre]) {
-  //       acc[genre] = [currentValue.id]
-  //     } else {
-  //       acc[genre].push(currentValue.id)
-  //     }
-  //   })
+  const makeFilteredArray = category => {
+    return displayedWorlds.filter(world => world.category === category);
+  };
 
-  //   return acc
-  // }, []))
-
-  //get 155 and 120
+  const carouselPreviews = ['Fantasy & Mystical',
+                            'Futuristic & Tech',
+                            'Nature & Environment',
+                            'Urban & Modern',
+                            'Miscellaneous & Niche'
+                          ].map((category, index) => 
+                            <Carousel
+                              category={category}
+                              filteredWorlds={makeFilteredArray(category)}
+                              routeToWorld={routeToWorld}
+                              key={index}
+                              />
+                            );
 
   const mainPreviewWorlds = [40, 103, 60, 56, 25].map(id => {
     return displayedWorlds.find(world => world.id === id);
@@ -68,11 +57,7 @@ export const WorldBrowser = () => {
           <MainCarousel worlds={mainPreviewWorlds} routeToWorld={routeToWorld}/>
         </section>
         <section className='preview-section carousel-preview-display'>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
-          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          {carouselPreviews}
         </section>
         <section className='preview-section grid-preview-display'>
           <Grid routeToWorld={routeToWorld}/>

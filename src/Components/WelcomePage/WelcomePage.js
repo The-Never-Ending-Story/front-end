@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError } from '../rootSlice';
 import {Error} from '../Error/Error'
 import './WelcomePage.css'
+import { About } from "../About/About";
 
 export const WelcomePage = () => {
   const dispatch = useDispatch();
@@ -29,22 +30,7 @@ export const WelcomePage = () => {
 
   return (
     <main className="welcome-page">
-      <section className="welcome-menu">
-        <div className="initial-text">
-          Introducing HyperLoom
-        </div>
-        <p className="intro-text">
-          HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore. 
-
-          Explore barely known worlds, or discover new domains:
-        </p>
-        <div className="button-container">
-          <Link to='/worlds'>
-            <button className="menu-button">Explore</button>
-          </Link>
-          <button className="menu-button" onClick={()=> {discoverNewWorld()}}>Discover</button>
-        </div>
-      </section>
+      <About discoverNewWorld={discoverNewWorld}/>
     </main>
   )
 };

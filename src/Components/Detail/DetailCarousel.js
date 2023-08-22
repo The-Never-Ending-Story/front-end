@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
-import './Details.css'
+import './Details.css';
 
 export const DetailCarousel = ({content}) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -32,5 +32,5 @@ export const DetailCarousel = ({content}) => {
                                               >▶</motion.button> 
                                             : null }
     </div>
-  )
-}
+  );
+};

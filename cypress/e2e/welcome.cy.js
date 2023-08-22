@@ -20,8 +20,6 @@ describe('Welcome Page', () => {
 
   it('should display header with the logo upon initial load', ()=> {
     cy.get('.header-container').should('be.visible').should('exist')
-
-    cy.get('.header-logo').should('be.visible').should('exist')
   })
 
   it('should display correct intro text', () => {

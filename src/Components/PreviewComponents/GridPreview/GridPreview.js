@@ -17,5 +17,5 @@ export const GridPreview = ({world, routeToWorld}) => {
       />
       <div className='grid-preview-modal'></div>
     </div>
-  )
+  );
 };
