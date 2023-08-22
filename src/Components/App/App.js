@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect } from 'react';
-import { getAllWorldsData } from '../../apiCalls.js'
+import { getAllWorldsData } from '../../apiCalls.js';
 import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError, changeIsLoading } from '../rootSlice';
 import { Route, Switch } from 'react-router-dom';
@@ -16,6 +16,7 @@ function App() {
   useEffect( () => {
     getAllWorldsData()
     .then(data => {
+      console.log(data)
       dispatch(getDiscoveredWorlds(data))
       dispatch(changeIsLoading(false))
     }).catch(err => {

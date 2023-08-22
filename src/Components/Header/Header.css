@@ -1,25 +1,16 @@
-h2 {
+.title {
   font-size: 1.75rem;
+  all: unset;
+  color: #ffffff;
 }
 
 .header-container {
   position: relative;
-  min-height: 100px;
-  border-bottom:rgba(229, 235, 226, 0.696) solid 2px;
-  padding-top: 20px;
+  border-bottom:rgb(20, 213, 133) solid 1px;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
   align-items:center;
   display: flex;
-  background: radial-gradient(
-    circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
-  line-height: 2rem;
-}
-
-.logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .buttons-container {
@@ -28,25 +19,13 @@ h2 {
   display: flex;
 }
 
-.header-logo {
-  margin: 0 auto;
-  padding: .2rem;
-  max-height: 12vh;
-  border-radius: .65rem;
-  padding-bottom: .5rem;
-}
-
-.header-logo:hover {
-  background: rgba(185, 229, 205, 0.15);
-}
-
 .header-button {
   font-size: 1.25rem;
   padding-right: 40px;
   outline: none;
   background: none;
   border-style: none;
-  color:#15be8b ;
+  color: white ;
   cursor: pointer;
   border-radius: .5rem;
   font-family: 'Share-TechMono', sans-serif;
@@ -60,62 +39,12 @@ h2 {
   justify-content: space-between;
 }
 
-.header-container:hover {
-  animation: close-in ease-in-out .6s;
-}
-
 .header-button:hover {
   color:#f1f6f9 ;
 }
 
-@keyframes close-in {
-  0% {
-    background: radial-gradient(
-      circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
-  }
-  10% {
-    background: radial-gradient(circle, rgba(3,42,37,) 20%, rgb(80, 158, 146) 26%, rgba(3,42,57,) 50%)
-  }
-  20% {
-    background: radial-gradient(circle, rgba(3,42,37,) 20%, rgb(80, 158, 146) 27%,rgba(3,42,57,) 50%)
-  }
-  30% {
-    background: radial-gradient(circle, rgba(3,42,37,) 20%, rgb(80, 158, 146) 28%, rgb(3, 42, 37) 50%)
-  }
-  40% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 29%, rgb(3, 42, 37) 50%)
-  }
-  50% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 30%,  rgb(3, 42, 37) 50%)
-  }
-  60% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 29%, rgb(3, 42, 37) 50%)
-  }
-  70% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 28%, rgb(3, 42, 37) 50%)
-  }
-  80% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 27%, rgb(3, 42, 37) 50%)
-  }
-  90% {
-    background: radial-gradient(circle, rgb(3, 42, 37) 20%, rgb(80, 158, 146) 26%, rgb(3, 42, 37) 50%)
-  }
-  100% {
-    background: radial-gradient(
-      circle,rgb(3, 42, 37) 20%,rgb(80, 158, 146) 25%,rgb(3, 42, 37) 50%);
-  }
-}
-
 @media screen and (max-width: 34em) {
-  .header-logo {
-    margin: 0 auto;
-    padding: .2rem;
-    max-height: 8vh;
-    padding-bottom: .3rem;
-  }
-  .header-logo:hover {
-  background: none;
-  }
+
   .header-button {
 
     font-size: .9rem;

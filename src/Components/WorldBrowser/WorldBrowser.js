@@ -1,16 +1,59 @@
-import './WorldBrowser.css'
+import './WorldBrowser.css';
 import React from  'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { PageNotFound } from '../PageNotFound/PageNotFound';
 import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
 import { Error } from '../Error/Error';
-import WorldCard from '../WorldCard/WorldCard';
+import { MainCarousel } from '../PreviewComponents/MainPreview/MainCarousel';
+import { Carousel } from '../PreviewComponents/CarouselPreview/Carousel';
+import { useHistory } from 'react-router-dom';
+import { Grid } from '../PreviewComponents/GridPreview/Grid';
 
 export const WorldBrowser = () => {
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
-  const loading = useSelector((state) => state.root.isLoading);
-  const error = useSelector((state) => state.root.error);
+  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds),
+        loading = useSelector((state) => state.root.isLoading),
+        error = useSelector((state) => state.root.error),
+        history = useHistory();
+
+  const chooseRandomWorlds = (worlds, numberToDisplay) => {
+    const selectedWorlds = [];
+
+    while (selectedWorlds.length < numberToDisplay) {
+      const randomIndex = Math.floor(Math.random() * worlds.length);
+      
+      if (!selectedWorlds.includes(randomIndex)) {
+        selectedWorlds.push(worlds[randomIndex]);
+      };
+    };
+
+    return selectedWorlds;
+  };
+
+  const routeToWorld = (id) => {
+    const worldView = `world/${id}`;
+    history.push(worldView);
+    window.scrollTo(0, 0);
+  };
+
+  // console.log(displayedWorlds[121])
+  // console.log(displayedWorlds.reduce((acc, currentValue) => {
+  //   currentValue.genres.forEach(genre => {
+  //     if (!acc[genre]) {
+  //       acc[genre] = [currentValue.id]
+  //     } else {
+  //       acc[genre].push(currentValue.id)
+  //     }
+  //   })
+
+  //   return acc
+  // }, []))
+
+  //get 155 and 120
+
+  const mainPreviewWorlds = [40, 103, 60, 56, 25].map(id => {
+    return displayedWorlds.find(world => world.id === id);
+  });
 
   if (useLocation().pathname !== '/worlds') {
     return <PageNotFound />;
@@ -21,10 +64,19 @@ export const WorldBrowser = () => {
   } else if (displayedWorlds.length > 0) {
     return (
       <div className='world-browser-container'>
-        {displayedWorlds.map((world) => {
-          
-          return <WorldCard world= {world} key= {world.id} />
-        })}
+        <section className='preview-section main-preview-display'>
+          <MainCarousel worlds={mainPreviewWorlds} routeToWorld={routeToWorld}/>
+        </section>
+        <section className='preview-section carousel-preview-display'>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+          <Carousel worlds={chooseRandomWorlds(displayedWorlds, 15)} routeToWorld={routeToWorld}/>
+        </section>
+        <section className='preview-section grid-preview-display'>
+          <Grid routeToWorld={routeToWorld}/>
+        </section>
       </div>
     );
   }
