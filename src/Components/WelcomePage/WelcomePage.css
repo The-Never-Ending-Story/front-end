@@ -39,14 +39,6 @@
   font-size: 1rem;
 }
 
-.button-container {
-  display:flex;
-  justify-content: space-between;
-  border-radius:.75rem;
-  margin: .45rem;
-  padding: .45rem;
-  min-width: 20rem;
-}
 
 .menu-button {
   padding: 0.6em 2em;

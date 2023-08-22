@@ -1,0 +1,45 @@
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 40vw;
+  padding: 20px;
+  border: grey 1px solid;
+  border-radius: 15px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button-container {
+  display:flex;
+  justify-content: space-evenly;
+  border-radius:.75rem;
+  margin: .45rem;
+  padding: .45rem;
+  min-width: 20rem;
+}
+
+.about-button, link {
+  all: unset;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.about-image {
+  
+}
