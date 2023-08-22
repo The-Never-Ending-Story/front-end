@@ -32,11 +32,10 @@ export const HeroImageSlider = () => {
     const heroImageStyle = {
       backgroundImage: `url(${slides[currentSlide].img.landscape})`
     }
+
+
     return (
-      <div className='my-hero'>
-        <div className='slider-div' style={heroImageStyle}>
-          <h1>HYPERLOOM LOGO</h1>
-        </div>
+      <div className='my-hero' style={heroImageStyle}>
       <div className="keyframe-arrow">
             <span></span>
             <span></span>

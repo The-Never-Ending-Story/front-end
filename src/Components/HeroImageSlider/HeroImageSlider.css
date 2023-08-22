@@ -1,18 +1,18 @@
 .my-hero {
-  color: white;
-  position:absolute;
-  display:flex;
-  justify-content: flex-end;
-  align-items:flex-end;
-  z-index: -1;
-  background-position: center;
+  position: relative;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: stretch;
+  z-index: -2;
+  min-height: 100vh;
   width: 100vw;
   height: 100vh;
 }
 
 .keyframe-arrow {
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+  padding: 4rem;
   transform: translate(-50%, -50%);
   transform: rotate(270deg);
   cursor: pointer;

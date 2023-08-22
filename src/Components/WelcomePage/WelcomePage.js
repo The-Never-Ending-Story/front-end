@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import { Link, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,7 +13,6 @@ export const WelcomePage = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
-  const worldPreviews = useSelector((state)=>state.root.worldPreviews)
   const error = useSelector((state) => state.root.error);
   const [aboutModalVisible, setAboutModal] = useState(false)
 
@@ -29,10 +28,9 @@ export const WelcomePage = () => {
   };
 
   const fadeInRise = {
-    hidden: { opacity: 0, marginTop:'30rem' },
+    hidden: { opacity: 0},
     visible: {
       opacity: 1, 
-      marginTop:'4rem',
       transition: {
         delay:.25,
         duration:3,
@@ -80,7 +78,9 @@ export const WelcomePage = () => {
           Explore new worlds built with ChatGPT and MidJourney, rich with inhabitants, histories, and futures yet unknown...
         </motion.span>
         }
+      <section className='welcome-bottom'>
       <About discoverNewWorld={discoverNewWorld}/>
+      </section>
     </main>
   )
 };
