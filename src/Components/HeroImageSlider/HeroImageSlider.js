@@ -29,6 +29,7 @@ export const HeroImageSlider = () => {
   } else if (error) {
     return <Error />
   } else if (slides.length > 0) {
+
     return (
       <div className='slider-container'>
         {slides.map((slide, i) => {
@@ -43,6 +44,22 @@ export const HeroImageSlider = () => {
             />
           )
         })}
+
+    const heroImageStyle = {
+      backgroundImage: `url(${slides[currentSlide].img.landscape})`
+    }
+    
+    /*
+    return (
+      <div className='my-hero' style={heroImageStyle}>
+      <div className="keyframe-arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+      </div>
+      
+     */
+
       </div>
     )
   }
