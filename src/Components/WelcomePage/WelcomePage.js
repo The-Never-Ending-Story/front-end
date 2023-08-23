@@ -29,7 +29,7 @@ export const WelcomePage = () => {
   if (error) {
     return <Error />;
   };
-
+  
   const fadeInMoveRight = {
     hidden: { opacity: 0, left: '0rem'},
     visible: {

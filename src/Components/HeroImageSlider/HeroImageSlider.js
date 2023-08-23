@@ -32,8 +32,7 @@ export const HeroImageSlider = () => {
     const heroImageStyle = {
       backgroundImage: `url(${slides[currentSlide].img.landscape})`
     }
-
-
+    
     return (
       <div className='my-hero' style={heroImageStyle}>
       <div className="keyframe-arrow">

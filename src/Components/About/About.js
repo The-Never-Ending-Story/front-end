@@ -12,7 +12,7 @@ export const About = ({ discoverNewWorld }) => {
           HyperLoom is world building application that allows users to explore magical realms. It uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore. Explore barely known worlds, or discover new domains:
         </p>
         <div className="button-container">
-          <Link to='/worlds' >
+          <Link to='/worlds'>
             <button className="about-button">Explore</button>
           </Link>
           <button className="about-button" onClick={() => { discoverNewWorld() }}>Discover</button>
