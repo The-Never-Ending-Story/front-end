@@ -6,7 +6,7 @@ import { Error } from '../Error/Error';
 
 export const HeroImageSlider = () => {
 
-  const slideIds = [97, 143, 91, 66, 9, 28, 84, 121, 137, 76, 103, 100]
+  const slideIds = [26, 87, 188, 19, 93, 28, 84, 32, 137, 76, 103, 100]
   const slides = useSelector((state) => state.root.discoveredWorlds.filter((world) => {
     return slideIds.includes(world.id)    
   }))
@@ -20,7 +20,7 @@ export const HeroImageSlider = () => {
       } else {
         setCurrentSlide(currentSlide+1)
       }
-    }, 4000)
+    }, 2000)
     return ()=> clearTimeout(timer)
   }, [currentSlide])
   

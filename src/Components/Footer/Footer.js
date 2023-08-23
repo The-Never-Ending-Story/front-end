@@ -1,11 +1,14 @@
 import './Footer.css';
 import React, { useRef, useEffect, useState } from 'react';
-
+import { useSelector } from 'react-redux';
+import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
+import { Error } from '../Error/Error';
 
 export const Footer = () => {
 
-  const [rect, setRect] = useState(null)
+  const [rect, setRect] = useState(0)
   const teamContainerRef = useRef(null)
+  const error = useSelector((state) => state.root.error);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,50 +40,74 @@ export const Footer = () => {
             <h2>Frontend:</h2>
             <div className='dev-container'>
               <p>Adam Meza</p>
-              <p>LinkedIn</p>
-              <p>GitHub</p>
+              <a href='https://www.linkedin.com/in/adam-meza/'>
+                <p>LinkedIn</p>
+              </a>
+              <a href='https://github.com/Adam-Meza'>
+                <p>GitHub</p>
+              </a>
             </div>
             <div className='dev-container'>
               <p>Shane Misra</p>
-              <p>LinkedIn</p>
-              <p>GitHub</p>
+              <a href='https://www.linkedin.com/in/shanemisra/'>
+                <p>LinkedIn</p>
+              </a>
+              <a href='https://github.com/sdmisra'>
+                <p>GitHub</p>
+              </a>
             </div>
             <div className='dev-container'>
               <p>Priscilla Paxton</p>
-              <p>LinkedIn</p>
-              <p>GitHub</p>
+              <a href='https://www.linkedin.com/in/priscilla-paxton/'>
+                <p>LinkedIn</p>
+              </a>
+              <a href='https://github.com/priscillaapaxton'>
+                <p>GitHub</p>
+              </a>
             </div>
             <div className='dev-container'>
               <p>Sharie Trachsel</p>
-              <p>LinkedIn</p>
-              <p>GitHub</p>
+              <a href='https://www.linkedin.com/in/sharie-trachsel/'>
+                <p>LinkedIn</p>
+              </a>
+              <a href='https://github.com/sdtrachsel'>
+                <p>GitHub</p>
+              </a>
             </div>
           </div>
           <div className='front-end-container'>
             <h2>Backend:</h2>
             <div className='dev-container'>
               <p>Andrew Bowman</p>
-              <p>LinkedIn</p>
-              <p>GitHub</p>
+              <a href='https://www.linkedin.com/in/andrew-b0wman/'>
+                <p>LinkedIn</p>
+              </a>
+              <a href='https://github.com/abwmn'>
+                <p>GitHub</p>
+              </a>
             </div>
             <div className='dev-container'>
               <p>Sean Cowans</p>
-              <p>LinkedIn</p>
-              <p>GitHub</p>
+              <a href='https://www.linkedin.com/in/sean-cowans/'>
+                <p>LinkedIn</p>
+              </a>
+              <a href='https://github.com/sjcowans'>
+                <p>GitHub</p>
+              </a>
             </div>
             <div className='dev-container'>
               <p>Branden Ge</p>
-              <p>LinkedIn</p>
-              <p>GitHub</p>
-            </div>
-            <div className='dev-container'>
-              <p>Sharie Trachsel</p>
-              <p>LinkedIn</p>
-              <p>GitHub</p>
+              <a href='https://www.linkedin.com/in/brandenge/'>
+                <p>LinkedIn</p>
+              </a>
+              <a href='https://github.com/brandenge'>
+                <p>GitHub</p>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   )
-};
+  }
+  

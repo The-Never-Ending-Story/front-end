@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   border-bottom:rgb(20, 213, 133) solid 1px;
-  height: 500px;
-  width: 100%; 
+  width: 100%;
+  height: 896px; 
 }
 
 .slider-div{
-  height: 500px;
-  width: 90%;
+  width: 1344px;
+  height: 896px;
   transition: opacity 2s;
   position: absolute;
   border-radius: 5px;

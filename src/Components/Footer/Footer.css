@@ -32,3 +32,8 @@
   display: flex;
   justify-content: space-around;
 }
+
+a {
+  color: rgb(185, 215, 181);
+  text-decoration: none;
+}
