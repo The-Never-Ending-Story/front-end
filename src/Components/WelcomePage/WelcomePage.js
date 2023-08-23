@@ -44,7 +44,6 @@ export const WelcomePage = () => {
 
   return (
     <main className="welcome-page" >
-      <HeroImageSlider/>
       <motion.div className='intro-box' variants={fadeInMoveRight} initial='hidden' animate='visible'>
         <motion.span className='intro-text'>
           Welcome to HyperLoom

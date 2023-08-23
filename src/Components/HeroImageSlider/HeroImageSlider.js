@@ -20,7 +20,7 @@ export const HeroImageSlider = () => {
       } else {
         setCurrentSlide(currentSlide+1)
       }
-    }, 2000)
+    }, 8000)
     return ()=> clearTimeout(timer)
   }, [currentSlide])
   
@@ -44,7 +44,6 @@ export const HeroImageSlider = () => {
             />
           )
         })}
-
       </div>
       )
     }
