@@ -1,8 +1,6 @@
 import './Footer.css';
 import React, { useRef, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
-import { Error } from '../Error/Error';
 
 export const Footer = () => {
 
