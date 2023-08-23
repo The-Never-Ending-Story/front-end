@@ -45,9 +45,14 @@ export const HeroImageSlider = () => {
           )
         })}
 
-    const heroImageStyle = {
-      backgroundImage: `url(${slides[currentSlide].img.landscape})`
+      </div>
+      )
     }
+  }
+
+    // const heroImageStyle = {
+    //   backgroundImage: `url(${slides[currentSlide].img.landscape})`
+    // }
     
     /*
     return (
@@ -60,7 +65,4 @@ export const HeroImageSlider = () => {
       
      */
 
-      </div>
-    )
-  }
-}
+
