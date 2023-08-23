@@ -6,7 +6,7 @@ import { Error } from '../Error/Error';
 
 export const HeroImageSlider = () => {
 
-  const slideIds = [97, 143, 91, 66, 9, 28, 84, 121, 137, 76, 103, 100]
+  const slideIds = [26, 87, 188, 19, 93, 28, 84, 32, 137, 76, 103, 100]
   const slides = useSelector((state) => state.root.discoveredWorlds.filter((world) => {
     return slideIds.includes(world.id)    
   }))
@@ -20,7 +20,7 @@ export const HeroImageSlider = () => {
       } else {
         setCurrentSlide(currentSlide+1)
       }
-    }, 4000)
+    }, 2000)
     return ()=> clearTimeout(timer)
   }, [currentSlide])
   
@@ -29,10 +29,27 @@ export const HeroImageSlider = () => {
   } else if (error) {
     return <Error />
   } else if (slides.length > 0) {
+
+    return (
+      <div className='slider-container'>
+        {slides.map((slide, i) => {
+          return (
+            <div 
+              className='slider-div'
+              key={i}
+              style={{
+                backgroundImage: `url(${slide.img.hero})`,
+                opacity: currentSlide === i ? 1 : 0
+              }}
+            />
+          )
+        })}
+
     const heroImageStyle = {
       backgroundImage: `url(${slides[currentSlide].img.landscape})`
     }
     
+    /*
     return (
       <div className='my-hero' style={heroImageStyle}>
       <div className="keyframe-arrow">
@@ -40,6 +57,9 @@ export const HeroImageSlider = () => {
             <span></span>
             <span></span>
       </div>
+      
+     */
+
       </div>
     )
   }

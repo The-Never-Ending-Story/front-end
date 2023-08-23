@@ -1,3 +1,18 @@
+.slider-container{
+  display: flex;
+  justify-content: center;
+  border-bottom:rgb(20, 213, 133) solid 1px;
+  width: 100%;
+  height: 896px; 
+}
+
+.slider-div{
+  width: 1344px;
+  height: 896px;
+  transition: opacity 2s;
+  position: absolute;
+  border-radius: 5px;
+
 .my-hero {
   position: relative;
   background-repeat: no-repeat;

@@ -1,0 +1,39 @@
+.footer-container{
+  height: 95vh;
+  background-color: rgb(14, 25, 17);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-container{
+  width: 800px;
+  height: 400px;
+  background-color:rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 2px 3px 40px 15px rgba(20, 213, 133, .4);
+  font-family: 'DYLOVASTUFF', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 1.5s;
+}
+
+.team-section{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.front-end-container, .back-end-container{
+  width: 30%;
+}
+
+.dev-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: rgb(185, 215, 181);
+  text-decoration: none;
+}
