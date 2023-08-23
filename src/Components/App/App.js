@@ -9,12 +9,9 @@ import { WelcomePage } from '../WelcomePage/WelcomePage'
 import { Header } from '../Header/Header.js'
 import { WorldBrowser } from '../WorldBrowser/WorldBrowser';
 import { PageNotFound } from '../PageNotFound/PageNotFound';
-import { HeroImageSlider } from '../HeroImageSlider/HeroImageSlider';
-import { Footer } from '../Footer/Footer';
 
 function App() {
   const dispatch = useDispatch()
-
 
   useEffect( () => {
     getAllWorldsData()
@@ -33,16 +30,9 @@ function App() {
     <div className="App">
       <Header/>
       <Switch>
-        <Route exact path="/" render={()=> 
-          <Fragment className='welcome-container'>
-            <HeroImageSlider />
-            <WelcomePage />
-            <Footer />
-          </Fragment>
-        } />
-       
-        <Route path="/worlds" render={() => ( <WorldBrowser /> )} />
-        <Route path="/world/:id" render={() => ( <SingleWorld /> )}/>
+        <Route exact path="/" render={()=> <WelcomePage />} />
+        <Route path="/worlds" render={() => ( <WorldBrowser />)} />
+        <Route path="/world/:id" render={() => ( <SingleWorld />)}/>
         <Route exact path='*' render={() => <PageNotFound />} />
       </Switch>
     </div>

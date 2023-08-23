@@ -25,11 +25,9 @@ export const Header = () => {
 
   return (
     <nav className='header-container'>
-      <div className='logo-container'>
-        <Link to='/' className="title">
-          <h1>HyperLoom</h1>
-        </Link>
-      </div>
+      <Link to='/' className="title">
+        <h1>HyperLoom</h1>
+      </Link>
       <div className='buttons-container'>
         {pathname === '/worlds' && (
           <button className="header-button" onClick={discoverNewWorld}>Discover

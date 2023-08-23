@@ -5,13 +5,14 @@
 .App {
   padding: 0px;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
   align-items: center;
+  position: relative;
 }
 
 body {

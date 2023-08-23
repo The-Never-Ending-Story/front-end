@@ -175,6 +175,7 @@ export const SingleWorld = () => {
       </div>
       <div className="tab-content">
         <div className="details carousel">
+      {/* maybe theres a conditinal here that checks for history something liek if */}
           {currentTab && <DetailCarousel content={tabContent[currentTab]} />}
         </div>
       </div>

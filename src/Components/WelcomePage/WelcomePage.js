@@ -7,7 +7,8 @@ import { Error } from '../Error/Error';
 import { motion } from 'framer-motion'; 
 import './WelcomePage.css';
 import { About } from "../About/About";
-import {HeroImageSlider} from '../HeroImageSlider/HeroImageSlider';
+import { HeroImageSlider } from '../HeroImageSlider/HeroImageSlider';
+import { Footer } from '../Footer/Footer';
 
 export const WelcomePage = () => {
   const dispatch = useDispatch();
@@ -44,14 +45,16 @@ export const WelcomePage = () => {
 
   return (
     <main className="welcome-page" >
+      <HeroImageSlider />
       <motion.div className='intro-box' variants={fadeInMoveRight} initial='hidden' animate='visible'>
-        {/* <motion.span className='intro-text'>
+        <motion.span className='intro-text'>
           Welcome to HyperLoom
-        </motion.span> */}
+        </motion.span>
       </motion.div>
       <section className='welcome-bottom'>
         <About discoverNewWorld={discoverNewWorld}/>
       </section>
+      <Footer />
     </main>
   );
 };
