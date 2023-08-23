@@ -9,76 +9,15 @@
   position: relative;
 }
 
-.welcome-menu {
+.intro-box {
   position: absolute;
-  right: 3rem;
-  bottom: 10rem;
-  color: white;
-  width: 32rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgb(3, 42, 37, .5);
-  border-radius: .40rem;
-}
-
-.first-intro-text {
-  display: flex;
-  justify-items: center;
-  color: white;
-  z-index: 1;
-  font-size: 2.5rem;
-  margin: 1rem;
-}
-
-.second-intro-text {
-  display: flex;
-  justify-items: center;
-  color: white;
-  z-index: 1;
-  font-size: 1rem;
-  margin: 1rem;
-  margin-right: 5rem;
-}
-.first-box {
-  height: 8rem;
-  border: 1px solid white;
-  border-radius: .15rem;
-}
-.second-box {
   display:flex;
-  align-items: center;
-  height: 4rem;
-  border: 1px solid white;
-  border-radius: .15rem;
-}
-.initial-text {
-  color: white;
-  font-size: 1.25rem;
+  padding: 1rem;
+  top: 35rem;
+  left: 5rem;
 }
 
 .intro-text {
+  font-size: 4rem;
   color: white;
-  font-size: 1rem;
-}
-
-
-.menu-button {
-  padding: 0.6em 2em;
-  outline: none;
-  border: black solid .5px;
-  background: rgb(3, 42, 37, .5);
-  color:white;
-  cursor: pointer;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  font-family: 'DYLOVASTUFF', sans-serif;
-}
-
-.menu-button:hover {
-  animation: increase 2s ease-out;
 }

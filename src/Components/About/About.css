@@ -45,11 +45,12 @@
   min-width: 20rem;
 }
 
-.about-button, link {
+.about-button {
   all: unset;
   color: white;
   border: 1px solid white;
-  padding: 10px;
+  border-radius: .15rem;
+  padding: .35rem;
 }
 
 .about-image {

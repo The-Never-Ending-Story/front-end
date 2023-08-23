@@ -1,7 +1,7 @@
 .my-hero {
   position: relative;
   background-repeat: no-repeat;
-  background-size: stretch;
+  background-size: contain;
   z-index: -2;
   min-height: 100vh;
   width: 100vw;
@@ -10,7 +10,7 @@
 
 .keyframe-arrow {
   position: absolute;
-  bottom: 3rem;
+  bottom: 16rem;
   right: 2rem;
   padding: 4rem;
   transform: translate(-50%, -50%);
@@ -26,7 +26,7 @@
   border-right: 5px solid white;
   transform: rotate(45deg);
   margin: -10px;
-  animation:animate 4s infinite;
+  animation:animate 3.35s infinite;
 }
 
 .keyframe-arrow span:nth-child(2) {
