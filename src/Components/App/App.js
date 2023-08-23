@@ -33,7 +33,7 @@ function App() {
       <Header/>
       <Switch>
         <Route exact path="/" render={()=> 
-          <Fragment>
+          <Fragment className='welcome-container'>
             <HeroImageSlider />
             <WelcomePage />
             <Footer />

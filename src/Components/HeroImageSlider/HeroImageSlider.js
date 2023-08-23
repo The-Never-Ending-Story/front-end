@@ -18,9 +18,9 @@ export const HeroImageSlider = () => {
       if(currentSlide === 11) {
         setCurrentSlide(0)
       } else {
-        setCurrentSlide(currentSlide+1)
+        setCurrentSlide(currentSlide + 1)
       }
-    }, 2000)
+    }, 5000)
     return ()=> clearTimeout(timer)
   }, [currentSlide])
   
@@ -29,7 +29,6 @@ export const HeroImageSlider = () => {
   } else if (error) {
     return <Error />
   } else if (slides.length > 0) {
-
     return (
       <div className='slider-container'>
         {slides.map((slide, i) => {
