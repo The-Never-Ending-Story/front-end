@@ -8,6 +8,10 @@
   width: 100%;
   text-align: center;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
 }
 
 body {
@@ -21,3 +25,4 @@ body {
 .hidden {
   display: hidden;
 }
+

@@ -21,6 +21,7 @@ function App() {
     .then(data => {
       dispatch(getDiscoveredWorlds(data))
       dispatch(changeIsLoading(false))
+      console.log(data)
     }).catch(err => {
       console.log('errorfound')
       dispatch(changeIsLoading(false))
@@ -33,7 +34,7 @@ function App() {
       <Header/>
       <Switch>
         <Route exact path="/" render={()=> 
-          <Fragment>
+          <Fragment className='welcome-container'>
             <HeroImageSlider />
             <WelcomePage />
             <Footer />

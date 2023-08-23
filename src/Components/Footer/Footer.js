@@ -3,9 +3,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 export const Footer = () => {
-
-  const [rect, setRect] = useState(0)
-  const teamContainerRef = useRef(null)
+  const [rect, setRect] = useState(0),
+        teamContainerRef = useRef(null)
   const error = useSelector((state) => state.root.error);
 
   useEffect(() => {
@@ -13,15 +12,15 @@ export const Footer = () => {
       if(teamContainerRef.current) {
         const newRect = teamContainerRef.current.getBoundingClientRect()
         setRect(newRect)
-      }
-    }
+      };
+    };
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
     
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleScroll);
     }
-  }, [])
+  }, []);
 
   return (
     <div className='footer-container'>
@@ -106,6 +105,6 @@ export const Footer = () => {
         </div>
       </div>
     </div>
-  )
-  }
+  );
+};
   

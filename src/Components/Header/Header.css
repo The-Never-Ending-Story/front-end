@@ -11,6 +11,8 @@
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
   display: flex;
+  z-index: 1;
+  width: 100vw;
 }
 
 .buttons-container {
