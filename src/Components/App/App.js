@@ -21,6 +21,7 @@ function App() {
     .then(data => {
       dispatch(getDiscoveredWorlds(data))
       dispatch(changeIsLoading(false))
+      console.log(data)
     }).catch(err => {
       console.log('errorfound')
       dispatch(changeIsLoading(false))

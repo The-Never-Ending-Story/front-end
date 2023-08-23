@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export const CarouselPreview = ({ world, routeToWorld }) => {
-  const { id, img, name, blurb } = world;
-
+  
+  const { id, imgs, name, blurb } = world;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMouseInside, setIsMouseInside] = useState(false);
   const modalContainerRef = useRef(null);
 
   useEffect(() => {
-    
+    console.log(world.imgs)
     const handleMouseEnter = () => {
       setIsMouseInside(true);
       setIsModalOpen(true);
@@ -30,12 +30,12 @@ export const CarouselPreview = ({ world, routeToWorld }) => {
   return (
     <div 
       className="carousel-preview-container"
-      ref={modalContainerRef} // Attach ref to the container
+      ref={modalContainerRef} 
     >
       <motion.img
         key={id}
         className="carousel-item"
-        src={img.thumbnail}
+        src={imgs.thumbnails[0]}
         alt={`Image ${id}`}
         initial={{ opacity: 0, scale: 0.7 }}
         transition={{ duration: 0.2 }}

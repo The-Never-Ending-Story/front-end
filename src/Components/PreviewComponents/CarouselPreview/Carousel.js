@@ -7,13 +7,15 @@ export const Carousel = ({filteredWorlds, routeToWorld, category}) => {
   const [currentIndex, setCurrentIndex] = useState(0),
         [windowWidth, setWindowWidth] = useState(window.innerWidth),
         [numberToDisplay, setDisplay] = useState(0),
-        [worlds, setWorlds] = useState(filteredWorlds)
-  
+        [worlds, setWorlds] = useState(filteredWorlds),
+        visibleImages = worlds ? worlds.slice(currentIndex, currentIndex + numberToDisplay) : [] ;
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
+    console.log(visibleImages)
     window.addEventListener('resize', handleResize);
 
     if (windowWidth < 600) {
@@ -33,7 +35,6 @@ export const Carousel = ({filteredWorlds, routeToWorld, category}) => {
     };
   }, [windowWidth]);
 
-  const visibleImages = worlds ? worlds.slice(currentIndex, currentIndex + numberToDisplay) : [] ;
 
   const handleNext = () => {
     setCurrentIndex(Math.min(currentIndex + 1, worlds.length - numberToDisplay));
