@@ -29,14 +29,20 @@ export const HeroImageSlider = () => {
   } else if (error) {
     return <Error />
   } else if (slides.length > 0) {
-    const heroImageStyle = {
-      backgroundImage: `url(${slides[currentSlide].img.landscape})`
-    }
     return (
       <div className='slider-container'>
-        <div className='slider-div' style={heroImageStyle}>
-        <h1>HYPERLOOM LOGO</h1>
-        </div>
+        {slides.map((slide, i) => {
+          return (
+            <div 
+              className='slider-div'
+              key={i}
+              style={{
+                backgroundImage: `url(${slide.img.hero})`,
+                opacity: currentSlide === i ? 1 : 0
+              }}
+            />
+          )
+        })}
       </div>
     )
   }
