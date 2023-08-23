@@ -1,110 +1,23 @@
 .welcome-page {
-  height: 85vh;
+  height: 200vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.welcome-menu {
-  color: white;
-  width: 500px;
-  height: 18rem;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(3, 42, 37, .5);
-  border: .75rem #43675ded solid;
-  border-radius: .25rem;
-  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-	animation: borderRotate var(--d) ease-out infinite forwards;
+  position: relative;
+}
+
+.intro-box {
+  position: absolute;
+  display:flex;
+  padding: 1rem;
+  top: 35rem;
+  left: 5rem;
 }
 
 .intro-text {
-  margin: 1rem;
-}
-
-.initial-text {
+  font-size: 4rem;
   color: white;
-  font-size: 1.25rem;
-}
-
-.intro-text {
-  color: white;
-  font-size: 1rem;
-}
-
-
-.menu-button {
-  padding: 0.6em 2em;
-  outline: none;
-  border: black solid .5px;
-  background: rgb(3, 42, 37, .5);
-  color:white;
-  cursor: pointer;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  font-family: 'DYLOVASTUFF', sans-serif;
-}
-
-.menu-button:hover {
-  animation: increase 2s ease-out;
-}
-
-@keyframes increase {
-  25% {
-    scale: 1.01;
-    background:#2c36383c;
-  }
-  50% {
-    scale: 1.02;
-    background:#2c363876;
-  }
-  75% {
-    scale: 1.06;
-    background:#2c3638af;
-  }
-  100% {
-    scale: 1..02;
-    background:#2C3638;
-  }
-}
-
-@keyframes borderRotate {
-  100% {
-    --angle: 420deg;
-  }
-}
-
-:root {
-	--d:  10000ms;
-	--angle: 90deg;
-	--gradX: 100%;
-	--gradY: 50%;
-	--c1: #CDD2CA;
-	--c2: #4a7166;
-}
-
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 90deg;
-  inherits: true;
-}
-
-@property --gradX {
-  syntax: '<percentage>';
-  initial-value: 50%;
-  inherits: true;
-}
-
-@property --gradY {
-  syntax: '<percentage>';
-  initial-value: 0%;
-  inherits: true;
 }

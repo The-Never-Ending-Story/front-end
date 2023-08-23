@@ -5,11 +5,11 @@
 }
 
 .header-container {
+  height: 4rem;
   position: relative;
   border-bottom:rgb(20, 213, 133) solid 1px;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
-  align-items:center;
   display: flex;
 }
 
