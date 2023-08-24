@@ -1,5 +1,6 @@
 import React, { useState} from 'react'
 import { useSelector } from 'react-redux/es/hooks/useSelector';
+import './index.css'
 
 export const InternalTool = () => {
   const displayedWorlds = useSelector((state) => state.root.discoveredWorlds),
@@ -18,9 +19,9 @@ export const InternalTool = () => {
 
 
     <div className='world-button'>
-      <img src={picture}/>
-
-      <button onClick={getRandomPicture}/>
+      <img className='internal-image'src={picture}/>
+      <h2 style={{color: 'white'}}>{id}</h2>
+      <button className='internal-button'onClick={getRandomPicture}>get hero</button>
     </div>
   )
 }
