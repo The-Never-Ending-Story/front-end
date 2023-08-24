@@ -20,7 +20,9 @@ export const Carousel = ({filteredWorlds, routeToWorld, category}) => {
 
     if (windowWidth < 600) {
       setDisplay(1);
-    }  else if (windowWidth < 1100) {
+    } else if (windowWidth < 720) {
+      setDisplay(2)
+    } else if (windowWidth < 1100) {
       setDisplay(3);
     } else if (windowWidth < 1350) {
       setDisplay(4);

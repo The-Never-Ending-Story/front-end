@@ -22,13 +22,18 @@
 }
 
 .carousel-preview-display {
-  /* border: 1px blue solid; */
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px blue solid;
   height: 100rem;
-  width: 100%;
+  width: 95vw;
   margin-bottom: 10rem;
 }
 
 .grid-preview-display {
+  display: flex;
   justify-content: flex-start;
   /* border: 1px green solid; */
   height: 60rem;

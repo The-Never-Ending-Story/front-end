@@ -1,4 +1,5 @@
 .grid-preview-wrapper {
+  border: 1px white solid;
   height: 45rem;
   width: 60%;
   display: flex;
