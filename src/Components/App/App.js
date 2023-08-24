@@ -1,5 +1,5 @@
 import './App.css';
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { getAllWorldsData } from '../../apiCalls.js';
 import { useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError, changeIsLoading } from '../rootSlice';

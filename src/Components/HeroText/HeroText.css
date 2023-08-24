@@ -85,3 +85,18 @@
       transform: rotate(45deg) translate(20px, 20px);
   }
 }
+
+@media (max-width: 1100px) {
+  .introducing {
+    font-size: 24px;
+  }
+  
+  .hero-title {
+    position: absolute;
+    top: 18%;
+    left: 3%;
+    transform: translateY(-50%);
+    font-size: 150%;
+    position: absolute;
+  }
+}

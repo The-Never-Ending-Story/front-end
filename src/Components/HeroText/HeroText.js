@@ -1,9 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useHistory } from 'react-router-dom';
 import './HeroText.css'
 
 export const HeroText = () => {
-  
+  const history = useHistory()
+
   const fadeInMoveRight = {
     hidden: { opacity: 0, left: '0rem'},
     visible: {
@@ -30,7 +32,8 @@ export const HeroText = () => {
   
   return (
     <motion.div className='intro-box'>
-      <motion.div className='intro-text'
+      <motion.div
+        className='intro-text'
         variants={fadeInMoveRight}
         initial='hidden'
         animate='visible'>
@@ -42,11 +45,17 @@ export const HeroText = () => {
         </span>
       </motion.div>
 
-      <div className="keyframe-arrow">
+      <motion.div
+        className="keyframe-arrow"
+        initial={{ opacity: 0 }}
+        whileInView={{opacity: 1}}
+        transition={{delay: 4, type: 'tween', duration: 3}}
+        onClick={() => history.push(`/worlds`)}
+      >
             <span></span>
             <span></span>
             <span></span>
-      </div>
+      </motion.div>
 
       <motion.span className='tag-text'
         variants={fadeInMoveRightSlower}
