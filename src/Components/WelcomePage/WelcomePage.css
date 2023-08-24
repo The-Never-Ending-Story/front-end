@@ -10,7 +10,7 @@
   top: 0;
 }
 
-.test {
+.main-welcome-content {
   z-index: 1;
   height:fit-content;
   display: flex;

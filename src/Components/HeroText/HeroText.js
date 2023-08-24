@@ -18,9 +18,20 @@ export const HeroText = () => {
   
   return (
     <motion.div className='intro-box' variants={fadeInMoveRight} initial='hidden' animate='visible'>
-      <motion.span className='intro-text'>
-        Welcome to HyperLoom
-      </motion.span>
+      <motion.div className='intro-text'>
+        <span className='introducing'>
+          Introducing
+        </span> 
+        <span className='hero-title'>
+          HyperLoom
+        </span>
+      </motion.div>
+
+      <div className="keyframe-arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+      </div>
     </motion.div>
   );
 };

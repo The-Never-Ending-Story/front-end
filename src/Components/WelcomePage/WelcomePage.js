@@ -35,7 +35,7 @@ export const WelcomePage = () => {
   return (
     <main className="welcome-page" >
       <HeroImageSlider />
-      <div className="test">
+      <div className="main-welcome-content">
         <HeroText />
         <About discoverNewWorld={discoverNewWorld}/>
         <Footer />
