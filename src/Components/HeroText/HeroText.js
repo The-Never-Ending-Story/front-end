@@ -10,17 +10,32 @@ export const HeroText = () => {
       opacity: 1,
       left: '5rem', 
       transition: {
-        delay:.25,
-        duration:5,
+        delay: .25,
+        duration: 4,
+      }
+    }
+  };
+
+  const fadeInMoveRightSlower = {
+    hidden: { opacity: 0, left: '0rem'},
+    visible: {
+      opacity: 1,
+      left: '5rem', 
+      transition: {
+        delay: 1.5,
+        duration: 3,
       }
     }
   };
   
   return (
-    <motion.div className='intro-box' variants={fadeInMoveRight} initial='hidden' animate='visible'>
-      <motion.div className='intro-text'>
+    <motion.div className='intro-box'>
+      <motion.div className='intro-text'
+        variants={fadeInMoveRight}
+        initial='hidden'
+        animate='visible'>
         <span className='introducing'>
-          Introducing
+          INTRODUCING
         </span> 
         <span className='hero-title'>
           HYPERLOOM
@@ -32,6 +47,14 @@ export const HeroText = () => {
             <span></span>
             <span></span>
       </div>
+
+      <motion.span className='tag-text'
+        variants={fadeInMoveRightSlower}
+        initial='hidden'
+        animate='visible'
+      >
+        Powered by ChatGPT and MidJourney AI
+      </motion.span>
     </motion.div>
   );
 };

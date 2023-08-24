@@ -1,14 +1,15 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link, useLocation, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError } from '../rootSlice';
 import './Header.css';
+import { motion, useScroll } from "framer-motion";
 
 export const Header = () => {
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
+  const dispatch = useDispatch(),
+        history = useHistory(),
+        displayedWorlds = useSelector((state) => state.root.discoveredWorlds);
 
   const discoverNewWorld = ()=> {
     getRandomWorldData()
@@ -18,13 +19,17 @@ export const Header = () => {
       history.push(`/world/${data.id}`)
     }).catch((error)=>{
       dispatch(changeError(error))
-    })
+    });
   };
 
   const {pathname} = useLocation();
 
   return (
-    <nav className='header-container'>
+    <motion.nav className='header-container'
+      initial={{ opacity: 0 }}
+      whileInView={{opacity: 1}}
+      transition={{delay: 4, type: 'tween', duration: 3}}
+    >
       <Link to='/' className="title-box">
         <h1 className="title">HyperLoom</h1>
       </Link>
@@ -43,6 +48,6 @@ export const Header = () => {
           </>
         )}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
