@@ -9,7 +9,6 @@ export const CarouselPreview = ({ world, routeToWorld }) => {
   const modalContainerRef = useRef(null);
 
   useEffect(() => {
-    console.log(world.imgs)
     const handleMouseEnter = () => {
       setIsMouseInside(true);
       setIsModalOpen(true);
