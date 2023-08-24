@@ -25,8 +25,8 @@ export const Header = () => {
 
   return (
     <nav className='header-container'>
-      <Link to='/' className="title">
-        <h1>HyperLoom</h1>
+      <Link to='/' className="title-box">
+        <h1 className="title">HyperLoom</h1>
       </Link>
       <div className='buttons-container'>
         {pathname === '/worlds' && (

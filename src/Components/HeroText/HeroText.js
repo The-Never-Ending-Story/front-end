@@ -17,14 +17,10 @@ export const HeroText = () => {
   };
   
   return (
-
-    <div className='intro-box'>
-      this is a test
-    </div>
-    // <motion.div className='intro-box' variants={fadeInMoveRight} initial='hidden' animate='visible'>
-    //   <motion.span className='intro-text'>
-    //     Welcome to HyperLoom
-    //   </motion.span>
-    // </motion.div>
-  )
-}
+    <motion.div className='intro-box' variants={fadeInMoveRight} initial='hidden' animate='visible'>
+      <motion.span className='intro-text'>
+        Welcome to HyperLoom
+      </motion.span>
+    </motion.div>
+  );
+};
