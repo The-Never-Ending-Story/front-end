@@ -6,6 +6,7 @@
 .title {
   font-size: 1.3rem;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .header-container {
@@ -25,7 +26,7 @@
 
 .header-button {
   z-index: 1;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding-right: 40px;
   outline: none;
   background: none;
@@ -51,7 +52,6 @@
 @media screen and (max-width: 34em) {
 
   .header-button {
-
     font-size: .9rem;
     padding-right: 30px;
   }
