@@ -1,23 +1,20 @@
 .welcome-page {
-  height: 100vh;
-  width: 100%;
+  height: fit-content;
+  width: 100vw;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.intro-box {
+  justify-content: flex-start;
   position: absolute;
-  display:flex;
-  padding: 1rem;
-  top: 35rem;
-  left: 5rem;
+  top: 0;
 }
 
-.intro-text {
-  font-size: 4rem;
-  color: white;
+.test {
+  z-index: 1;
+  height:fit-content;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
 }
