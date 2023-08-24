@@ -1,6 +1,6 @@
 .welcome-page {
   height: fit-content;
-  width: 100vw;
+  /* width: 100%; */
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,7 @@
   justify-content: flex-start;
   position: absolute;
   top: 0;
+  overflow: hidden;
 }
 
 .main-welcome-content {

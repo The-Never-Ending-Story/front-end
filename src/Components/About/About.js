@@ -5,6 +5,7 @@ import aboutImage from '../../assets/about-image.png'
 
 export const About = ({ discoverNewWorld }) => {
   return (
+    
     <section className="about">
       <section className='about-info'>
         <h2 className='about-title'>About</h2>
