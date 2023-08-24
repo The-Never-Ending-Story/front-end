@@ -1,7 +1,36 @@
+.modal-name {
+  font-size: 20px;
+  margin-bottom: .05rem;
+}
+
+
+.modal {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transform: translateY(50%);
+  border-radius: 10px;
+}
+
+.modal p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px
+}
+
 .grid-preview-wrapper {
-  border: 1px white solid;
   height: 45rem;
-  width: 60%;
+  width: 85%;
+  margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -12,16 +41,20 @@
 .grid-preview-container {
   aspect-ratio: 1;
   width: 20%;
-  margin-right: 3rem;
+  margin: 1rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;  
   align-items: flex-start;
+  justify-content: center;
+  position:relative;
 }
 
 .grid-preview-image {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  border: rgb(7, 65, 41) .1rem solid;
 }
 
 .grid-preview-image:hover {
@@ -31,7 +64,7 @@
 @media (max-width: 1600px ) {
   .grid-preview-wrapper {
     height: 90vh;
-    width: 70%;
+    width: 85%;
   }
 
   .grid-preview-container {
@@ -42,7 +75,7 @@
 @media (max-width: 1200px ) {
   .grid-preview-wrapper {
     height: 80vh;
-    width: 75%;
+    width: 82%;
   }
 
   .grid-preview-container {
@@ -65,7 +98,7 @@
 @media (max-width: 760px ) {
   .grid-preview-wrapper {
     height: 75vh;
-    width: 70%;
+    width: 80%;
   }
 
   .grid-preview-container {

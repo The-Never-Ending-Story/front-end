@@ -13,8 +13,9 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: .15rem;
   padding: 1.5rem;
+  margin: -1rem;
 }
 
 .carousel-btn {
@@ -44,7 +45,7 @@
   bottom: 0;
   width: 80%;
   height: 60%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.65);
   color: white;
   display: flex;
   flex-direction: column;
@@ -71,6 +72,7 @@
   margin-right: 0rem;
   width: 100%;
   border-radius: 10px;
+  border: rgb(6, 89, 54) .05rem solid;
   aspect-ratio: 1;
 }
 
