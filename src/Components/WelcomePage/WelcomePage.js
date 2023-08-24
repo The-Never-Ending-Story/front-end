@@ -9,6 +9,7 @@ import './WelcomePage.css';
 import { About } from "../About/About";
 import { HeroImageSlider } from '../HeroImageSlider/HeroImageSlider';
 import { Footer } from '../Footer/Footer';
+import { HeroText } from "../HeroText/HeroText";
 
 export const WelcomePage = () => {
   const dispatch = useDispatch();
@@ -30,31 +31,15 @@ export const WelcomePage = () => {
   if (error) {
     return <Error />;
   };
-  
-  const fadeInMoveRight = {
-    hidden: { opacity: 0, left: '0rem'},
-    visible: {
-      opacity: 1,
-      left: '5rem', 
-      transition: {
-        delay:.25,
-        duration:5,
-      }
-    }
-  };
 
   return (
     <main className="welcome-page" >
       <HeroImageSlider />
-      <motion.div className='intro-box' variants={fadeInMoveRight} initial='hidden' animate='visible'>
-        <motion.span className='intro-text'>
-          Welcome to HyperLoom
-        </motion.span>
-      </motion.div>
-      <section className='welcome-bottom'>
+      <div className="test">
+        <HeroText />
         <About discoverNewWorld={discoverNewWorld}/>
-      </section>
-      <Footer />
+        <Footer />
+      </div>
     </main>
   );
 };
