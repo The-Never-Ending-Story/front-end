@@ -8,27 +8,32 @@
 .intro-text {
   font-size: 4rem;
   color: white;
-  position: absolute;
-  top: 20%;
-  transform: translateY(-50%);
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 
+.intro-text span {
+  margin: 0px;
+  font-family: 'Audiowide';
+}
+
 .introducing {
+  position: absolute;
+  top: 16%;
+  left: 8%;
+  transform: translateY(-50%);
   font-size: 36px;
 }
 
-.intro-text span {
-  margin: 0px;
-}
-
 .hero-title {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
   font-size: 200%;
-  font-family: 'Audiowide';
-  margin: 0px;
+  position: absolute;
 }
 
 .keyframe-arrow {

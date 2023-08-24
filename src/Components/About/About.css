@@ -6,7 +6,7 @@
   height: 110vh;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  overflow: hidden;
+  z-index: -2;
 }
 
 .about-info {
@@ -24,7 +24,7 @@
   aspect-ratio: calc(3/3);
   padding: 25px;
   border-radius: 15px;
-  overflow: hidden;
+  
 }
 
 .about-title {

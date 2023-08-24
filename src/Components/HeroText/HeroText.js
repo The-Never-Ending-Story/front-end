@@ -23,7 +23,7 @@ export const HeroText = () => {
           Introducing
         </span> 
         <span className='hero-title'>
-          HyperLoom
+          HYPERLOOM
         </span>
       </motion.div>
 
