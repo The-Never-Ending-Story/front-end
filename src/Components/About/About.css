@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   height: 110vh;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  z-index: -2;
 }
 
 .about-info {
@@ -23,6 +24,7 @@
   aspect-ratio: calc(3/3);
   padding: 25px;
   border-radius: 15px;
+  
 }
 
 .about-title {

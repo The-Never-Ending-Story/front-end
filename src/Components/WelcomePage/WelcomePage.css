@@ -8,13 +8,15 @@
   justify-content: flex-start;
   position: absolute;
   top: 0;
+  overflow-x: hidden;
 }
 
-.test {
+.main-welcome-content {
   z-index: 1;
   height:fit-content;
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 0;
+  width: 105vw;
 }

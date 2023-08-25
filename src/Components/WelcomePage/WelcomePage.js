@@ -10,6 +10,7 @@ import { About } from "../About/About";
 import { HeroImageSlider } from '../HeroImageSlider/HeroImageSlider';
 import { Footer } from '../Footer/Footer';
 import { HeroText } from "../HeroText/HeroText";
+import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 
 export const WelcomePage = () => {
   const dispatch = useDispatch();
@@ -30,16 +31,18 @@ export const WelcomePage = () => {
 
   if (error) {
     return <Error />;
-  };
-
+  } else if(displayedWorlds.length === 0) {
+    return <LoadingIcon />
+ } else {
   return (
     <main className="welcome-page" >
       <HeroImageSlider />
-      <div className="test">
+      <div className="main-welcome-content">
         <HeroText />
         <About discoverNewWorld={discoverNewWorld}/>
         <Footer />
       </div>
     </main>
   );
+ }
 };

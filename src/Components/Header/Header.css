@@ -4,18 +4,20 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .header-container {
-  height: 4rem;
-  border-bottom: white solid 1px;
+  height: 3.5rem;
+  border-bottom: white solid .5px;
   font-family: 'Share-TechMono', sans-serif;
   justify-content: space-between;
   display: flex;
   align-items: center;
   width: 100vw;
+  z-index: 2;
 }
 
 .buttons-container {
@@ -24,7 +26,7 @@
 
 .header-button {
   z-index: 1;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding-right: 40px;
   outline: none;
   background: none;
@@ -50,7 +52,6 @@
 @media screen and (max-width: 34em) {
 
   .header-button {
-
     font-size: .9rem;
     padding-right: 30px;
   }
