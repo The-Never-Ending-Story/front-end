@@ -50,7 +50,7 @@ export const CarouselPreview = ({ world, routeToWorld }) => {
           onClick={() => routeToWorld(id)}
         >
           <p className="modal-name">{name}</p>
-          <p>{blurb}</p>
+          <p className='modal-blurb'>{blurb}</p>
         </motion.div>
       )}
     </div>

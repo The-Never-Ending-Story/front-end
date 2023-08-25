@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import { motion } from 'framer-motion';
 
 export const GridPreview = ({world, routeToWorld}) => {
-  const { id, img, name, blurb } = world;
+  const { id, img, name, blurb, magicTechnology } = world;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMouseInside, setIsMouseInside] = useState(false);
   const modalContainerRef = useRef(null);
@@ -49,6 +49,8 @@ export const GridPreview = ({world, routeToWorld}) => {
           onClick={() => routeToWorld(id)}
         >
           <p className="modal-name">{name}</p>
+          <p className='modal-stat'>Magic Level: {magicTechnology.magicLvl}</p>
+          <p className='modal-stat'>Tech Level: {magicTechnology.techLvl}</p>
         </motion.div>
       )}
     </div>
