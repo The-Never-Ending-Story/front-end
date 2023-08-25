@@ -39,7 +39,7 @@ export const Grid = ({routeToWorld}) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [windowWidth]);
 
   const gridPreviews = worlds
                         .slice(0, numberToDisplay)

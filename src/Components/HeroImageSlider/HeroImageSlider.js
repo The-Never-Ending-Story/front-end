@@ -5,11 +5,11 @@ import { LoadingIcon } from '../LoadingIcon/LoadingIcon';
 import { Error } from '../Error/Error';
 
 export const HeroImageSlider = () => {
-
   const slideIds = [26, 87, 188, 19, 93, 28, 84, 32, 137, 76, 103, 100]
   const slides = useSelector((state) => state.root.discoveredWorlds.filter((world) => {
     return slideIds.includes(world.id)    
   }))
+  
   const [currentSlide, setCurrentSlide] = useState(0)
   const error = useSelector((state) => state.root.error);
 
@@ -48,20 +48,3 @@ export const HeroImageSlider = () => {
       )
     }
   }
-
-    // const heroImageStyle = {
-    //   backgroundImage: `url(${slides[currentSlide].img.landscape})`
-    // }
-    
-    /*
-    return (
-      <div className='my-hero' style={heroImageStyle}>
-      <div className="keyframe-arrow">
-            <span></span>
-            <span></span>
-            <span></span>
-      </div>
-      
-     */
-
-

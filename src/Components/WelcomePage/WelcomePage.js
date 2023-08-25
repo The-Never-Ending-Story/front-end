@@ -7,7 +7,10 @@ import { Error } from '../Error/Error';
 import { motion } from 'framer-motion'; 
 import './WelcomePage.css';
 import { About } from "../About/About";
-import {HeroImageSlider} from '../HeroImageSlider/HeroImageSlider';
+import { HeroImageSlider } from '../HeroImageSlider/HeroImageSlider';
+import { Footer } from '../Footer/Footer';
+import { HeroText } from "../HeroText/HeroText";
+import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 
 export const WelcomePage = () => {
   const dispatch = useDispatch();
@@ -28,30 +31,18 @@ export const WelcomePage = () => {
 
   if (error) {
     return <Error />;
-  };
-  
-  const fadeInMoveRight = {
-    hidden: { opacity: 0, left: '0rem'},
-    visible: {
-      opacity: 1,
-      left: '5rem', 
-      transition: {
-        delay:.25,
-        duration:5,
-      }
-    }
-  };
-
+  } else if(displayedWorlds.length === 0) {
+    return <LoadingIcon />
+ } else {
   return (
     <main className="welcome-page" >
-      <motion.div className='intro-box' variants={fadeInMoveRight} initial='hidden' animate='visible'>
-        {/* <motion.span className='intro-text'>
-          Welcome to HyperLoom
-        </motion.span> */}
-      </motion.div>
-      <section className='welcome-bottom'>
+      <HeroImageSlider />
+      <div className="main-welcome-content">
+        <HeroText />
         <About discoverNewWorld={discoverNewWorld}/>
-      </section>
+        <Footer />
+      </div>
     </main>
   );
+ }
 };
