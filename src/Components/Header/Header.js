@@ -28,7 +28,10 @@ export const Header = () => {
     <motion.nav className='header-container'
       initial={{ opacity: 0 }}
       whileInView={{opacity: 1}}
-      transition={{delay: 4, type: 'tween', duration: 3}}
+      transition={{
+        delay: pathname.includes('/world') ? .5 : 4,
+        type: 'tween',
+        duration: pathname.includes('/world') ? 1 : 3}}
     >
       <Link to='/' className="title-box">
         <h1 className="title">HyperLoom</h1>
