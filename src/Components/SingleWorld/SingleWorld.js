@@ -124,7 +124,7 @@ export const SingleWorld = () => {
                       : declareUnknown('events');
 
   const history =
-      <div className="single-det-wrapper">
+      <div className="single-det-wrapper hist-det-text-wrapper">
         { world.lore ? world.lore.map((par, index) => <p key={index}>{par}</p>) : declareUnknown('history') }
       </div>;
 

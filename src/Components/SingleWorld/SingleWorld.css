@@ -92,7 +92,6 @@ p.lvl-detail{
   height: 60px;
   text-align: center;
   font-size: 1.5rem;
-  /* border-bottom: #f1f6f9 2px solid; */
 }
 
 .tab-active {
@@ -106,8 +105,6 @@ p.lvl-detail{
   height: 60px;
   text-align: center;
   font-size: 1.5rem;
-  /* border-right: 1px solid #f1f6f9; */
-  /* border-left: 1px solid #f1f6f9; */
   border-bottom: none;
 }
 
@@ -120,6 +117,18 @@ p.lvl-detail{
 .tab-content {
   display: flex;
   justify-content: center;
+}
+
+.hist-det-text-wrapper {
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  color: white; 
+  min-height: 50%;
+  max-height: 100%;
+  width: 50%;
+  text-align: center; 
 }
 
 @media screen and (max-width: 34em) {
