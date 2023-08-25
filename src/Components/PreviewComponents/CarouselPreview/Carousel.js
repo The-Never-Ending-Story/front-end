@@ -15,7 +15,6 @@ export const Carousel = ({filteredWorlds, routeToWorld, category}) => {
       setWindowWidth(window.innerWidth);
     };
 
-    console.log(visibleImages)
     window.addEventListener('resize', handleResize);
 
     if (windowWidth < 600) {

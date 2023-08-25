@@ -4,7 +4,6 @@ import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError } from '../rootSlice';
 import { Error } from '../Error/Error';
-import { motion } from 'framer-motion'; 
 import './WelcomePage.css';
 import { About } from "../About/About";
 import { HeroImageSlider } from '../HeroImageSlider/HeroImageSlider';
