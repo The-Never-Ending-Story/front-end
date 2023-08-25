@@ -65,7 +65,7 @@ export const Detail = ({ item, additionalDetails }) => {
             <motion.div
               ref={modalContainerRef}
               transition={{ delay: 0.1, type: 'just' }}
-              className="single-det-container"
+              className="single-det-modal"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
