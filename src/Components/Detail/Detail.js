@@ -51,7 +51,7 @@ export const Detail = ({ item, additionalDetails }) => {
 
       {windowWidth < 1200 && (
         <div
-          className="modal-det-container"
+          className="single-det-container"
           onClick={handleOpenModal}
           onMouseEnter={handleMouseEnter}
         >
@@ -65,7 +65,7 @@ export const Detail = ({ item, additionalDetails }) => {
             <motion.div
               ref={modalContainerRef}
               transition={{ delay: 0.1, type: 'just' }}
-              className="single-det-modal"
+              className="single-det-container"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}

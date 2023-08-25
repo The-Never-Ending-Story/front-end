@@ -29,7 +29,8 @@
 .single-top-wrapper {
   border-radius: 20px;
   top: 50%;
-  transform: translate(50%, -50%);
+  right: 5%;
+  transform: translateY(-50%); 
   position: absolute;
   background-color: rgba(101, 99, 99, 0.6);
   padding: 0 20px;
@@ -130,7 +131,15 @@ p.lvl-detail{
   width: 50%;
   text-align: center; 
 }
-
+@media screen and (max-width: 54em) {
+  .single-top-wrapper {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+  }
+}
 @media screen and (max-width: 34em) {
   .tab {
     font-size: 1rem;

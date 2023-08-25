@@ -172,11 +172,9 @@ export const SingleWorld = () => {
           </button>
         ))}
       </div>
-      <div className="tab-content">
-        <div className="details carousel">
-        {currentTab === 'History' ? tabContent[currentTab] : <DetailCarousel content={tabContent[currentTab]} />}
-        </div>
-      </div>
+      <div className="tab-content single-det-wrapper">
+                {currentTab === 'History' ? tabContent[currentTab] : <DetailCarousel content={tabContent[currentTab]} />}
+          </div>
     </section>
   );
 };
