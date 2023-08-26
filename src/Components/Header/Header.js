@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { Link, useLocation, useHistory } from 'react-router-dom'
 import { getRandomWorldData } from "../../apiCalls";
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoveredWorlds, changeError } from '../rootSlice';
 import './Header.css';
-import { motion, useScroll } from "framer-motion";
+import { motion} from "framer-motion";
 
 export const Header = () => {
   const dispatch = useDispatch(),

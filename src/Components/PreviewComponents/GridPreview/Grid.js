@@ -30,8 +30,13 @@ export const Grid = ({routeToWorld}) => {
 
     window.addEventListener('resize', handleResize);
 
-    if (windowWidth < 1000) {
-      setDisplay(9);
+    if (windowWidth < 500) {
+      setDisplay(6);
+    } else if (windowWidth < 761) {
+      setDisplay(8)
+    }
+      else if (windowWidth < 1000) {
+      setDisplay(9)
     } else {
       setDisplay(12);
     };
