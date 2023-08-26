@@ -38,7 +38,7 @@ export const Detail = ({ item, additionalDetails }) => {
     <div className="single-det-wrapper" key={id}>
       {windowWidth > 1200 && (
         <div className="single-det-container">
-          <img className="single-det-img" src={img} alt={imgAlt} />
+          <img className="single-det-img" src={img} alt={name || 'world detail'} />
           <div className="single-det-text-wrapper">
             <h3>{name}</h3>
             {additionalDetails && additionalDetails.map((detail, index) => (
