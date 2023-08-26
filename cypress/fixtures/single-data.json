@@ -1,126 +1,182 @@
-
-  {
-      "id": 3,
-      "name": "DigiVale",
-      "blurb": "A dwarf planet, blanketed with sun-scorched savannas, gigantic salt flats, and drowned by a complex network of cavernous caves with an extraordinary fusion of magic and rudimentary technology.",
-      "description": "DigiVale is a vivid blend of natural beauty, magic-infused landscapes, and cyberpunk aesthetics. Shimmering salt flats stretch for miles, dotted with conductive crystals that spin in harmony, enhancing magic for miles. The savanna carries vibrant flora and fauna, pulsating with otherworldly life, while its vast, cavernous caves, crisscrossing underneath, are both mystic and perilous.",
-      "geoDynamics": {
-          "size": "Dwarf",
-          "shape": "Planet",
-          "climate": "savanna",
-          "landscapes": [
-              "salt flats",
-              "cavernous caves"
-          ]
-      },
-      "magicTechnology": {
-          "magic": [
-              "virtually limitless",
-              "advanced enchantments",
-              "cosmic wizardry"
-          ],
-          "techLvl": 4,
-          "magicLvl": 10,
-          "technology": [
-              "basic AI",
-              "primitive cybernetics",
-              "rudimentary nanotech"
-          ]
-      },
-      "img": {
-          "landscape": "https://cdn.discordapp.com/attachments/1128814452012220536/1129842151103148173/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_44ee86aa-76d6-416b-9526-75abd158ae6b.png",
-          "thumbnail": "https://cdn.discordapp.com/attachments/1128814452012220536/1129839527599538298/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_4976cd1d-3b62-4510-b6c2-8fb0eba4eb69.png"
-      },
-      "species": [
-          {
-              "id": 3,
-              "name": "Maagi",
-              "alignment": "Neutral Good",
-              "politics": "Communal society",
-              "lore": "Bipedal beings, resembling humans, but adapted to DigiVale's environment. Deeply interwoven with their planet's magic, they're natural enchanters, using the blend of rudimentary tech and magic to thrive and communicate.",
-              "imagine": "Humanoid silhouette standing tall, skin glistening with sweat under a blazing sun, eyes glowing with incandescent magic, with augmentations of rudimentary cybernetics blended seamlessly with their anatomy, and a landscape of dramatic savanna and salt flats stretching out behind them.",
-              "img": "https://cdn.discordapp.com/attachments/1128814452012220536/1129974195820965888/hyperloom_Humanoid_silhouette_standing_tall_skin_glistening_wit_8455020a-ab65-465a-8603-2d67b8cb754f.png",
-              "type": "none",
-              "world": 3
-          }
-      ],
-      "locations": [
-          {
-              "id": 4,
-              "name": "Crystaline",
-              "type": "City",
-              "climate": "Hot, dry",
-              "lore": "Constructed amid saltpan, emblematically named for the encircling mystical crystals. Foundations are rooted within the caves beneath, buildings are magically reinforced, with abundant neon lighting.",
-              "imagine": "A cityscape gleaming under the setting sun, tall buildings of glass and metal erected amid a desert of salt, surrounded by giant luminescent crystals, their reflections painting the city in a mesmerizing polychrome lightshow, while the hollow entrance of a cavernous abyss opens up beneath the city.",
-              "img": "https://cdn.midjourney.com/97131eab-e646-44cd-9ee0-13cd3900ad57/0_0.png",
-              "world": 3
-          },
-          {
-              "id": 5,
-              "name": "Ravendell",
-              "type": "Settlement",
-              "climate": "Temperate, humid",
-              "lore": "Nestled high in the cavernous caves where the humidity is bearable. It's interconnected with one another via suspended rope bridges, crystal-enhanced lighting refracts to the stalactites above.",
-              "imagine": "High up within a cavernous void, a settlement hangs suspended. Wooden, artificially enhanced structures lit by glowing crystals, surrounded by stalactites, connected with rope bridges swaying slightly in the cave's gentle breathe.",
-              "img": "https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_0.png",
-              "world": 3
-          }
-      ],
-      "characters": [
-          {
-              "id": 3,
-              "name": "Eldriq",
-              "species": "Maagi",
-              "alignment": "Lawful Neutral",
-              "age": 70,
-              "lore": "The venerable elder of Crystaline, who paved the path for the fusion of magic and technology. Spread the teachings of harmony between both, despite the city's adversity towards technology initially.",
-              "imagine": "An elderly figure, face lining wisdom, eyes glowing with powerful magic, stands before a holographic interface. In their extended hand, a magical orb pulses synchronous with the neon-lit cityscape behind.",
-              "img": "https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_0.png",
-              "location": "",
-              "world": 3
-          },
-          {
-              "id": 4,
-              "name": "Shyla",
-              "species": "Maagi",
-              "alignment": "Chaotic Good",
-              "age": 30,
-              "lore": "The explorer of Ravendell's depths, who discovered uncharted caves underneath DigiVale. Brought socio-economic growth to the settlement after discovering abundant, precious resources.",
-              "imagine": "An agile silhouette is huddled over a cyber-embedded rope hanging off a bridge's edge, peering down into the abyss with eyes that emit a soft, magical light.",
-              "img": "none",
-              "location": "",
-              "world": 3
-          }
-      ],
-      "events": [
-          {
-              "id": 3,
-              "name": "The Harmonic Uprising",
-              "type": "Revolution",
-              "age": "Bronze Age",
-              "time": "1400",
-              "lore": "Eldriq, with his revolutionary ideas managing to sway public opinion, leading to the Harmonic Uprising, completely changed how the Maagi of Crystaline viewed the relationship between magic and technology.",
-              "imagine": "A lone figure standing elevated, backdropped by a luminescent city, in front of an impending audience, with a holographic spectrum swirling around him.",
-              "img": "",
-              "location": "",
-              "world": 3
-          },
-          {
-              "id": 4,
-              "name": "Uncharted Depths",
-              "type": "Discovery",
-              "age": "Iron Age",
-              "time": "2020",
-              "lore": "After this event, the total landmass known for Ravendell nearly tripled when Shyla discovered new, untouched caverns replete with resources beneath the settlement, triggering an exploration boom.",
-              "imagine": "A figure, silhouette illuminated by the soft glow of a cavern opening, stands at the precipice of an abyss, throwing a light-enchanted stone that reveals a vast labyrinth of previously unseen interconnected caves.",
-              "img": "",
-              "location": "",
-              "world": 3
-          }
-      ],
-      "lore": [
-          "Crystaline, once distrustful of technology, became the beacon of magic-tech fusion under Eldriq's steadfast determination, his Harmonic Uprising allowing Maagi to harmoniously integrate magic with rudimentary technology, establishing a balanced society.",
-          "In the newer age, the settlement of Ravendell experienced an exploration boom after Shyla's discovery of vast, resource-rich caverns. This ignited a wave of adventurous spirits, changing the face of the settlement forever, paving the way for future expansions.",
-          "This application of technology and unearthing of resources led to a Renaissance for the Maagi, ushering in an age of prosperity and cultural upheaval, leaving an indelible mark in the cosmic annals of DigiVale."
-      ]
-  }
+{
+    "id": 3,
+    "name": "DigiVale",
+    "blurb": "A dwarf planet, blanketed with sun-scorched savannas, gigantic salt flats, and drowned by a complex network of cavernous caves with an extraordinary fusion of magic and rudimentary technology.",
+    "category": "Urban & Modern",
+    "genres": [
+        "Cyberprep"
+    ],
+    "description": "DigiVale is a vivid blend of natural beauty, magic-infused landscapes, and cyberpunk aesthetics. Shimmering salt flats stretch for miles, dotted with conductive crystals that spin in harmony, enhancing magic for miles. The savanna carries vibrant flora and fauna, pulsating with otherworldly life, while its vast, cavernous caves, crisscrossing underneath, are both mystic and perilous.",
+    "geoDynamics": {
+        "size": "Dwarf",
+        "shape": "Planet",
+        "climate": "savanna",
+        "landscapes": [
+            "salt flats",
+            "cavernous caves"
+        ]
+    },
+    "magicTechnology": {
+        "magic": [
+            "virtually limitless",
+            "advanced enchantments",
+            "cosmic wizardry"
+        ],
+        "techLvl": 4,
+        "magicLvl": 10,
+        "technology": [
+            "basic AI",
+            "primitive cybernetics",
+            "rudimentary nanotech"
+        ]
+    },
+    "img": {
+        "hero": "https://cdn.midjourney.com/51ad55f3-e270-46f0-9149-f62bd632f867/0_0.png",
+        "landscape": "https://cdn.discordapp.com/attachments/1128814452012220536/1129842151103148173/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_44ee86aa-76d6-416b-9526-75abd158ae6b.png",
+        "thumbnail": "https://cdn.midjourney.com/ca454dc6-0a4a-4e4f-bd5d-8a48aa8ef826/0_0.png"
+    },
+    "imgs": {
+        "heros": [
+            "https://cdn.midjourney.com/51ad55f3-e270-46f0-9149-f62bd632f867/0_0.png",
+            "https://cdn.midjourney.com/51ad55f3-e270-46f0-9149-f62bd632f867/0_1.png",
+            "https://cdn.midjourney.com/51ad55f3-e270-46f0-9149-f62bd632f867/0_2.png",
+            "https://cdn.midjourney.com/51ad55f3-e270-46f0-9149-f62bd632f867/0_3.png"
+        ],
+        "landscapes": [
+            "https://cdn.discordapp.com/attachments/1128814452012220536/1129842151103148173/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_44ee86aa-76d6-416b-9526-75abd158ae6b.pn0",
+            "https://cdn.discordapp.com/attachments/1128814452012220536/1129842151103148173/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_44ee86aa-76d6-416b-9526-75abd158ae6b.pn1",
+            "https://cdn.discordapp.com/attachments/1128814452012220536/1129842151103148173/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_44ee86aa-76d6-416b-9526-75abd158ae6b.pn2",
+            "https://cdn.discordapp.com/attachments/1128814452012220536/1129842151103148173/hyperloom_DigiVale_is_a_vivid_blend_of_natural_beauty_magic-inf_44ee86aa-76d6-416b-9526-75abd158ae6b.pn3"
+        ],
+        "thumbnails": [
+            "https://cdn.midjourney.com/ca454dc6-0a4a-4e4f-bd5d-8a48aa8ef826/0_0.png",
+            "https://cdn.midjourney.com/ca454dc6-0a4a-4e4f-bd5d-8a48aa8ef826/0_1.png",
+            "https://cdn.midjourney.com/ca454dc6-0a4a-4e4f-bd5d-8a48aa8ef826/0_2.png",
+            "https://cdn.midjourney.com/ca454dc6-0a4a-4e4f-bd5d-8a48aa8ef826/0_3.png"
+        ]
+    },
+    "species": [
+        {
+            "id": 3,
+            "name": "Maagi",
+            "alignment": "Neutral Good",
+            "politics": "Communal society",
+            "lore": "Bipedal beings, resembling humans, but adapted to DigiVale's environment. Deeply interwoven with their planet's magic, they're natural enchanters, using the blend of rudimentary tech and magic to thrive and communicate.",
+            "imagine": "Humanoid silhouette standing tall, skin glistening with sweat under a blazing sun, eyes glowing with incandescent magic, with augmentations of rudimentary cybernetics blended seamlessly with their anatomy, and a landscape of dramatic savanna and salt flats stretching out behind them.",
+            "img": "https://cdn.midjourney.com/26352f88-2d49-4c3b-b9c0-552feb8a36fa/0_0.png",
+            "imgs": [
+                "https://cdn.midjourney.com/26352f88-2d49-4c3b-b9c0-552feb8a36fa/0_0.png",
+                "https://cdn.midjourney.com/26352f88-2d49-4c3b-b9c0-552feb8a36fa/0_1.png",
+                "https://cdn.midjourney.com/26352f88-2d49-4c3b-b9c0-552feb8a36fa/0_2.png",
+                "https://cdn.midjourney.com/26352f88-2d49-4c3b-b9c0-552feb8a36fa/0_3.png"
+            ],
+            "type": "none",
+            "world": 3
+        }
+    ],
+    "locations": [
+        {
+            "id": 5,
+            "name": "Ravendell",
+            "type": "Settlement",
+            "climate": "Temperate, humid",
+            "lore": "Nestled high in the cavernous caves where the humidity is bearable. It's interconnected with one another via suspended rope bridges, crystal-enhanced lighting refracts to the stalactites above.",
+            "imagine": "High up within a cavernous void, a settlement hangs suspended. Wooden, artificially enhanced structures lit by glowing crystals, surrounded by stalactites, connected with rope bridges swaying slightly in the cave's gentle breathe.",
+            "img": "https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_0.png",
+            "imgs": "['https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_0.png', 'https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_1.png', 'https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_2.png', 'https://cdn.midjourney.com/4b3c0e4b-9b78-4157-8ebd-888110919fd9/0_3.png']",
+            "world": 3
+        },
+        {
+            "id": 4,
+            "name": "Crystaline",
+            "type": "City",
+            "climate": "Hot, dry",
+            "lore": "Constructed amid saltpan, emblematically named for the encircling mystical crystals. Foundations are rooted within the caves beneath, buildings are magically reinforced, with abundant neon lighting.",
+            "imagine": "A cityscape gleaming under the setting sun, tall buildings of glass and metal erected amid a desert of salt, surrounded by giant luminescent crystals, their reflections painting the city in a mesmerizing polychrome lightshow, while the hollow entrance of a cavernous abyss opens up beneath the city.",
+            "img": "https://cdn.midjourney.com/97131eab-e646-44cd-9ee0-13cd3900ad57/0_0.png",
+            "imgs": "['https://cdn.midjourney.com/97131eab-e646-44cd-9ee0-13cd3900ad57/0_0.png', 'https://cdn.midjourney.com/97131eab-e646-44cd-9ee0-13cd3900ad57/0_1.png', 'https://cdn.midjourney.com/97131eab-e646-44cd-9ee0-13cd3900ad57/0_2.png', 'https://cdn.midjourney.com/97131eab-e646-44cd-9ee0-13cd3900ad57/0_3.png']",
+            "world": 3
+        }
+    ],
+    "characters": [
+        {
+            "id": 4,
+            "name": "Shyla",
+            "species": "Maagi",
+            "alignment": "Chaotic Good",
+            "age": 30,
+            "lore": "The explorer of Ravendell's depths, who discovered uncharted caves underneath DigiVale. Brought socio-economic growth to the settlement after discovering abundant, precious resources.",
+            "imagine": "An agile silhouette is huddled over a cyber-embedded rope hanging off a bridge's edge, peering down into the abyss with eyes that emit a soft, magical light.",
+            "img": "https://cdn.midjourney.com/63ce3a20-3b84-4269-8419-6323a8fba4d9/0_0.png",
+            "imgs": [
+                "https://cdn.midjourney.com/63ce3a20-3b84-4269-8419-6323a8fba4d9/0_0.png",
+                "https://cdn.midjourney.com/63ce3a20-3b84-4269-8419-6323a8fba4d9/0_1.png",
+                "https://cdn.midjourney.com/63ce3a20-3b84-4269-8419-6323a8fba4d9/0_2.png",
+                "https://cdn.midjourney.com/63ce3a20-3b84-4269-8419-6323a8fba4d9/0_3.png"
+            ],
+            "location": "",
+            "world": 3
+        },
+        {
+            "id": 3,
+            "name": "Eldriq",
+            "species": "Maagi",
+            "alignment": "Lawful Neutral",
+            "age": 70,
+            "lore": "The venerable elder of Crystaline, who paved the path for the fusion of magic and technology. Spread the teachings of harmony between both, despite the city's adversity towards technology initially.",
+            "imagine": "An elderly figure, face lining wisdom, eyes glowing with powerful magic, stands before a holographic interface. In their extended hand, a magical orb pulses synchronous with the neon-lit cityscape behind.",
+            "img": "https://cdn.midjourney.com/614aefa2-ff36-498f-98bd-fede5c1e30bb/0_0.png",
+            "imgs": [
+                "https://cdn.midjourney.com/614aefa2-ff36-498f-98bd-fede5c1e30bb/0_0.png",
+                "https://cdn.midjourney.com/614aefa2-ff36-498f-98bd-fede5c1e30bb/0_1.png",
+                "https://cdn.midjourney.com/614aefa2-ff36-498f-98bd-fede5c1e30bb/0_2.png",
+                "https://cdn.midjourney.com/614aefa2-ff36-498f-98bd-fede5c1e30bb/0_3.png"
+            ],
+            "location": "",
+            "world": 3
+        }
+    ],
+    "events": [
+        {
+            "id": 4,
+            "name": "Uncharted Depths",
+            "type": "Discovery",
+            "age": "Iron Age",
+            "time": "2020",
+            "lore": "After this event, the total landmass known for Ravendell nearly tripled when Shyla discovered new, untouched caverns replete with resources beneath the settlement, triggering an exploration boom.",
+            "imagine": "A figure, silhouette illuminated by the soft glow of a cavern opening, stands at the precipice of an abyss, throwing a light-enchanted stone that reveals a vast labyrinth of previously unseen interconnected caves.",
+            "img": "https://cdn.midjourney.com/ac667046-1ca7-441e-a314-77637d22db97/0_0.png",
+            "imgs": [
+                "https://cdn.midjourney.com/ac667046-1ca7-441e-a314-77637d22db97/0_0.png",
+                "https://cdn.midjourney.com/ac667046-1ca7-441e-a314-77637d22db97/0_1.png",
+                "https://cdn.midjourney.com/ac667046-1ca7-441e-a314-77637d22db97/0_2.png",
+                "https://cdn.midjourney.com/ac667046-1ca7-441e-a314-77637d22db97/0_3.png"
+            ],
+            "location": "",
+            "world": 3
+        },
+        {
+            "id": 3,
+            "name": "The Harmonic Uprising",
+            "type": "Revolution",
+            "age": "Bronze Age",
+            "time": "1400",
+            "lore": "Eldriq, with his revolutionary ideas managing to sway public opinion, leading to the Harmonic Uprising, completely changed how the Maagi of Crystaline viewed the relationship between magic and technology.",
+            "imagine": "A lone figure standing elevated, backdropped by a luminescent city, in front of an impending audience, with a holographic spectrum swirling around him.",
+            "img": "https://cdn.midjourney.com/a19f0287-0f86-4134-8e96-8e15eb447c71/0_0.png",
+            "imgs": [
+                "https://cdn.midjourney.com/a19f0287-0f86-4134-8e96-8e15eb447c71/0_0.png",
+                "https://cdn.midjourney.com/a19f0287-0f86-4134-8e96-8e15eb447c71/0_1.png",
+                "https://cdn.midjourney.com/a19f0287-0f86-4134-8e96-8e15eb447c71/0_2.png",
+                "https://cdn.midjourney.com/a19f0287-0f86-4134-8e96-8e15eb447c71/0_3.png"
+            ],
+            "location": "",
+            "world": 3
+        }
+    ],
+    "lore": [
+        "Crystaline, once distrustful of technology, became the beacon of magic-tech fusion under Eldriq's steadfast determination, his Harmonic Uprising allowing Maagi to harmoniously integrate magic with rudimentary technology, establishing a balanced society.",
+        "In the newer age, the settlement of Ravendell experienced an exploration boom after Shyla's discovery of vast, resource-rich caverns. This ignited a wave of adventurous spirits, changing the face of the settlement forever, paving the way for future expansions.",
+        "This application of technology and unearthing of resources led to a Renaissance for the Maagi, ushering in an age of prosperity and cultural upheaval, leaving an indelible mark in the cosmic annals of DigiVale."
+    ]
+}
