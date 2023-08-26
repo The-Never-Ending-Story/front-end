@@ -48,10 +48,11 @@ export const Grid = ({routeToWorld}) => {
 
   const gridPreviews = worlds
                         .slice(0, numberToDisplay)
-                        .map(world =>
+                        .map((world, index)=>
                           <GridPreview 
                             world={world}
                             routeToWorld={routeToWorld}
+                            key={index}
                           />
                         );
 

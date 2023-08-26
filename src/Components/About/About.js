@@ -19,7 +19,7 @@ export const About = ({ discoverNewWorld }) => {
           <button className="about-button" onClick={() => { discoverNewWorld() }}>Discover</button>
         </div>
       </section>
-      <img className='about-image' src={aboutImage}/>
+      <img className='about-image' src={aboutImage} alt='etheral woman, Hyper Looms mascot'/>
     </section>
   )
 }
