@@ -8,7 +8,6 @@
 }
 
 .main-preview-display {
-  /* border: 1px red solid; */
   margin-bottom: 5rem;
 }
 
@@ -22,7 +21,6 @@
 }
 
 .carousel-preview-display {
-  /* border: 1px blue solid; */
   height: 100rem;
   width: 100%;
   margin-bottom: 10rem;
@@ -30,7 +28,6 @@
 
 .grid-preview-display {
   justify-content: flex-start;
-  /* border: 1px green solid; */
   height: 60rem;
   width: 100%;
 }
