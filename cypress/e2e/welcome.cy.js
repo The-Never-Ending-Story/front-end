@@ -14,32 +14,37 @@ describe('Welcome Page', () => {
     .visit('http://localhost:3000/')
   })
   
-  it('should display correct initial text', () => {
-    cy.get('.initial-text').should('have.text', 'Introducing HyperLoom');
-  });
+  it('should display the Hero Slider and Text', () => {
+    cy.get('.welcome-page')
+      .get('.slider-container')
+      .get('.slider-div')
 
-  it('should display header with the logo upon initial load', ()=> {
-    cy.get('.header-container').should('be.visible').should('exist')
+    cy.get('.intro-box')
+      .get('.intro-text')
+      .get('.introducing').should('have.text', 'INTRODUCING')
+      .get('.hero-title').should('have.text', 'HYPERLOOM')
+
+    cy.get('.keyframe-arrow')
+    cy.get('.tag-text').should('have.text', 'Powered by ChatGPT and MidJourney AI')
   })
 
-  it('should display correct intro text', () => {
-    cy.get('.intro-text').should(
-      'have.text',
-      'HyperLoom uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore. Explore barely known worlds, or discover new domains:'
-    );
-  });
+  it('should have about section', ()=> {
+    cy.get('.about').should('be.visible').should('exist')
+      .get('.about-title').should('have.text', 'About')
+      .get('.about-text').should('have.text', "HyperLoom is world building application that allows users to explore magical realms. It uses the power of MidJourney and ChatGPT to create new and exciting worlds, complete with rich lore. Explore barely known worlds, or discover new domains:")
+      .get('.button-container')
+  })
 
-  it('should navigate to correct URLs when links are clicked', () => {
-    cy.get('.menu-button').first().click();
-    cy.url().should('include', '/worlds');
-
-    cy.go('back');
-
-    cy.contains('Discover').click();
-    cy.url().should('include', '/world/');
-  });
-
-  it('should contain the button container', () => {
-    cy.get('.button-container').should('exist');
+  it('should contain the footer component and list contributors', () => {
+    cy.get('.footer-container').should('exist')
+      .get('.team-container')
+    
+    cy.get('.dev-container').eq(0).find('a[href="https://www.linkedin.com/in/adam-meza/"]');
+    cy.get('.dev-container').eq(1).find('a[href="https://www.linkedin.com/in/shanemisra/"]');
+    cy.get('.dev-container').eq(2).find('a[href="https://www.linkedin.com/in/priscilla-paxton/"]');
+    cy.get('.dev-container').eq(3).find('a[href="https://www.linkedin.com/in/sharie-trachsel/"]');
+    cy.get('.dev-container').eq(4).find('a[href="https://www.linkedin.com/in/andrew-b0wman/"]');
+    cy.get('.dev-container').eq(5).find('a[href="https://www.linkedin.com/in/sean-cowans/"]');
+    cy.get('.dev-container').eq(6).find('a[href="https://www.linkedin.com/in/brandenge/"]');
   });
 });
