@@ -51,7 +51,7 @@ export const Detail = ({ item, additionalDetails }) => {
 
       {windowWidth < 1200 && (
         <div
-          className="modal-det-container"
+          className="single-det-container"
           onClick={handleOpenModal}
           onMouseEnter={handleMouseEnter}
         >

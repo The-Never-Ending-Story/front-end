@@ -18,7 +18,7 @@ export const DetailCarousel = ({content}) => {
   };
 
   return (
-    <div className='details-carousel'>
+    <>
       {content[currentIndex]}
       { currentIndex !== 0 ? <motion.button 
                                   className='details-prev' 
@@ -31,6 +31,6 @@ export const DetailCarousel = ({content}) => {
                                                 onClick={handleNext}
                                               >▶</motion.button> 
                                             : null }
-    </div>
+    </>
   );
 };

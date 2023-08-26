@@ -29,7 +29,8 @@
 .single-top-wrapper {
   border-radius: 20px;
   top: 50%;
-  transform: translate(50%, -50%);
+  right: 5%;
+  transform: translateY(-50%); 
   position: absolute;
   background-color: rgba(101, 99, 99, 0.6);
   padding: 0 20px;
@@ -92,7 +93,6 @@ p.lvl-detail{
   height: 60px;
   text-align: center;
   font-size: 1.5rem;
-  /* border-bottom: #f1f6f9 2px solid; */
 }
 
 .tab-active {
@@ -106,8 +106,6 @@ p.lvl-detail{
   height: 60px;
   text-align: center;
   font-size: 1.5rem;
-  /* border-right: 1px solid #f1f6f9; */
-  /* border-left: 1px solid #f1f6f9; */
   border-bottom: none;
 }
 
@@ -122,6 +120,26 @@ p.lvl-detail{
   justify-content: center;
 }
 
+.hist-det-text-wrapper {
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  color: white; 
+  min-height: 50%;
+  max-height: 100%;
+  width: 50%;
+  text-align: center; 
+}
+@media screen and (max-width: 54em) {
+  .single-top-wrapper {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+  }
+}
 @media screen and (max-width: 34em) {
   .tab {
     font-size: 1rem;
