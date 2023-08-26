@@ -8,7 +8,6 @@
 }
 
 .main-preview-display {
-  /* border: 1px red solid; */
   margin-bottom: 5rem;
 }
 
@@ -34,7 +33,6 @@
 .grid-preview-display {
   display: flex;
   justify-content: flex-start;
-  /* border: 1px green solid; */
   height: 60rem;
   width: 100%;
 }
