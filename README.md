@@ -9,7 +9,7 @@ Hyperloom is a web based application that leverages ChatGPT and Midjourney to pr
 
 ## Preview of App:
 [//]: <>
-![hyperloom2](https://github.com/The-Never-Ending-Story/front-end/assets/122052199/6d431927-5852-4bd6-903f-0cadb4d1565f)
+![hyperloom2](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzV2NG9tc216dzAzOWtsazAwem1lZWh1c2xycDdiM3dvbHlkcGhmdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X0t32oVa7oQxLilyph/giphy.gif)
 
 ## Backend Repository
 [Hyperloom](https://github.com/The-Never-Ending-Story/back-end)
@@ -49,6 +49,7 @@ Hyperloom was created over a 2 week sprint as part of Turing's software developm
 - Router
 - Cypress
 - Redux
+- Framer Motion
 - Github Actions Continuous Integration
 - GitHub Project Board
 - Miro - planning 
