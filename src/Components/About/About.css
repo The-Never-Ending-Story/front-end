@@ -68,4 +68,8 @@
   .about-image {
     display: none;
   }
+  
+  .about-info {
+    width: 75%;
+  }
 }
