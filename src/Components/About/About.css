@@ -63,3 +63,13 @@
   border-radius: 15px;
   box-shadow: 2px 3px 40px 15px rgba(20, 213, 133, .4);
 }
+
+@media(max-width: 800px) {
+  .about-image {
+    display: none;
+  }
+  
+  .about-info {
+    width: 75%;
+  }
+}

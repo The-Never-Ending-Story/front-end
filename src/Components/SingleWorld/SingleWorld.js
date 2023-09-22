@@ -75,6 +75,7 @@ export const SingleWorld = () => {
     let additionalDetails;
 
     return category.map(item => {
+      console.log(item)
       switch (category) {
         case world.species:
           additionalDetails = [

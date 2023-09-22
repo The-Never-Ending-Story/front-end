@@ -100,3 +100,9 @@
    width: 100%;
   }
 }
+
+@media(max-width: 800px) {
+  .single-det-img {
+    max-width: 90vw;
+  }
+}

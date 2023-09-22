@@ -131,14 +131,25 @@
     font-size: 2rem;
   }
 }
+
 @media (max-width: 780px) {
+  .carousel-btn {
+    scale: .8;
+  }
   .carousel-wrapper {
     width: 85%;
   }
   .carousel-preview-container {
     width: 41%;
   }
+  .prev-button {
+    left: 1.15rem;
+  }
+  .next-button {
+    right: -1.85rem;
+  }
 }
+
 @media (max-width: 600px) {
   .carousel-wrapper {
     width: 70%;

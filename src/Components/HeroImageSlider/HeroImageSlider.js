@@ -30,7 +30,7 @@ export const HeroImageSlider = () => {
     return <Error />
   } else if (slides.length > 0) {
     return (
-      <div className='slider-container'>
+      <div className='slider-container' >
         {slides.map((slide, i) => {
           return (
             <div 

@@ -105,3 +105,23 @@
     position: absolute;
   }
 }
+
+@media(max-width: 800px) {
+  .introducing {
+    font-size: 22px;
+  }
+  
+  .hero-title {
+    font-size: 70%;
+  }
+
+  .tag-text {
+    font-size: 100%;
+  }
+
+  .keyframe-arrow {
+    bottom: 12%;
+    right: 15%;
+    scale: 3;
+  }
+}

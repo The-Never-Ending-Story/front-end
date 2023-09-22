@@ -70,3 +70,12 @@
   color: rgb(20, 213, 133);
   border: rgb(20, 213, 133) 1px solid;
 }
+
+@media(max-width: 800px) {
+  .main-prev{
+    left: 4rem;
+  }
+  .main-next{
+    right: -1rem;
+  }
+}
