@@ -28,7 +28,7 @@ export const Footer = () => {
       className='team-container' 
       ref={teamContainerRef}
       style={{
-        opacity: rect.top >= 575 ? .10 : 1 
+        // opacity: rect.top >= 575 ? .10 : 1 
       }}
       >
         <h1>The Team</h1>

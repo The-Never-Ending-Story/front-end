@@ -2,6 +2,7 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .single-det-wrapper h2,
@@ -25,6 +26,7 @@
   align-items: center;
   width: 80%;
   padding-top: 25px;
+  position: relative;
 }
 
 .single-det-text-wrapper {
@@ -104,5 +106,17 @@
 @media(max-width: 800px) {
   .single-det-img {
     max-width: 90vw;
+  }
+
+  .details-prev {
+    bottom: 0;
+    left: 30%;
+    transform: translateY(300%);
+  }
+
+  .details-next {
+    bottom: 0;
+    right: 30%;
+    transform: translateY(300%);
   }
 }
