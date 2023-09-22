@@ -34,7 +34,6 @@
   position: absolute;
   background-color: rgba(101, 99, 99, 0.6);
   padding: 0 20px;
-  min-width: 28rem;
   max-width: 45rem;
   display: flex;
   flex-direction: column;
@@ -151,5 +150,20 @@ p.lvl-detail{
 
   .single-world-view h1 {
     font-size: 3.25rem;
+  }
+}
+
+@media(max-width: 800px) {
+
+  .single-world-view {
+    width: 100vw;
+  }
+  .single-world-view p {
+    font-size: .9rem;
+  }
+  .single-top-wrapper {
+    min-width: 0rem;
+    width: 90%;
+    padding-left: 0rem;
   }
 }
