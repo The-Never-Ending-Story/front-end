@@ -3,11 +3,8 @@ import { motion } from 'framer-motion';
 import './Details.css';
 
 export const DetailCarousel = ({content}) => {
+  console.log(content)
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [content]);
 
   const handleNext = () => {
     setCurrentIndex(Math.min(currentIndex + 1, content.length - 1));

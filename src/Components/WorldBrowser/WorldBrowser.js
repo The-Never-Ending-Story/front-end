@@ -17,6 +17,7 @@ export const WorldBrowser = () => {
         history = useHistory();
 
   console.log(displayedWorlds.forEach(world=> console.log(world.genres)))
+  
   const routeToWorld = id => {
     const worldView = `world/${id}`;
     history.push(worldView);
