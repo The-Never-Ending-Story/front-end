@@ -8,7 +8,8 @@ export const HeroImageSlider = () => {
   const slideIds = [26, 87, 188, 19, 93, 28, 84, 32, 137, 76, 103, 100]
   const slides = useSelector((state) => state.root.discoveredWorlds.filter((world) => {
     return slideIds.includes(world.id)    
-  }))
+  })
+)
   
   const [currentSlide, setCurrentSlide] = useState(0)
   const error = useSelector((state) => state.root.error);
@@ -37,7 +38,7 @@ export const HeroImageSlider = () => {
               className='slider-div'
               key={i}
               style={{
-                backgroundImage: `url(${slide.img.hero})`,
+                backgroundImage: `url(${slide.img.landscape})`,
                 opacity: currentSlide === i ? 1 : 0
               }}
             />

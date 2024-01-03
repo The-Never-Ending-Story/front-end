@@ -16,6 +16,7 @@ export const WorldBrowser = () => {
         error = useSelector(state => state.root.error),
         history = useHistory();
 
+  console.log(displayedWorlds.forEach(world=> console.log(world.genres)))
   const routeToWorld = id => {
     const worldView = `world/${id}`;
     history.push(worldView);
@@ -23,14 +24,15 @@ export const WorldBrowser = () => {
   };
 
   const makeFilteredArray = category => {
-    return displayedWorlds.filter(world => world.category === category);
+    console.log(category, displayedWorlds)
+    return displayedWorlds.filter(world => world.genres.includes(category));
   };
 
-  const carouselPreviews = ['Fantasy & Mystical',
-                            'Futuristic & Tech',
-                            'Nature & Environment',
-                            'Urban & Modern',
-                            'Miscellaneous & Niche'
+  const carouselPreviews = ['Retro-Futurism',
+                            'Clockpunk',
+                            'Surrealism',
+                            'Fantasy',
+                            'Alien'
                           ].map((category, index) => 
                             <Carousel
                               category={category}

@@ -15,8 +15,8 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect( () => {
-dispatch(getDiscoveredWorlds(worlds))
-dispatch(changeIsLoading(false))
+    dispatch(getDiscoveredWorlds(worlds))
+    dispatch(changeIsLoading(false))
   }, [dispatch] )
 
   return (
