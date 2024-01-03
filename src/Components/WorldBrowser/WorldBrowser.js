@@ -29,7 +29,7 @@ export const WorldBrowser = () => {
   };
 
   const carouselPreviews = ['Retro-Futurism',
-                            'Clockpunk',
+                            'Post-Apocalyptic',
                             'Surrealism',
                             'Fantasy',
                             'Alien'
@@ -42,10 +42,10 @@ export const WorldBrowser = () => {
                               />
                             );
 
-  const mainPreviewWorlds = [1, 96, 107, 100, 93].map(id => {
+  const mainPreviewWorlds = [1, 70, 90, 100, 93].map(id => {
     return displayedWorlds.find(world => world.id === id);
   });
-
+  console.log('main carousel previews:', mainPreviewWorlds)
   if (useLocation().pathname !== '/worlds') {
     return <PageNotFound />;
   } else if (loading) {

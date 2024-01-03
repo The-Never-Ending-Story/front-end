@@ -7,6 +7,7 @@ import { LoadingIcon } from "../LoadingIcon/LoadingIcon";
 import { PageNotFound } from "../PageNotFound/PageNotFound";
 import { Error } from "../Error/Error";
 import { DetailCarousel } from "../Detail/DetailCarousel";
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 export const SingleWorld = () => {
   const { id } = useParams(),
