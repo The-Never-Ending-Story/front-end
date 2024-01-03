@@ -9,19 +9,14 @@ import { WelcomePage } from '../WelcomePage/WelcomePage'
 import { Header } from '../Header/Header.js'
 import { WorldBrowser } from '../WorldBrowser/WorldBrowser';
 import { PageNotFound } from '../PageNotFound/PageNotFound';
-
+import worlds from '../../assets/allWorlds/AllWorlds.js'
 function App() {
+  console.log(worlds)
   const dispatch = useDispatch()
 
   useEffect( () => {
-    getAllWorldsData()
-    .then(data => {
-      dispatch(getDiscoveredWorlds(data))
-      dispatch(changeIsLoading(false))
-    }).catch(err => {
-      dispatch(changeIsLoading(false))
-      dispatch(changeError(err.message))
-    })
+dispatch(getDiscoveredWorlds(worlds))
+dispatch(changeIsLoading(false))
   }, [dispatch] )
 
   return (
